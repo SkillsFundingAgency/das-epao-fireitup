@@ -1,0 +1,75 @@
+.sector-jobs {
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	padding: 4em 0;
+	h1 {
+		margin: 0 0 2em 0;
+		color: #6F777B;
+	}
+	.jobs-wrapper {
+		display: inline-block;
+		@include media-query($from: tablet) {
+			display: flex;
+		}
+		a.job {
+			width: 100%;
+			@include media-query($from: tablet) {
+				width: 20%;
+			}
+			text-align: center;
+			text-decoration: none;
+			border-radius: 5px;
+			// background: white;
+			padding: 1em;
+			transition: all .3s ease;
+			&:hover, &:active, &:focus {
+				background: rgba(black,0.05);
+				cursor: pointer;
+				transform: scale(1.1);
+				// box-shadow: 0 0 10px 0 rgba(black,0.2);
+				// text-decoration: underline;
+				// .number {
+				// 	text-decoration: none;
+				// }
+			}
+			.number {
+				font-family: $font-family;
+				font-weight: bold;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: $apprentice;
+				color: white;
+				border-radius: 50%;
+				font-size: 1.5rem;
+				margin: 0 auto 1em auto;
+				width: 2em;
+				height: 2em;
+			}
+			h2, h3, p {
+				margin: 0.25em 0;
+			}
+			h2 {
+
+			}
+			h3 {
+				color: $apprentice;
+				.location {
+					display: inline-block;
+					// float: left;
+					text-indent: -1000em;
+					width: 1em;
+					height: 1.25em;
+					margin: 0 0.25em 0 0;
+					background: url('../images/location-blue.svg') no-repeat;
+					background-size: contain;
+				}
+			}
+			p {
+				font-size: 18px;
+				color: $text-colour;
+			}
+		}
+	}
+}

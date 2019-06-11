@@ -1,0 +1,111 @@
+<!-- /////////////////// Javascript - START /////////////////// -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Array.prototype.includes,CustomEvent,Object.entries,Object.values,URL" crossorigin="anonymous"></script>
+<script src="https://das-prd-frnt-end.azureedge.net/campaign/js/plyr.min.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://das-prd-frnt-end.azureedge.net/campaign/js/app.min.js" crossorigin="anonymous"></script>
+<script src="https://das-prd-frnt-end.azureedge.net/js/das-all.js" crossorigin="anonymous"></script>
+<script>
+     window.DASFrontend.initAll()
+     window.DASFrontend.initMaps()
+</script>
+<script src="/dist/js/jquery.cookie.js"></script>
+<script src="/dist/js/my-cookies.js"></script>
+<script src="/dist/js/my-jquery.js"></script>
+<script src="/dist/js/scroll-effect.js"></script>
+<script src="/dist/js/header/navigation.js"></script>
+<script src="/dist/js/sidebar/sidebar.js"></script>
+
+<script src="/dist/js/jquery.autocomplete.min.js"></script>
+<script src="/dist/js/autocomplete.js"></script>
+<script src="/dist/js/autocomplete-FAT.js"></script>
+<script type="text/javascript">
+
+     var myInput = document.getElementById("autocomplete");
+     $("#faa-search-keyword").click(function(){
+          // if (myInput.value == "Credit controller") {
+          //      window.location.href = 'job-profiles/1-credit.html';
+          //      return false;
+          // } else if (myInput.value == "Paralegal") {
+          //      window.location.href = 'job-profiles/2-paralegal.html';
+          //      return false;
+          // } else if (myInput.value == "Chef") {
+          //      window.location.href = 'job-profiles/3-chef.html';
+          //      return false;
+          // } else if (myInput.value == "Publican") {
+          //      window.location.href = 'job-profiles/4-publican.html';
+          //      return false;
+          // } else if (myInput.value == "Bank manager") {
+          //      window.location.href = 'job-profiles/5-bank-manager.html';
+          //      return false;
+          // } else if (myInput.value == "Diver") {
+          //      window.location.href = 'job-profiles/6-diver.html';
+          //      return false;
+          // } else if (myInput.value == "Plumber") {
+          //      window.location.href = 'job-profiles/7-plumber.html';
+          //      return false;
+          // } else if (myInput.value == "Medical secretary") {
+          //      window.location.href = 'job-profiles/8-medical.html';
+          //      return false;
+          // } else {
+          //      window.location.href = 'job-profiles/2-paralegal.html';
+          //      return false;
+          // }
+     });
+
+</script>
+
+<script>
+ var div = document.createElement('div');
+ div.className = 'fb-customerchat';
+ div.setAttribute('page_id', '212467976300698');
+ div.setAttribute('ref', '');
+ document.body.appendChild(div);
+ window.fbMessengerPlugins = window.fbMessengerPlugins || {
+   init: function () {
+     FB.init({
+        appId            : '1678638095724206',
+        autoLogAppEvents : true,
+        xfbml            : true,
+        version          : 'v3.0'
+     });
+   }, callable: []
+ };
+ window.fbAsyncInit = window.fbAsyncInit || function () {
+   window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
+   window.fbMessengerPlugins.init();
+ };
+ setTimeout(function () {
+   (function (d, s, id) {
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) { return; }
+     js = d.createElement(s);
+     js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+ }, 0);
+</script>
+<!-- /////////////////// Javascript - END /////////////////// -->
+
+<script src="/dist/js/are-you-sure.js"></script>
+<script src="/dist/js/fat-ui.js"></script>
+
+<script language="javascript">
+     $(function() {
+          var len_fit = 15; // According to your question, 10 letters can fit in.
+          var un = $('#apprenticeship-title');
+
+          // Get the lenght of title.
+          var len_user_name = un.html().length;
+          if(len_fit < len_user_name ){
+
+               // Calculate the new font size.
+               var size_now = parseInt(un.css("font-size"));
+               var size_new = size_now * len_fit/len_user_name;
+
+               // Set the new font size to the title.
+               un.css("font-size",size_new);
+          }
+     });
+</script>

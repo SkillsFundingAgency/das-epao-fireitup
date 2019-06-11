@@ -1,0 +1,103 @@
+.upsell-component {
+	text-align: center;
+	color: white;
+	clip-path: none;
+	background: linear-gradient(180deg, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.4) 40%, black 90%),url("../images/images/heroes/2000x1200/employer/matt-right.jpg") no-repeat;
+	background-size: cover;
+	background-position: 50% 15%;
+	margin: 3em 0 -4em 0;
+	padding-bottom: 8em;
+	@include media-query($from: tablet) {
+		clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
+	}
+	.heading-xl, .heading-l, .heading-s {
+		color: white;
+	}
+	.cta-row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 2em 0 0 0;
+		& > div {
+			margin: 0 2em;
+		}
+		.heading-xl, .heading-l, .heading-s {
+			margin: 0;
+		}
+	}
+}
+
+.sign-in-component {
+	clip-path: none;
+	position: relative;
+	z-index: 10;
+	@include media-query($from: tablet) {
+		clip-path: polygon(0% 8%, 100% 0%, 100% 100%, 0% 92%);
+	}
+	.main-text {
+		padding-top: 3em;
+		padding-bottom: 1em;
+		background: $employer;
+		.heading-l {
+			margin-top: 0;
+		}
+		.grid-column-one-half {
+			margin-bottom: 3em;
+		}
+		@include media-query($from: tablet) {
+			padding-top: 6em;
+			padding-bottom: 3em;
+			.grid-column-one-half {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.t-and-cs {
+		padding-top: 1em;
+		padding-bottom: 2em;
+		background: darken($employer, 10%);
+		@include media-query($from: tablet) {
+			padding-bottom: 4.5em;
+		}
+	}
+}
+
+.apprentice {
+	.upsell-component {
+		background: linear-gradient(180deg, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.4) 40%, black 90%),url("../images/images/heroes/2000x1200/apprentice/neil-right.jpg") no-repeat;
+		background-size: cover;
+		background-position: 50% 15%;
+		margin: -2em 0 0em 0;
+		clip-path: none;
+		@include media-query($from: tablet) {
+			margin: -4em 0 0em 0;
+			clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 90%);
+			background-position: 50% 15%;
+		}
+	}
+	.sign-in-component {
+		margin-top: 3em;
+		@include media-query($from: tablet) {
+			clip-path: polygon(0% 0%, 100% 8%, 100% 92%, 0% 100%);
+		}
+		.main-text {
+			background: $apprentice;
+			color: white;
+			padding-top: 3em;
+			padding-bottom: 1em;
+			@include media-query($from: tablet) {
+				padding-top: 5em;
+				padding-bottom: 5em;
+			}
+			.heading-l, .heading-s {
+				color: white;
+			}
+			.heading-l {
+				margin: 0;
+			}
+			.button {
+				margin-top: 2em;
+			}
+		}
+	}
+}

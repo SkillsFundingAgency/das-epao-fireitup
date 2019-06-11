@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+{% set pageTitle = "Digital Apprenticeship Service" %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl govuk-!-margin-top-6 govuk-!-margin-bottom-3">DAS Frontend</h1>
+        <p class="govuk-body-l">Contains the code you need to start building a user interface for the Digital Apprenticeship Service.</p>
+    </div>
+</div>
+
+<script>
+     window.onload = function() {
+          // similar behavior as clicking on a link
+          window.location.href = "/campaign/index";
+     }
+</script>
+
+{% endblock  %}

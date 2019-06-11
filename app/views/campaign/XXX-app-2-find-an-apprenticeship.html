@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Campaign</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0c0c" />
+
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+  <!--[if !IE 8]><!-->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.4.7/plyr.css">
+  <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+  <!--<![endif]-->
+
+  <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+
+
+
+</head>
+
+<body class="page-template">
+
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="wrap">
+
+         {% include './components/header/_header.html'%}
+         {% include './components/hero-heading/_app-1-hero-heading.html' %}
+
+        <main id="main-content" class="main-content">
+
+            <div class="grid-row">
+                <div class="grid-column-two-thirds">
+
+                    <div class="page">
+                        <h2 class="heading-l" id="heading1">Introduction to apprenticeships</h2>
+
+
+
+                        <div class="video-player plyr__video-embed js-player visually-hidden" id="player">
+                            <a class="video-player__close" href="#">Close</a>
+                            <iframe src="https://www.youtube.com/embed/VSeiSg9WPtE?iv_load_policy=3&amp;modestbranding=1&amp;playsinline=1&amp;showinfo=0&amp;rel=0&amp;enablejsapi=1" allowfullscreen allowtransparency allow="autoplay"></iframe>
+
+                        </div>
+
+                         <p><a href="#player" class="play">Play</a></p>
+
+                        <p>It's a real job,  with hands-on experience, a salary and the chance to train while you work. You get the same as other employees - a contract of employment, holiday leave, even sick pay.</p>
+                        <p>If you're 16 or over, you can become an apprentice as long as you live in England and aren't in full-time education.</p>
+                        <p><strong>Apprenticeships mean:</strong></p>
+
+                        <ul class="list list--bullet list--bullet-apprentice">
+                            <li>You get paid and learn at the same time, with at least 20% of your time set aside for learning - usually at a college, university or a training provider.</li>
+                            <li>You study for an official certification of your skills, equivalent to a qualification ranging from level two (equivalent to GCSE) all the way up to degree level.</li>
+                            <li>You're on a career path, which has real potential for a higher salary and great prospects. </li>
+                        </ul>
+
+                        {% include './components/boxQuote/_boxQuote.html'%}
+
+                        <p>Your apprenticeship can take between one and five years to complete, depending on which one, and which level, you choose.</p>
+                        <p>Different apprenticeships are available all over England, at companies large and small, in a wide range of industries and organisations. From local businesses to large national brands.</p>
+                        <p>We've made some massive improvements to apprenticeships recently. They're no longer 'the easy option' - studying and working takes lots of effort and focus. Degree apprenticeships are now recognised as genuine, credible alternatives to full-time university courses.</p>
+
+                        <figure class="quote-inline quote-inline--employer quote-inline--right-aligned">
+                            <blockquote class="quote-inline__quote">
+                                My apprenticeship will give me the best stepping stone to become a highly trained firefighter, with regular assessments and development days
+                            </blockquote>
+                            <figcaption class="quote-inline__cite">
+                                <span class="quote-inline__cite-person">Claire Lester</span>
+                                <span class="quote-inline__cite-source">Staffordshire Fire and Rescue</span>
+                            </figcaption>
+                        </figure>
+
+
+
+                        <p>Completing your apprenticeship means not only will you have less debt, and a valuable recognised qualification, you'll also hopefully have gained the skills needed to progress your career.</p>
+                        <p>If you live in Scotland, Wales or Northern Ireland, check out your apprenticeship options today.</p>
+                        <h3 class="heading-m" id="heading2">What are the different types of apprenticeships?</h3>
+                        <p>There are hundreds of different apprenticeships to choose from. Whether you're at the start of your career, want to change career direction, or if you're returning to work after a break. We have the apprenticeships for you.</p>
+                        <p><strong>Which level is right for me?</strong></p>
+                        <p><strong>(Level Tables Here)</strong></p>
+                        <p>Here's a simple guide to the different apprenticeship levels, numbered from two to seven.</p>
+                        <p>Degree apprenticeships offer the benefits of higher education, with none of the cost. Apprentices earn a salary right from day one of their employment and training. Your tuition fees are covered and paid in full, so you have the potential to graduate debt-free.</p>
+
+
+
+                    </div>
+
+
+                </div>
+                <div class="grid-column-one-third">
+                    <div class="sidebar">
+                        <div class="sidebar__hero">
+                            <img src="/dist/campaign/images/worker-girl.jpg" class="sidebar__hero-image">
+                        </div>
+                        <div class="trimmer">
+                            <div class="sidebar__header">
+                                <h3 class="heading-s sidebar__heading">WHAT ARE THE STEPS TO BECOME AN APPRENTICE</h3>
+                            </div>
+                        </div>
+                        <div class="sidebar__content">
+                            {% include './components/sideBar/_sideBar.html'%}
+                        </div>
+                        <div class="trimmer">
+                            <div class="sidebar__sub-content">
+                                <h2 class="heading-s sidebar__heading">Find out more</h2>
+                                <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p>
+                                <a class="button button--sparks button--shadow " href="#modal-RegisterInterest">Register Interest</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+
+
+    {% include './components/footer/_footer.html'%}
+
+    </div>
+
+    <script src="/dist/campaign/js/app.min.js"></script>
+    <script src="/dist/js/das-all.js"></script>
+    <script>
+        window.DASFrontend.initAll()
+    </script>
+
+</body>
+
+</html>

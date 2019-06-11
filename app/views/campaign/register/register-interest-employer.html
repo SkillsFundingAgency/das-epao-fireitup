@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>Fire it up! - Register interest</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template">
+
+          <script>
+               document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          </script>
+
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+
+          {% include '../components/header/_header.html'%}
+
+          <main id="main-content">
+
+               <div class="hero register" data-module="smoothScroll">
+                    <div class="grid-row">
+                         <div class="grid-column-one-half">
+                              <div class="hero-heading">
+                                   <h1 class="heading-xl hero-heading__heading">Email me my favourites</h1>
+                              </div>
+                              <div class="hero-heading__content">
+                                   <p class="lead-paragraph">Send me my favourites so I can come back and change them later...</p>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="main-content">
+                    <div class="page">
+
+                         <form action="/campaign/FAT/FAT-basket" method="get">
+
+                              <div class="form-validation-summary" style="display: none">
+                                   <h3 class="heading-s">Sorry but there seems to be a problem with your registration</h3>
+                              </div>
+                              <div class="form-group">
+                                   <label class="label visually-hidden" for="FirstName">
+                                        First name
+                                   </label>
+                                   <input id="FirstName-employer" class="input" type="text" placeholder="First name" autocomplete="given-name" name="FirstName" value="">
+                              </div>
+
+                              <div class="form-group">
+                                   <label class="label visually-hidden" for="LastName">
+                                        Last name
+                                   </label>
+                                   <input class="input" type="text" placeholder="Last name" autocomplete="family-name" id="LastName-employer" name="LastName" value="">
+                              </div>
+
+                              <div class="form-group">
+                                   <label class="label visually-hidden" for="Email">
+                                        Email Address
+                                   </label>
+                                   <input class="input" type="text" placeholder="Email address" autocomplete="email" id="Email-employer" name="Email" value="">
+                              </div>
+
+                              <!-- <div class="form-group radios">
+                                   <div class="radios__item">
+                                        <input class="input radios__input" value="1" type="radio" id="rbApprentice" name="Route">
+                                        <label class="label radios__label" for="rbApprentice">I want to become an <span class="text--apprentice">apprentice</span> </label>
+                                   </div>
+                                   <div class="radios__item">
+                                        <input class="input radios__input" value="2" type="radio" id="rbEmployer" name="Route">
+                                        <label class="label radios__label" for="rbEmployer">I want to <span class="text--employer">employ</span> an apprentice</label>
+                                   </div>
+                              </div> -->
+
+                              <div class="form-group radios">
+                                   <div class="checkboxes__item">
+                                        <input class="checkboxes__input" type="checkbox" value="true" id="AcceptTandCs" name="AcceptTandCs">
+                                        <label class="label checkboxes__label" for="AcceptTandCs">
+                                             I would like to receive information via emails from the Education and Skills Funding Agency in relation to apprenticeships. I can confirm that I am over the age of 13
+                                        </label>
+                                   </div>
+                              </div>
+
+                              <button class="button button-inverted" name="registerInterestSubmit" id="btn-favourites">Save favourites</button>
+                         </form>
+
+                    </div>
+               </div>
+
+          </main>
+
+          {% include '../components/footer/_footer.html'%}
+
+          <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <!-- <script src="/dist/campaign/js/app.min.js"></script>
+          <script src="/dist/js/das-all.js"></script> -->
+          <!-- <script>
+               window.DASFrontend.initAll()
+          </script> -->
+
+          {% include '../components/footer/_scripts.html'%}
+
+     </body>
+
+</html>
