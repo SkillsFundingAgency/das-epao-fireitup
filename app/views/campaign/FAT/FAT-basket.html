@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template" id="page-fat-basket">
+     <body class="page-template employer-page" id="page-fat-basket" data-page-id="5">
 
      <script>
      document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -47,13 +47,18 @@
 
                          <div class="sidebar sidebar--employer FAT-basket">
                               <div class="shopping-basket">
-                                   <h1 class="heading-m sidebar__heading">
-                                        Save your choices and create your
-                                        <img class="sidebar__sub-content-crown-logo" src="https://das-at-frnt-end.azureedge.net/assets/images/govuk-mask-icon.svg">
-                                        gov.uk account to start hiring the future
+                                   <h1 class="heading-m sidebar__heading no-bottom-margin">
+                                        Want to start a conversation with your favourite training providers?
                                    </h1>
-                                   <a class="button button--sparks button--shadow __web-inspector-hide-shortcut__ external" href="https://das-nonlevy-prototype.herokuapp.com/version-7/newregister/employerStarted" target="_blank" rel="external"><span class="external"></span> Hire an apprentice</a>
-                                   <a href="/campaign/register/register-interest-employer" class="email-me">Email me my favourites for later</a>
+                                   <p class="no-top-margin">Share your details so we can ask them to contact you.</p>
+                                   <a class="button button--sparks button--shadow __web-inspector-hide-shortcut__" href="/campaign/FAT/save-this-standard">SHARE MY DETAILS</a>
+                                   <!-- <a class="button button--sparks button--shadow __web-inspector-hide-shortcut__ external" href="https://das-nonlevy-prototype.herokuapp.com/version-7/newregister/employerStarted" target="_blank" rel="external"><span class="external"></span> Hire an apprentice</a> -->
+                                   <form method="post" action="https://esfa-shopping-basket.herokuapp.com/sprint-17/V7/index">
+                                        <div class="pass-form-data"></div>
+                                        <input type="submit" class="create-account" value="Create an Apprenticeship Service account" />
+                                   </form>
+                                   <a href="/campaign/register/email-me" class="email-me">Email me my favourites for later</a>
+                                   <!-- <a href="/campaign/register/register-interest-employer" class="share-me">Share my favourites with my training provider</a> -->
                               </div>
                          </div>
 
@@ -100,7 +105,7 @@
 
           {% include '../components/faa-fat/_fat-link-block-search.html'%}
 
-          {% include '../components/footer/_footer.html'%}
+          {% include '../components/footer/_footer-employer.html'%}
 
           <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
 

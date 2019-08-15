@@ -23,7 +23,7 @@
   <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template">
+<body class="page-template apprentice-page" data-page-id="1">
 
   <script>
     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -33,7 +33,7 @@
 
     <div class="wrap">
 
-          {% include '../components/header/_header.html'%}
+         {% include '../components/header/_header-apprentice.html'%}
           {% include '../components/hero-heading/_app-a-hero-heading.html' %}
 
         <main id="main-content" class="main-content apprentice">
@@ -114,7 +114,7 @@
                               <li class="pagination__list-item pagination__list-item--previous">
                               </li>
                               <li class="pagination__list-item pagination__list-item--next">
-                                   <a href="/campaign/apprentice/1-what-is-an-apprenticeship" target="_blank" class="pagination__link pagination__link--next">
+                                   <a href="/campaign/apprentice/1-what-is-an-apprenticeship" class="pagination__link pagination__link--next">
                                         What is an apprenticeship?
                                    </a>
                               </li>
@@ -152,7 +152,7 @@
         </main>
 
 
-    {% include '../components/footer/_footer.html'%}
+    {% include '../components/footer/_footer-apprentice.html'%}
 
     </div>
 

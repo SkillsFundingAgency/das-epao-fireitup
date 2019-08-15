@@ -23,7 +23,7 @@
      <meta property="og:image" content="/dist/campaign/images/opengraph.png">
 </head>
 
-<body class="page-template">
+<body class="page-template employer-page" data-page-id="5">
 
      <script>
           document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -33,14 +33,12 @@
 
      <div class="wrap fat-search">
 
-          {% include '../components/header/_header.html'%}
+          {% include '../components/header/_header-employer.html'%}
           {% include '../components/hero-heading/_em-2B-no-results.html' %}
 
-          <div class="anchor-wrapper">
-               <a href="#" id="back-to-top"><span></span>Back to the top</a>
-          </div>
+          {% include '../components/faa-fat/_fat-no-results.html'%}
 
-          {% include '../components/footer/_footer.html'%}
+          {% include '../components/footer/_footer-employer.html'%}
 
      </div>
 

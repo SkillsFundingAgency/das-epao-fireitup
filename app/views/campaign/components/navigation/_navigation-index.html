@@ -1,0 +1,40 @@
+{% from "../button/macro.njk" import dasButton %}
+<div data-module="navigation">
+     <a href="#navigation" class="navigation__toggle">
+          <span class="navigation__toggle-label" id="nav-label">Menu</span>
+          <span class="navigation__toggle-icon"></span>
+     </a>
+
+     <nav class="navigation" aria-labelledby="nav-label">
+          <ul class="navigation__menu">
+
+               <!-- NAV ITEM 1 - START -->
+               <li class="navigation__list-item apprentice-nav">
+                    <a href="/campaign/hub-apprentice" class="navigation__link--top-level navigation__link--top-level--apprentice">
+                         Apprentice
+                         <span class="border"></span>
+                    </a>
+               </li>
+               <!-- NAV ITEM 1 - END -->
+
+               <!-- NAV ITEM 2 - START -->
+               <li class="navigation__list-item employer-nav">
+                    <a href="/campaign/hub-employer" class="navigation__link--top-level navigation__link--top-level--employer">
+                         Employer
+                         <span class="border"></span>
+                    </a>
+               </li>
+               <!-- NAV ITEM 2 - END -->
+
+               <!-- NAV ITEM 3 - START -->
+               <li class="navigation__list-item navigation__list-item--with-button">
+                    <a class="button button--sparks button--shadow " id="btn-register-interest-header" href="/campaign/register/register-interest">
+                         Register Interest
+                    </a>
+               </li>
+               <!-- NAV ITEM 3 - END -->
+
+          </ul>
+     </nav>
+
+</div>

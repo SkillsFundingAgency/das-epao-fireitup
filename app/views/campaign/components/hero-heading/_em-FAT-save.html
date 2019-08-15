@@ -1,35 +1,45 @@
-<div class="hero FAT-basket">
+<!-- <a href="/campaign/employer/2-the-right-apprenticeship">Search apprenticeships</a> -->
+<div class="hero FAT-basket FAT-save-standard">
      <div class="grid-row">
-          <div class="grid-column-one-half">
+          <div class="grid-column-two-thirds">
                <div class="hero-heading">
 
                     <span class="caption-m hero-heading__caption hero-heading__caption--employer">
-                         <a href="/campaign/employer/1-how-much-is-it-going-to-cost">Employer</a>
-                         <div class="sep">></div>
-                         <a href="/campaign/FAT/1-FAT-Search">Save the training provider</a>
+                         <a href="javascript:history.back()">&#60; &nbsp; Back</a>
                     </span>
-                    <h1 class="heading-xl hero-heading__heading">Save the training provider</h1>
+                    <h1 class="heading-xl hero-heading__heading" id="apprenticeship-title">START A CONVERSATION</h1>
                </div>
 
                <div class="text-wrapper">
                     <p class="lead-paragraph">
-                         Ready to hire an apprentice? Save this training provider and go to gov.uk to create your account.
+                         If you want to find out more about your favourite training providers, it’s time to start a conversation.
+                         Share your details so we can ask them to contact you.
                     </p>
+                    <!-- <p class="lead-paragraph">
+                    </p> -->
                     <div class="cta-row">
-
-                         <form method="post" action="https://esfa-shopping-basket.herokuapp.com/favourites-V5/V4/index">
-                             <input type="hidden" value="" id="standard-title" name="standard-title" />
-                             <input type="hidden" value="" id="provider-name" name="provider-name" />
-                             <input type="submit" class="button button--shadow button--sparks" value="Yes, save training provider" id="save-this-standard" />
-                             <p class="lead-paragraph secondary-cta"><a href="javascript:history.back()" class="">Cancel</a></p>
+                         <form method="post" action="https://esfa-shopping-basket.herokuapp.com/sprint-17/V7/index">
+                              <div class="pass-form-data"></div>
+                              <div class="primary-cta">
+                                   <p>
+                                        It's a great time to set up your Apprenticeship Service account -
+                                        the only extra thing we'll need from you is a password.
+                                   </p>
+                                   <input type="submit" class="button button--shadow button--sparks" value="CONTINUE WITH ACCOUNT" id="save-this-standard" />
+                              </div>
                          </form>
-
+                         <form method="get" action="/campaign/register/share-me">
+                              <div class="pass-form-data"></div>
+                              <div class="secondary-cta">
+                                   <!-- <h2 class="heading-m no-top-margin no-bottom-margin">No account</h2> -->
+                                   <p class="">
+                                        If you’d prefer, you can choose to share your details without creating an account.
+                                   </p>
+                                   <input type="submit" class="button button--shadow button--sparks" value="CONTINUE AS A GUEST" id="share-this-standard" />
+                              </div>
+                         </form>
                     </div>
-               </div>
-          </div>
-          <div class="grid-column-one-half">
-               <div class="gov-uk-image-wrapper">
-                    <img class="gov-uk-image" src="/dist/campaign/images/fat-screen-shot.jpg">
+                    <p class="lead-paragraph secondary-cta"><a href="javascript:history.back()" class="">Back</a></p>
                </div>
           </div>
      </div>

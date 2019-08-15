@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <title>Fire it up! - Your favourite apprenticeships</title>
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+     </head>
+
+     <body id="email-template">
+
+          <!-- ////////////////////// EMAIL HEADER - START ////////////////////// -->
+          <header class="email-header">
+               <div class="email-wrapper">
+                    <p>View in <a href="#">browser</a></p>
+                    <img src="/dist/campaign/images/emails/header-logo.png">
+                    <p>July, 2019</p>
+               </div>
+          </header>
+          <!-- ////////////////////// EMAIL HEADER - END ////////////////////// -->
+
+          <!-- ////////////////////// EMAIL MAIN - START ////////////////////// -->
+          <main class="">
+               <div class="email-wrapper">
+                    <img src="/dist/campaign/images/emails/email-heading-1.jpg">
+                    <div class="text">
+                         <h1 class="heading-m">
+                              Hi <span class="FirstName-Email">name</span>,
+                         </h1>
+                         <p>
+                              We hope you enjoyed browsing our Apprenticeships website and discovering the huge range of
+                              apprenticeships and training providers available.
+                         <p>
+                         <p>
+                              As requested, below you’ll find the list of favourites you created. If you want to add more,
+                              you can head back to the website and carry on browsing – simply use the button below to return
+                              to your online favourites list.
+                         </p>
+                         <p>
+                              <a href="/campaign/FAT/FAT-basket" class="button button--sparks button-employer-hero">RETURN TO MY FAVOURITES</a>
+                         </p>
+                         <p>
+                              Ready to start a conversation with the training providers you’re interested in? Use the <strong>Share
+                              my details</strong> link on your favourites page to ask them to contact you.
+                         </p>
+                         <hr>
+                         <h2 class="heading-s">
+                              Your list of training providers
+                         </h2>
+                         <ol id="training-providers-list">
+
+                         </ol>
+                    </div>
+               </div>
+          </main>
+          <!-- ////////////////////// EMAIL MAIN - END ////////////////////// -->
+
+          <!-- ////////////////////// EMAIL FOOTER - START ////////////////////// -->
+          <footer class="email-footer">
+               <div class="footer-top">
+                    <div class="email-wrapper">
+                         <div class="logo-container">
+                              <img src="/dist/campaign/images/emails/footer-logo-1.png">
+                              <img src="/dist/campaign/images/emails/footer-logo-2.png">
+                         </div>
+                         <p>
+                              <a href="#">Privacy and cookies</a> | <a href="#">Privacy notice</a> | <a href="#">Terms and conditions</a>
+                         </p>
+                         <p>
+                              All content is available under the <a href="#">Open Government Licence v2.0</a>, except where otherwise stated
+                         </p>
+                    </div>
+               </div>
+               <div class="footer-bottom">
+                    <div class="email-wrapper">
+                         <p>
+                              To stop receiving emails from Apprenticeships <a href="#">click here</a>
+                         </p>
+                    </div>
+               </div>
+          </footer>
+          <!-- ////////////////////// EMAIL FOOTER - END ////////////////////// -->
+
+          {% include '../components/footer/_scripts.html'%}
+
+     </body>
+
+</html>

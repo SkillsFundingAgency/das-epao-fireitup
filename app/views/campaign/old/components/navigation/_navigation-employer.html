@@ -1,0 +1,195 @@
+{% from "../button/macro.njk" import dasButton %}
+
+<a href="#navigation" class="navigation__toggle">
+    <span class="navigation__toggle-label" id="nav-label">Menu</span>
+    <span class="navigation__toggle-icon"></span>
+</a>
+
+<nav class="navigation employer-nav" aria-labelledby="nav-label">
+    <ul class="navigation__menu">
+        <li class="navigation__list-item">
+            <a href="/campaign/apprentice/1-what-is-an-apprenticeship" class="navigation__link--top-level navigation__link--top-level--apprentice">
+                Apprentice
+                <span class="navigation__sub-menu-toggle"></span>
+                <span class="navigation__sub-menu-icon"></span>
+            </a>
+            <div class="navigation__sub-menu navigation__sub-menu--apprentice">
+                 <div class="grid-row">
+                     <div class="grid-column-one-half navigation__column">
+                         <h3 class="heading-s navigation_sub-heading">
+                             <span class="highlight">Why</span>
+                             <span class="secondary">you should become an apprentice...</span>
+                         </h3>
+                         <ul class="navigation__list">
+                             <!-- <li class="hidden--desktop">
+                                 <a href="/apprentice" class="navigation__link">
+                                     Apprentice hub
+                                 </a>
+                             </li> -->
+                             <li>
+                                 <a href="/campaign/real-stories/apprentices" class="navigation__link">
+                                     Real stories
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/campaign/apprentice/what-are-the-benefits-for-me" class="navigation__link">
+                                     What are the benefits for me?
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/campaign/interests/interests-home" class="navigation__link">
+                                    My interests - find your perfect apprenticeship
+                                 </a>
+                             </li>
+                         </ul>
+                     </div>
+                     <div class="grid-column-one-half navigation__column">
+                         <h3 class="heading-s navigation_sub-heading">
+                             <span class="highlight">How</span>
+                             <span class="secondary">to become an apprentice - step by step...</span>
+                         </h3>
+                         <ol class="navigation__ordered-list">
+                             <li>
+                                 <a href="/campaign/apprentice/1-what-is-an-apprenticeship" class="navigation__link">
+                                     What is an apprenticeship?
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/campaign/apprentice/2-find-an-apprenticeship" class="navigation__link">
+                                     Find an apprenticeship
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/campaign/apprentice/3-application" class="navigation__link">
+                                     Application
+                                 </a>
+                             </li>
+                         </ol>
+                         <ol class="navigation__ordered-list navigation__ordered-list--reset-3">
+                              <li>
+                                  <a href="/campaign/apprentice/4-interview" class="navigation__link">
+                                     Interview
+                                  </a>
+                              </li>
+                             <li>
+                                 <a href="/campaign/apprentice/5-your-apprenticeship" class="navigation__link">
+                                     Your apprenticeship
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/campaign/apprentice/6-assessment-and-qualification" class="navigation__link">
+                                     Assessment and qualification
+                                 </a>
+                             </li>
+                         </ol>
+                     </div>
+               </div>
+            </div>
+        </li>
+
+        <li class="navigation__list-item">
+            <a href="/campaign/employer/1-how-much-is-it-going-to-cost" class="navigation__link--top-level  navigation__link--top-level--employer">
+                Employer
+                <span class="navigation__sub-menu-toggle"></span>
+                <span class="navigation__sub-menu-icon"></span>
+            </a>
+            <div class="navigation__sub-menu navigation__sub-menu--employer">
+
+                 <div class="grid-row">
+
+                     <div class="grid-column-one-half navigation__column">
+                         <h3 class="heading-s navigation_sub-heading">
+                             <span class="highlight">Why</span>
+                             <span class="secondary">you should hire an apprentice...</span>
+                         </h3>
+                         <ul class="navigation__list">
+                             <!-- <li class="hidden--desktop">
+                                 <a href="/employer" class="navigation__link">
+                                     Employer hub
+                                 </a>
+                             </li> -->
+                             <li>
+                                 <a href="/campaign/employer/benefits-to-your-business" class="navigation__link">
+                                     Benefits to your business
+                                 </a>
+                             </li>
+                             <!-- <li>
+                                 <a href="/industries" class="navigation__link">
+                                     My industry - find out what other companies are doing
+                                 </a>
+                             </li> -->
+                             <li>
+                                 <a href="/campaign/real-stories/employers" class="navigation__link">
+                                     Real stories
+                                 </a>
+                             </li>
+                             <li>
+                                 <a href="/campaign/FAT/1-FAT-search" class="navigation__link">
+                                     Find an apprenticeship for your business
+                                 </a>
+                             </li>
+
+                         </ul>
+                     </div>
+                     <div class="grid-column-one-half navigation__column">
+                         <h3 class="heading-s navigation_sub-heading">
+                              <span class="highlight">Help</span>
+                              <span class="secondary">with hiring apprentices</span>
+                         </h3>
+                         <ol class="navigation__ordered-list">
+                              <li>
+                                   <a href="/campaign/employer/1-how-much-is-it-going-to-cost" class="navigation__link">
+                                        How much is it going to cost?
+                                   </a>
+                              </li>
+                              <li>
+                                   <a href="/campaign/employer/2-the-right-apprenticeship" class="navigation__link">
+                                        The right apprenticeship
+                                   </a>
+                              </li>
+                              <li>
+                                   <a href="/campaign/employer/3-choose-training-provider" class="navigation__link">
+                                        Choose a training provider
+                                   </a>
+                              </li>
+                         </ol>
+                         <ol class="navigation__ordered-list navigation__ordered-list--reset-3">
+                              <li>
+                                   <a href="/campaign/employer/4-hire-an-apprentice" class="navigation__link">
+                                        Hire an apprentice
+                                   </a>
+                              </li>
+                              <li>
+                                   <a href="/campaign/employer/5-preparing-and-monitoring" class="navigation__link">
+                                        Preparing and monitoring
+                                   </a>
+                              </li>
+                              <li>
+                                   <a href="/campaign/employer/6-assessment-and-qualification" class="navigation__link">
+                                        Assessment and qualification
+                                   </a>
+                              </li>
+                         </ol>
+                     </div>
+
+               </div>
+
+            </div>
+
+        </li>
+
+          <li class="navigation__list-item">
+               <a href="/campaign/real-stories/apprentices" class="navigation__link--top-level  navigation__link--top-level--real-stories">
+                    Real stories
+               </a>
+          </li>
+
+          <li class="navigation__list-item">
+               <a href="/campaign/interests/interests-home" class="navigation__link--top-level  navigation__link--top-level--interests">
+                    Interests
+               </a>
+          </li>
+
+
+    </ul>
+</nav>

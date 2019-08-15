@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template" id="">
+     <body class="page-template employer-section-fat employer-page" id="page-fat-search-results" data-page-id="5">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -36,6 +36,8 @@
                {% include '../components/header/_header-employer.html'%}
                {% include '../components/hero-heading/_em-FAT-2-hero-heading.html' %}
 
+               {% include '../components/confirmation/_shopping-basket.html' %}
+
                <main id="main-content" class="main-content page-fat-2 employer">
 
                     <div id="text-container" class="grid-row">
@@ -43,6 +45,17 @@
                          <div class="grid-column-two-thirds">
 
                               <div class="page">
+
+                                   <form id="fat-sort-by" class="sort-by employer">
+                                        <p>We’ve found <strong class="fat-number">36</strong> apprenticeships.</p>
+
+                                        <select class="form-control" data-val="true" id="fat-sort-by" name="fat-sort-by">
+                                             <option value="" selected>-- Sort by --</option>
+                                             <option value="Best match">Best match</option>
+                                             <option value="Level (high to low)">Level (high to low)</option>
+                                             <option value="Level (low to high)">Level (low to high)</option>
+                                        </select>
+                                   </form>
 
                                     <ol id="fat-search-results-static" class="search-results-list page-3-content">
 
@@ -55,6 +68,14 @@
                                                   <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
                                                   <p><strong>Typical length:</strong> 24 months</p>
                                              </div>
+                                            <div class="cta-row">
+                                                 <div class="form-group radios">
+                                                      <div class="checkboxes__item save-label">
+                                                           <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-31" name="save-31">
+                                                           <label class="label checkboxes__label" for="save-31">Add to favourites</label>
+                                                      </div>
+                                                 </div>
+                                            </div>
                                         </li>
                                         <!-- ////////////////////////////// APPRENTICESHIP - ITEM 31 - END ////////////////////////////// -->
 
@@ -67,6 +88,14 @@
                                                   <p><strong>Level:</strong> 4 (equivalent to certificate of higher education)</p>
                                                   <p><strong>Typical length:</strong> 18 months</p>
                                              </div>
+                                            <div class="cta-row">
+                                                 <div class="form-group radios">
+                                                      <div class="checkboxes__item save-label">
+                                                           <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-32" name="save-32">
+                                                           <label class="label checkboxes__label" for="save-32">Add to favourites</label>
+                                                      </div>
+                                                 </div>
+                                            </div>
                                         </li>
                                         <!-- ////////////////////////////// APPRENTICESHIP - ITEM 32 - END ////////////////////////////// -->
 
@@ -79,6 +108,14 @@
                                                   <p><strong>Level:</strong> 6 (equivalent to bachelor's degree)</p>
                                                   <p><strong>Typical length:</strong> 42 months</p>
                                              </div>
+                                            <div class="cta-row">
+                                                 <div class="form-group radios">
+                                                      <div class="checkboxes__item save-label">
+                                                           <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-33" name="save-33">
+                                                           <label class="label checkboxes__label" for="save-33">Add to favourites</label>
+                                                      </div>
+                                                 </div>
+                                            </div>
                                         </li>
                                         <!-- ////////////////////////////// APPRENTICESHIP - ITEM 33 - END ////////////////////////////// -->
 
@@ -92,6 +129,14 @@
                                                   <p><strong>Level:</strong> 3 (equivalent to A levels at grades A to E)</p>
                                                   <p><strong>Typical length:</strong> 12 months</p>
                                              </div>
+                                            <div class="cta-row">
+                                                 <div class="form-group radios">
+                                                      <div class="checkboxes__item save-label">
+                                                           <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-34" name="save-34">
+                                                           <label class="label checkboxes__label" for="save-34">Add to favourites</label>
+                                                      </div>
+                                                 </div>
+                                            </div>
                                         </li>
                                         <!-- ////////////////////////////// APPRENTICESHIP - ITEM 34 - END ////////////////////////////// -->
 
@@ -104,6 +149,14 @@
                                                   <p><strong>Level:</strong> 6 (equivalent to bachelor's degree)</p>
                                                   <p><strong>Typical length:</strong> 48 months</p>
                                              </div>
+                                            <div class="cta-row">
+                                                 <div class="form-group radios">
+                                                      <div class="checkboxes__item save-label">
+                                                           <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-35" name="save-35">
+                                                           <label class="label checkboxes__label" for="save-35">Add to favourites</label>
+                                                      </div>
+                                                 </div>
+                                            </div>
                                         </li>
                                         <!-- ////////////////////////////// APPRENTICESHIP - ITEM 35 - END ////////////////////////////// -->
 
@@ -116,6 +169,14 @@
                                                   <p><strong>Level:</strong> 6 (equivalent to bachelor's degree)</p>
                                                   <p><strong>Typical length:</strong> 36 months</p>
                                              </div>
+                                            <div class="cta-row">
+                                                 <div class="form-group radios">
+                                                      <div class="checkboxes__item save-label">
+                                                           <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-36" name="save-36">
+                                                           <label class="label checkboxes__label" for="save-36">Add to favourites</label>
+                                                      </div>
+                                                 </div>
+                                            </div>
                                         </li>
                                         <!-- ////////////////////////////// APPRENTICESHIP - ITEM 36 - END ////////////////////////////// -->
 
@@ -143,18 +204,26 @@
                                          </li>
                                     </ul>
 
+                                    <!-- ================= SEARCH COMPONENT - START ================= -->
+                                    <section class="similar-results">
+                                         <h1 class="heading-m">Searches related to <strong>Business Administrator</strong></h1>
+                                         <div class="flex-wrapper">
+                                              <p><a href="#"><strong>Business</strong> and Administration</a></p>
+                                              <p><a href="#">Payroll <strong>administrator</strong></a></p>
+                                              <p><a href="#"><strong>Business</strong> to business sales professional</a></p>
+                                              <p><a href="#">Investment operations <strong>administrator</strong></a></p>
+                                              <p><a href="#"><strong>Business and Administration</strong>: Medical Administration</a></p>
+                                       </div>
+                                    </section>
+                                    <!-- ================= SEARCH COMPONENT - END ================= -->
+
                               </div>
 
                          </div>
 
                          <div class="grid-column-one-third">
 
-                              <div class="sidebar sidebar--employer FAT-basket">
-                                   <div class="shopping-basket secondary-basket">
-                                        <p class="no-top-margin">Enter another apprenticeship name of job role to search for an alternative.</p>
-                                        {% include '../components/faa-fat/_fat-search-header.html' %}
-                                   </div>
-                              </div>
+                              {% include '../components/faa-fat/_fat-search-filter.html'%}
 
                               <div class="anchor-wrapper">
                                    <a href="#" id="back-to-top"><span></span>Back to the top</a>
@@ -172,7 +241,7 @@
 
                {% include '../components/confirmation/_compare-confirmation.html' %}
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/footer/_footer-employer.html'%}
 
           </div>
 
@@ -181,6 +250,7 @@
      <script src="/dist/js/das-all.js"></script>
      <script>
           window.DASFrontend.initAll()
+     </script>
      </script> -->
 
      {% include '../components/footer/_scripts.html'%}

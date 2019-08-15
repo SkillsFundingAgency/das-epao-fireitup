@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template" id="page-fat-details" data-id="{{ id }}">
+     <body class="page-template employer-page" id="page-fat-details" data-id="{{ id }}" data-page-id="5">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -44,6 +44,13 @@
 
                               <div class="page">
 
+                                   <form id="fat-sort-by" class="sort-by employer">
+                                        <p>
+                                             We’ve found <strong class="fat-number">36</strong> training providers for this apprenticeship.
+                                             Results are sorted by distance from '<strong class="fat-search-location">CV32 7EE</strong>'.
+                                        </p>
+                                   </form>
+
                                    <ol id="fat-training-provider-results" class="search-results-list page-3-content" start="31">
 
                                         <!-- /////////// FAT PROVIDER - 16 - START /////////// -->
@@ -60,6 +67,15 @@
                                                   <p><strong>Employer satisfaction:</strong> 100%</p>
                                                   <p><strong>Learner satisfaction:</strong> 89%</p>
                                                   <p><strong>Achievement rate:</strong> 71%</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 0486 6586 4865</p>
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-31" name="save-31">
+                                                            <label class="label checkboxes__label" for="save-31">Add to favourites</label>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </li>
                                         <!-- /////////// FAT PROVIDER - 31 - END /////////// -->
@@ -78,6 +94,15 @@
                                                   <p><strong>Employer satisfaction:</strong> 85%</p>
                                                   <p><strong>Learner satisfaction:</strong> 95%</p>
                                                   <p><strong>Achievement rate:</strong> 80%</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 0486 2688 8655</p>
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-32" name="save-32">
+                                                            <label class="label checkboxes__label" for="save-32">Add to favourites</label>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </li>
                                         <!-- /////////// FAT PROVIDER - 32 - END /////////// -->
@@ -96,6 +121,15 @@
                                                   <p><strong>Employer satisfaction:</strong> no data available</p>
                                                   <p><strong>Learner satisfaction:</strong> no data available</p>
                                                   <p><strong>Achievement rate:</strong> no data available</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 0468 568 2386</p>
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-33" name="save-33">
+                                                            <label class="label checkboxes__label" for="save-33">Add to favourites</label>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </li>
                                         <!-- /////////// FAT PROVIDER - 33 - END /////////// -->
@@ -115,6 +149,15 @@
                                                   <p><strong>Employer satisfaction:</strong> 92%</p>
                                                   <p><strong>Learner satisfaction:</strong> 94%</p>
                                                   <p><strong>Achievement rate:</strong> 82%</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 0684 767 676</p>
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-34" name="save-34">
+                                                            <label class="label checkboxes__label" for="save-34">Add to favourites</label>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </li>
                                         <!-- /////////// FAT PROVIDER - 34 - END /////////// -->
@@ -133,6 +176,15 @@
                                                   <p><strong>Employer satisfaction:</strong> 87%</p>
                                                   <p><strong>Learner satisfaction:</strong> no data available</p>
                                                   <p><strong>Achievement rate:</strong> no data available</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 04768 688 6865</p>
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-35" name="save-35">
+                                                            <label class="label checkboxes__label" for="save-35">Add to favourites</label>
+                                                       </div>
+                                                  </div>
                                              </div>
                                         </li>
                                         <!-- /////////// FAT PROVIDER - 35 - END /////////// -->
@@ -173,11 +225,13 @@
                                        <section class="faa-fat-link-block cta-fat search">
                                             <div class="cta-fat__action">
                                                  <input type="search" id="fat-search-postcode" placeholder="Enter postcode..." class="">
-                                                 <a id="link-FAT-search-provider" href="/campaign/FAT/4A-FAT-training-provider-results?id={{id}}" class="button button--shadow button--sparks search link-FAT-search"><span class="search"></span>Search</a>
+                                                 <a href="/campaign/FAT/4A-FAT-training-provider-results?id={{id}}" class="button button--shadow button--sparks white search link-FAT-search"><span class="search"></span>Search</a>
                                             </div>
                                        </section>
                                   </div>
                              </div>
+
+                             {% include '../components/faa-fat/_fat-training-provider-filter.html'%}
 
                               <div class="anchor-wrapper">
                                    <a href="#" id="back-to-top"><span></span>Back to the top</a>
@@ -189,13 +243,13 @@
 
                </main>
 
-               <!-- ///////////////////// COMPARE COMPONENT - START ///////////////////// -->
-               {% include '../components/faa-fat/_fat-compare-component.html'%}
-               <!-- ///////////////////// COMPARE COMPONENT - END ///////////////////// -->
+               <!-- ///////////////////// BASKET ALERT COMPONENT - START ///////////////////// -->
+               {% include '../components/confirmation/_basket-confirmation.html'%}
+               <!-- ///////////////////// BASKET ALERT COMPONENT - END ///////////////////// -->
 
                {% include '../components/confirmation/_compare-confirmation.html' %}
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/footer/_footer-employer.html'%}
 
           </div>
 

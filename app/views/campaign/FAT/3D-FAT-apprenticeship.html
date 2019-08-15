@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template" id="page-fat-details" data-id="{{ id }}">
+     <body class="page-template employer-page" id="page-fat-details" data-id="{{ id }}" data-page-id="5">
 
 
 
@@ -110,7 +110,7 @@
                                                   <p>
                                                        You can download the assessment plan from the Institute for Apprenticeships. There are no end-point
                                                        assessment organisations for this apprenticeship yet. Please email
-                                                       <a href="mailto:apprentice.assessment@education.gov.uk" target="_blank">apprentice.assessment@education.gov.uk</a> 
+                                                       <a href="mailto:apprentice.assessment@education.gov.uk" target="_blank">apprentice.assessment@education.gov.uk</a>
                                                        if you urgently need an end-point assessment organisation.
                                                   </p>
                                              </div>
@@ -125,18 +125,18 @@
 
                                    </dl>
 
-                                   <!-- <div class="cta-row save-and-compare">
+                                   <div class="cta-row save-and-compare">
                                         <div class="form-group radios">
                                              <div class="checkboxes__item save-label">
-                                                  <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-1" name="save-1">
-                                                  <label class="label checkboxes__label" for="save-1">Favourite</label>
+                                                  <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-{{ id }}" name="save-{{ id }}">
+                                                  <label class="label checkboxes__label" for="save-{{ id }}">Add to favourites</label>
                                              </div>
-                                             <div class="checkboxes__item compare-label">
+                                             <!-- <div class="checkboxes__item compare-label">
                                                   <input class="checkboxes__input compare-item" type="checkbox" value="true" id="compare-1" name="compare-feature">
                                                   <label class="label checkboxes__label" for="compare-1">Compare</label>
-                                             </div>
+                                             </div> -->
                                         </div>
-                                   </div> -->
+                                   </div>
 
                               </div>
 
@@ -150,7 +150,7 @@
 
                </main>
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/footer/_footer-employer.html'%}
 
           </div>
 

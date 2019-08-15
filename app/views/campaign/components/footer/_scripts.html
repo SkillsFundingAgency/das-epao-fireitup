@@ -19,7 +19,20 @@
 <script src="/dist/js/jquery.autocomplete.min.js"></script>
 <script src="/dist/js/autocomplete.js"></script>
 <script src="/dist/js/autocomplete-FAT.js"></script>
+
+<!-- Modal files - START -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!-- Modal files - END -->
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <script type="text/javascript">
+
+     AOS.init({
+          duration: 1000
+     })
 
      var myInput = document.getElementById("autocomplete");
      $("#faa-search-keyword").click(function(){
@@ -55,48 +68,17 @@
 
 </script>
 
-<script>
- var div = document.createElement('div');
- div.className = 'fb-customerchat';
- div.setAttribute('page_id', '212467976300698');
- div.setAttribute('ref', '');
- document.body.appendChild(div);
- window.fbMessengerPlugins = window.fbMessengerPlugins || {
-   init: function () {
-     FB.init({
-        appId            : '1678638095724206',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v3.0'
-     });
-   }, callable: []
- };
- window.fbAsyncInit = window.fbAsyncInit || function () {
-   window.fbMessengerPlugins.callable.forEach(function (item) { item(); });
-   window.fbMessengerPlugins.init();
- };
- setTimeout(function () {
-   (function (d, s, id) {
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) { return; }
-     js = d.createElement(s);
-     js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
- }, 0);
-</script>
-<!-- /////////////////// Javascript - END /////////////////// -->
 
 <script src="/dist/js/are-you-sure.js"></script>
 <script src="/dist/js/fat-ui.js"></script>
 
 <script language="javascript">
      $(function() {
-          var len_fit = 15; // According to your question, 10 letters can fit in.
+          var len_fit = 20; // According to your question, 20 letters can fit in.
           var un = $('#apprenticeship-title');
 
           // Get the lenght of title.
+          if (un.length > 0) {
           var len_user_name = un.html().length;
           if(len_fit < len_user_name ){
 
@@ -107,5 +89,24 @@
                // Set the new font size to the title.
                un.css("font-size",size_new);
           }
+     }
      });
 </script>
+
+<!-- /////////////////// MODAL HTML - START /////////////////// -->
+<div id="userModal" class="modal">
+     <h1 class="heading-m">Choose your preference...</h1>
+     <a href="/campaign/hub-apprentice" class="journey-picker journey-apprentice">
+          <span class="launcher__section-heading">Apprenticeships</span>
+          <span class="heading-m">Start your journey, become an apprentice</span>
+     </a>
+     <a href="/campaign/hub-employer" class="journey-picker journey-employer">
+          <span class="launcher__section-heading">Employer</span>
+          <span class="heading-m">Be part of the change, employ an apprentice</span>
+     </a>
+     <a href="/campaign/hub-parents" class="journey-picker journey-parents">
+          <span class="launcher__section-heading">Parents</span>
+          <span class="heading-m">Help shape their future, lead the next apprentice</span>
+     </a>
+</div>
+<!-- /////////////////// MODAL HTML - END /////////////////// -->

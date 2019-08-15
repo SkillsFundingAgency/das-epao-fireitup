@@ -23,7 +23,7 @@
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
      </head>
 
-     <body class="page-template">
+     <body class="page-template employer-page" id="page-fat-training-provider" data-id="{{ id }}" data-providerId="{{ providerId }}" data-page-id="5">
 
           <script>
                document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
@@ -34,7 +34,7 @@
           <div class="wrap fat-search">
 
                {% include '../components/header/_header-employer.html'%}
-               {% include '../components/hero-heading/_em-FAT-5-hero-heading.html' %}
+               {% include '../components/hero-heading/_em-FAT-5E-hero-heading.html' %}
 
                {% include '../components/confirmation/_shopping-basket.html' %}
 
@@ -271,6 +271,18 @@
 
                               </div>
 
+                              <div class="cta-row">
+                                   <p class="lead-paragraph">
+                                        Like what you see? Add this training provider to your list of favourites.
+                                   </p>
+                                   <div class="form-group radios">
+                                        <div class="checkboxes__item save-label">
+                                             <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-{{ providerId }}" name="save-{{ providerId }}">
+                                             <label class="label checkboxes__label" for="save-{{ providerId }}">Add to favourites</label>
+                                        </div>
+                                   </div>
+                              </div>
+
                          </div>
 
                          <div class="grid-column-one-third">
@@ -287,13 +299,13 @@
                          </div>
                     </div>
 
-                    {% include '../components/faa-fat/_fat-training-provider-save.html' %}
-
                </main>
 
-               {% include '../components/confirmation/_compare-confirmation.html' %}
+               <!-- ///////////////////// BASKET ALERT COMPONENT - START ///////////////////// -->
+               {% include '../components/confirmation/_basket-confirmation.html'%}
+               <!-- ///////////////////// BASKET ALERT COMPONENT - END ///////////////////// -->
 
-               {% include '../components/footer/_footer.html'%}
+               {% include '../components/footer/_footer-employer.html'%}
 
           </div>
 
