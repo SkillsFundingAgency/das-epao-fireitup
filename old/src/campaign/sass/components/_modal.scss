@@ -1,0 +1,103 @@
+$space: 40px;
+$blue: $apprentice;
+$blue-dark: darken($blue, 5%);
+
+// Mixin for transition/transform
+@mixin translate($x, $y){
+  -webkit-transform: translate($x, $y);
+      -ms-transform: translate($x, $y); // IE9+
+          transform: translate($x, $y);
+}
+@mixin transition($transition){
+  -webkit-transition: $transition;
+          transition: $transition;
+}
+@mixin transition-transform($transition){
+  -webkit-transition: -webkit-transform $transition;
+     -moz-transition: -moz-transform $transition;
+       -o-transition: -o-transform $transition;
+          transition: transform $transition;
+}
+
+.modal{
+  &:before{
+    content: ""; 
+    display: none;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2000;
+  }
+  
+  &:target {
+    &:before {
+      display: block;
+    }  
+    .modal-dialog{
+      @include translate(0, 0); 
+      top: 0;
+      bottom: 0;
+      @include media-query($from: tablet) {
+        top: 5%;
+        bottom: 5%;
+      }
+    }
+  }
+}
+
+.show-modal:before {
+  display: block;
+}
+
+.modal-dialog {
+  background: #fefefe;
+  position: fixed;
+  top: -100%;  
+  z-index: 2010;
+  max-height: 100%;
+  overflow: auto;
+  padding: 20px;
+
+  @include translate(0, -500%);
+  @include transition-transform(#{"0.6s ease"});
+
+  @include media-query($from: tablet) {
+    width: 45%;
+    left: 20%;
+    padding: 7.5%;
+  }
+  .show-modal & {
+    top: 0;
+    bottom: 0;
+    @include translate(0, 0);
+    @include media-query($from: tablet) {
+      top: 5%;
+      bottom: 5%;
+    }
+  }
+  & .section {
+    @include media-query($from: tablet) {
+      padding-top: 0;
+    }
+  }
+}
+
+.modal-header{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  a.close {
+    display: block;
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.modal-body{
+  padding: 20px;
+}
+
+

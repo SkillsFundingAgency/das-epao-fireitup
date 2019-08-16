@@ -5,7 +5,7 @@
 	background: linear-gradient(180deg, rgba(0,0,0,0.2) 10%, rgba(0,0,0,0.4) 40%, black 90%),url("../images/images/heroes/2000x1200/employer/matt-right.jpg") no-repeat;
 	background-size: cover;
 	background-position: 50% 15%;
-	margin: 3em 0 -4em 0;
+	margin: -3.25em 0 -4em 0;
 	padding-bottom: 8em;
 	@include media-query($from: tablet) {
 		clip-path: polygon(0% 0%, 100% 10%, 100% 90%, 0% 100%);
@@ -14,12 +14,20 @@
 		color: white;
 	}
 	.cta-row {
-		display: flex;
+		display: inline-block;
 		align-items: center;
 		justify-content: center;
 		margin: 2em 0 0 0;
+		@include media-query($from: tablet) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 		& > div {
-			margin: 0 2em;
+			margin: 0 0 1.5em 0;
+			@include media-query($from: tablet) {
+				margin: 0 2em;
+			}
 		}
 		.heading-xl, .heading-l, .heading-s {
 			margin: 0;
@@ -40,6 +48,10 @@
 		background: $employer;
 		.heading-l {
 			margin-top: 0;
+			color: white;
+		}
+		p {
+			color: white;
 		}
 		.grid-column-one-half {
 			margin-bottom: 3em;
@@ -56,6 +68,9 @@
 		padding-top: 1em;
 		padding-bottom: 2em;
 		background: darken($employer, 10%);
+		p {
+			color: white;
+		}
 		@include media-query($from: tablet) {
 			padding-bottom: 4.5em;
 		}

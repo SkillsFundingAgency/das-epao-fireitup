@@ -207,7 +207,7 @@
      }
 }
 
-#compare-message-panel {
+#compare-message-panel, #basket-confirm-panel {
      display: none;
      position: fixed;
      bottom: 0em;
@@ -230,30 +230,39 @@
           align-items: center;
           div {
                &:first-of-type {
-                    width: 85%;
+                    width: 60%;
+                    @include media-query($from: tablet) {
+                         width: 75%;
+                    }
                }
                &:last-of-type {
-                    width: 15%;
+                    width: 40%;
                     text-align: right;
+                    @include media-query($from: tablet) {
+                         width: 25%;
+                    }
                }
           }
           // justify-content: center;
           h1 {
                font-family: $font-family;
-               font-size: 1.4rem;
+               font-size: 1rem;
                font-weight: bold;
                margin: 0;
                color: white;
                width: auto;
                float: left;
                text-transform: uppercase;
+               @include media-query($from: tablet) {
+                    // font-size: 1.4rem;
+               }
           }
-          p.comparison-item-title {
+          p {
                float: left;
                clear: both;
                margin: 0;
-               color: rgba(white,0.7);
-               font-size: 1.2rem;
+               color: rgba(white,0.8);
+               font-size: 1rem;
                span {
                     margin: 0 0.5em 0 0;
                     &:after {
@@ -269,6 +278,10 @@
           }
           a.button {
                float: right;
+               font-size: 10px;
+               @include media-query($from: tablet) {
+                    font-size: 14px;
+               }
           }
      }
      // span {
@@ -281,6 +294,15 @@
      //      background: url("../images/tick-black.svg") no-repeat 50% 50% $employer;
      //      background-size: 2.5em;
      // }
+}
+
+#basket-confirm-panel {
+     .content {
+          padding: 0.75em 0;
+          a.button {
+
+          }
+     }
 }
 
 // @keyframes compare-open {

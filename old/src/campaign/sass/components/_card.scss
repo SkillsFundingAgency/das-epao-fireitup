@@ -1,0 +1,281 @@
+.card__collection {
+     // background: #fff;
+     margin-bottom: 20px;
+     max-width: 1440px;
+     margin-left: auto;
+     margin-right: auto;
+     @include media-query($from: desktop) {
+          display: flex;
+          align-items: stretch;
+     }
+}
+
+a.card {
+     text-decoration: none;
+     position: relative;
+     display: block;
+     // height: 100%;
+     flex: 1;
+     &:hover, &:active, &:focus { 
+          .card__link {
+               border-bottom: 2px solid black;
+               bottom: 1em;
+          }
+     }
+}
+
+.card__image {
+     height: 200px;
+     position: relative;
+     overflow: hidden;
+     @include media-query($from: tablet) {
+          height: 200px;
+     }
+     @include media-query($from: desktop) {
+          height: 300px;
+     }
+}
+
+.card__img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  background-position: center;
+  transition: all .3s ease;
+}
+
+.card:hover .card__img {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.card__img--agriculture-environment-animal-care { background: url("../images/images/sector-pages/agriculture/720x644/agriculture-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--business-administration { background: url("../images/images/sector-pages/business/720x644/business-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--care-services { background: url("../images/images/sector-pages/care-services/720x644/care-services-4.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--catering-hospitality { background: url("../images/images/sector-pages/catering/720x644/catering-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--construction { background: url("../images/images/sector-pages/construction/720x644/construction-3.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--creative-design { background: url("../images/images/sector-pages/creative/720x644/creative-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--digital { background: url("../images/images/sector-pages/digital/720x644/digital-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--education-childcare { background: url("../images/images/sector-pages/education/720x644/education-3.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--engineering-manufacturing { background: url("../images/images/sector-pages/engineering/720x644/engineering-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--hair-beauty { background: url("../images/images/sector-pages/hair/720x644/hair-3.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--health-science { background: url("../images/images/sector-pages/health/720x644/health-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--legal-finance-accounting { background: url("../images/images/sector-pages/legal/720x644/legal-1.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--protective-services { background: url("../images/images/sector-pages/protective-services/720x644/protective-services-3.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--sales-marketing-procurement { background: url("../images/images/sector-pages/sales/720x644/sales-3.jpg") no-repeat 50% 50%; background-size: cover; }
+.card__img--transport-logistics { background: url("../images/images/sector-pages/transport/720x644/transport-3.jpg") no-repeat 50% 50%; background-size: cover; }
+
+.card__img--employer-1 {
+     background: url("../images/images/case-studies/employer/annie-card-1.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 95px;
+     }
+}
+.card__img--employer-2 {
+     background: url("../images/images/case-studies/employer/bendy-hero-1.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 75px;
+     }
+}
+.card__img--employer-3 {
+     background: url("../images/images/case-studies/employer/gail-hero-1.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 50px;
+     }
+}
+.card__img--employer-4 {
+     background: url("../images/images/case-studies/employer/laura-card-1.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 20px;
+     }
+}
+
+.card__img--apprentice-1 {
+     background: url("../images/images/case-studies/apprentice/alim-card-1.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 95px;
+     }
+}
+.card__img--apprentice-2 {
+     background: url("../images/images/case-studies/apprentice/hozanna-card-1.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 75px;
+     }
+}
+.card__img--apprentice-3 {
+     background: url("../images/images/case-studies/apprentice/sarah-hero-2.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 50px;
+     }
+}
+.card__img--apprentice-4 {
+     background: url("../images/images/case-studies/apprentice/hero-2.jpg") no-repeat 50% 50%;
+     background-size: cover;
+     top: 0;
+     @include media-query($from: tablet) {
+          top: 20px;
+     }
+}
+
+
+
+.grid-column-full-width-one-quarter {
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     a.card {
+          flex: 1;
+     }
+}
+
+.card__content {
+     padding: 20px 20px 90px;
+     @include media-query($from: tablet) {
+          padding: 20px 40px 90px;
+     }
+     // position: relative;
+     h2 {
+          margin-top: 1em;
+     }
+}
+
+.card__summary {
+  color: $text-colour;
+}
+
+.card__link {
+     text-transform: uppercase;
+     font-weight: $font-weight-bold;
+     font-family: $font-family;
+     font-size: 14px;
+     display: inline-block;
+     padding-top: 20px;
+     padding-bottom: 0px;
+     position: absolute;
+     border-bottom: 2px dashed rgba(black,0.2);
+     color: #000;
+     bottom: 0;
+     transition: all .4s ease;
+     &:before {
+          content: "";
+          display: block;
+          height: 2px;
+          width: 50px;
+          background: $apprentice;
+          position: absolute;
+          top: 0;
+          .card--employer & {
+               background: $employer;
+          }
+     }
+}
+
+.interests-row-1, .interests-row-3 {
+     position: relative;
+     z-index: 11;
+     .grid-column-full-width-one-quarter {
+          .card__image {
+               clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+          }
+          &:nth-of-type(1) {
+               // margin-top: -81px;
+               .card__image {
+                    height: 219px;
+                    margin-top: 81px;
+               }
+          }
+          &:nth-of-type(2) {
+               // margin-top: -57px;
+               .card__image {
+                    height: 243px;
+                    margin-top: 57px;
+               }
+          }
+          &:nth-of-type(3) {
+               // margin-top: -30px;
+               .card__image {
+                    height: 270px;
+                    margin-top: 30px;
+               }
+          }
+          &:nth-of-type(4) {
+               // margin-top: 0px;
+               .card__image {
+                    height: 300px;
+                    margin-top: 0px;
+               }
+          }
+     }
+}
+
+.interests-row-1 {
+     margin-top: -120px;
+}
+
+.card__collection--hub-employer, .card__collection--hub-apprentice {
+     margin-top: -40px;
+     @include media-query($from: tablet) {
+          margin-top: -120px;
+     }
+}
+
+.interests-row-2, .interests-row-4 {
+     .grid-column-full-width-one-quarter {
+          .card__image {
+               clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0% 100%);
+          }
+          &:nth-of-type(4) {
+               // margin-top: -81px;
+               .card__image {
+                    height: 219px;
+                    margin-top: 81px;
+               }
+          }
+          &:nth-of-type(3) {
+               // margin-top: -57px;
+               .card__image {
+                    height: 243px;
+                    margin-top: 57px;
+               }
+          }
+          &:nth-of-type(2) {
+               // margin-top: -30px;
+               .card__image {
+                    height: 270px;
+                    margin-top: 30px;
+               }
+          }
+          &:nth-of-type(1) {
+               // margin-top: 0px;
+               .card__image {
+                    height: 300px;
+                    margin-top: 0px;
+               }
+          }
+     }
+}
+
+.interests-row-4 {
+     margin-bottom: 100px;
+}

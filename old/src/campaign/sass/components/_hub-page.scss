@@ -1,0 +1,352 @@
+#hub-page-B, #hub-page-C {
+     .main-content {
+          &.hub-page {
+               display: inline-block;
+               width: 90%;
+               padding: 40px 5% 0 5%;
+               margin-bottom: 0;
+               // clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+               position: relative;
+               z-index: 100;
+               background: white;
+               .main-title-container {
+                    text-align: center;
+                    .heading-l {
+                         margin: 0 0 0em 0;
+                    }
+               }
+               .journey-section {
+                    display: inline-block;
+                    justify-content: center;
+                    align-items: center;
+                    float: left;
+                    width: 100%;
+                    position: relative;
+                    @include media-query($from: tablet) {
+                         display: flex;
+                    }
+                    &.section-1, &.section-2, &.section-3, &.section-4, &.section-5, &.section-6, &.section-7 {
+                         margin-bottom: 8em;
+                         @include media-query($from: tablet) {
+                              margin-bottom: 0em;
+                         }
+                         .border {
+                              position: absolute;
+                              top: -8em;
+                              bottom: 5em;
+                              background: none;
+                              &:before {
+                                   content: '';
+                                   display: inline-block;
+                                   position: absolute;
+                                   width: 0px;
+                                   border: 5px dashed $employer;
+                                   top: 0;
+                                   bottom: 0;
+                                   left: 48.75%;
+                              }
+                              @include media-query($from: tablet) {
+                                   background: url("../images/employer/dotted-line.svg") no-repeat 50% 50%;
+                                   background-size: 70%;
+                                   &:before {
+                                        display: none;
+                                   }
+                              }
+                              width: 100%;
+                              height: 8em;
+                              @include media-query($from: tablet) {
+                                   top: -5em;
+                                   width: 50%;
+                                   height: 5em;
+                              }
+                              .spot {
+                                   background: $employer;
+                                   display: inline-block;
+                                   border-radius: 50%;
+                                   width: 1.5em;
+                                   height: 1.5em;
+                                   position: absolute;
+                                   border: 4px solid white;
+                                   // margin: 20px;
+                                   &:after {
+                                        content: '';
+                                        position: absolute;
+                                        top: -8px;
+                                        left: -8px;
+                                        right: -8px;
+                                        bottom: -8px;
+                                        background: $employer;
+                                        z-index: -1;
+                                        border-radius: 50%;
+                                   }
+                                   &.top {
+                                        top: -0.75em;
+                                        left: 50%;
+                                        margin-left: -1em;
+                                        @include media-query($from: tablet) {
+                                             left: 4.3em;
+                                             margin-left: 0;
+                                        }
+                                   }
+                                   &.bottom {
+                                        bottom: -0.75em;
+                                        right: 50%;
+                                        margin-right: -1em;
+                                        @include media-query($from: tablet) {
+                                             right: 4.3em;
+                                             margin-right: 0;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    &.section-1 {
+                         margin-top: 2em;
+                         z-index: 1;
+                         .image {
+                              order: 1;
+                         }
+                         .text {
+                              order: 2;
+                         }
+                    }
+                    &.section-2 {
+                         z-index: 2;
+                         .image {
+                              order: 2;
+                         }
+                         .text {
+                              order: 1;
+                         }
+                    }
+                    &.section-3 {
+                         z-index: 3;
+                         .image {
+                              order: 1;
+                         }
+                         .text {
+                              order: 2;
+                         }
+                         .border {
+                              transform: scaleX(-1);
+                              // .spot {
+                              //      &.top {
+                              //           left: inherit;
+                              //           right: -1em;
+                              //      }
+                              //      &.bottom {
+                              //           left: -1em;
+                              //           right: inherit;
+                              //      }
+                              // }
+                         }
+                    }
+                    &.section-4 {
+                         z-index: 4;
+                         margin-bottom: 2em;
+                         .image {
+                              order: 2;
+                         }
+                         .text {
+                              order: 1;
+                         }
+                    }
+                    .image, .text {
+                         flex: 1 auto;
+                         vertical-align: middle;
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 50%;
+                         }
+                    }
+                    .image {
+                         text-align: center;
+                         margin: 0 0 1em 0;
+                         @include media-query($from: tablet) {
+                              margin: 0;
+                         }
+                         img {
+                              width: 60%;
+                              display: inline-block;
+                              position: relative;
+                              z-index: -10;
+                         }
+                    }
+                    .text {
+                         text-align: center;
+                         h1, h2, h3, h4 {
+                              margin: 0 0 0 0;
+                              @include media-query($from: tablet) {
+                                   margin: -1em 0 0 0;
+                              }
+                         }
+                         p {
+                              margin-top: 0;
+                              strong {
+                                   color: $employer;
+                                   font-weight: bold;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}
+
+section {
+     &.title-container {
+          padding: 2em 0;
+          background: $employer;
+          clip-path: none;
+          position: relative;
+          z-index: 1;
+          margin: 0 0 2em 0;
+          @include media-query($from: tablet) {
+               margin: 0 0 1em 0;
+               padding: 6em 0;
+               clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
+          }
+          .content-wrapper {
+               text-align: center;
+               padding: 0 5%;
+               h1, h2, h3, h4, p {
+                    margin: 0;
+               }
+          }
+     }
+}
+
+#hub-page-C {
+     .main-content {
+          &.hub-page {
+               .journey-section {
+                    width: 100%;
+                    text-align: center;
+                    @include media-query($from: tablet) {
+                         width: 60%;
+                    }
+                    &.section-1, &.section-2, &.section-3, &.section-4, &.section-5, &.section-6, &.section-7 {
+                         margin-top: 0;
+                         margin-bottom: 6em;
+                         @include media-query($from: tablet) {
+                              margin-top: -4em;
+                              margin-bottom: 2em;
+                         }
+                         .border {
+                              width: 100%;
+                              height: 9em;
+                              top: -5.5em;
+                              @include media-query($from: tablet) {
+                                   width: 65%;
+                                   height: 10.25em;
+                                   top: -7em;
+                                   background: url("../images/employer/dotted-line-corner.svg") no-repeat -8em 0em;
+                                   background-size: 100%;
+                              }
+                              .spot {
+                                   &.top {
+                                        left: 50%;
+                                        @include media-query($from: tablet) {
+                                             left: 0;
+                                        }
+                                   }
+                                   &.bottom {
+                                        right: 50%;
+                                        @include media-query($from: tablet) {
+                                             right: 7.25em;
+                                        }
+                                   }
+                              }
+                         }
+                    }
+                    &.section-1 {
+                         margin-top: 0;
+                    }
+                    &.section-2 {
+                         float: right;
+                         .border {
+                              right: 0;
+                         }
+                    }
+                    &.section-3 {
+                         .border {
+                              left: 0;
+                         }
+                    }
+                    &.section-4 {
+                         margin-bottom: 6em;
+                         float: right;
+                         @include media-query($from: tablet) {
+                              margin-bottom: 0;
+                         }
+                         .border {
+                              right: 0;
+                         }
+                    }
+                    &.section-5 {
+                         z-index: 5;
+                         .border {
+                              left: 0;
+                              transform: scaleX(-1);
+                         }
+                         .image {
+                              order: 1;
+                         }
+                         .text {
+                              order: 2;
+                         }
+                    }
+                    &.section-6 {
+                         z-index: 6;
+                         float: right;
+                         .border {
+                              right: 0;
+                         }
+                         .image {
+                              order: 2;
+                         }
+                         .text {
+                              order: 1;
+                         }
+                    }
+                    &.section-7 {
+                         z-index: 4;
+                         margin-bottom: 2em;
+                         .border {
+                              left: 0;
+                              transform: scaleX(-1);
+                         }
+                         .image {
+                              order: 1;
+                         }
+                         .text {
+                              order: 2;
+                         }
+                    }
+                    .image {
+                         width: 80%;
+                         margin-bottom: 0;
+                         text-align: center;
+                         display: inline-block;
+                         @include media-query($from: tablet) {
+                              width: 40%;
+                         }
+                         img {
+                              width: 100%;
+                         }
+                    }
+                    .text {
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 60%;
+                         }
+                         h1, h2, h3, h4 {
+                              @include media-query($from: tablet) {
+                                   margin: 0 0 0 0;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+}

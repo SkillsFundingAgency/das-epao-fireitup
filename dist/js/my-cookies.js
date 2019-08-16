@@ -128,13 +128,13 @@ $(".link-FAT-search").on("click", function (e) {
 // Populates the fields
 if ($.cookie("fat-search-location")) {
      $('.fat-search-location').text($.cookie("fat-search-location"));
-     $('.fat-search-location').val($.cookie("fat-search-location"));
+     $('.fat-search-location, #fat-search-postcode').val($.cookie("fat-search-location"));
 }
 
 
 // TRAINING PROVIDER TITLE
 // Stores the cookie
-$("#fat-training-provider-results .search-result a.training-provider-title").on("click", function (e) {
+$("a.training-provider-title").on("click", function (e) {
      $.cookie("fat-training-provider-title", $(this).text(), {path:'/'});
 });
 
@@ -161,7 +161,6 @@ if ($.cookie("fat-save-email-true") == 'true') {
      // setTimeout(function() {
      //      $('#email-message-panel').slideUp();
      // }, 5000);
-
 } else {
      $('#email-message-panel').hide();
      $('.wrap.fat').addClass('FAT-basket-empty');
@@ -186,3 +185,16 @@ if ($.cookie("fat-sector-true") == 'true') {
      $('.fat-hero .fat-sector-title').text($.cookie("fat-sector-title"));
 }
 /////////////////// FAT SECTOR COOKIES - END ///////////////////
+
+/////////////////// EMAIL ME COOKIES - START ///////////////////
+$("#btn-email").on("click", function (e) {
+     $.cookie("FirstName-Email", $('#FirstName-Email').val(), {path:'/'});
+     $.cookie("LastName-Email", $('#LastName-Email').val(), {path:'/'});
+     $.cookie("Email-Email", $('#Email-Email').val(), {path:'/'});
+});
+
+// Populates the fields
+if ($.cookie("FirstName-Email")) { $('.FirstName-Email').text($.cookie("FirstName-Email")); }
+if ($.cookie("LastName-Email")) { $('.LastName-Email').text($.cookie("LastName-Email")); }
+if ($.cookie("Email-Email")) { $('.Email-Email').text($.cookie("Email-Email")); }
+/////////////////// EMAIL ME COOKIES - END ///////////////////

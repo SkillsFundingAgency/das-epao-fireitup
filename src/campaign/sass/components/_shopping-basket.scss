@@ -6,7 +6,7 @@
 .confirmation-message-panel {
      display: block;
      position: fixed;
-     top: 7em;
+     top: 10em;
      right: 1em;
      width: 20em;
      z-index: 1000;
@@ -37,8 +37,20 @@
           bottom: 0;
           width: 4em;
           border-radius: 5px 0 0 5px;
-          background: url("../images/tick-black.svg") no-repeat 50% 50% $employer;
+          background: url("../images/tick-white.svg") no-repeat 50% 50% $employer;
           background-size: 2.5em;
+     }
+     &.delete-panel {
+          span {
+               background: url("../images/delete-white.svg") no-repeat 50% 50% #df3034;
+               background-size: 2em;
+          }
+     }
+}
+
+.delete-panel {
+     span {
+          background-color: red;
      }
 }
 
@@ -94,23 +106,42 @@
      width: 100%;
      font-family: $font-family;
      ol#your-selected-items {
-          padding: 0 0 0 4em;
+          padding: 0 20px;
+          @include media-query($from: tablet) {
+               padding: 0 0 0 4em;
+          }
           li {
                &:before {
                     font-weight: bold;
-                    height: 71px;
+                    height: 50px;
                     width: 50px;
-                    margin: -6px 0px 0px -70px;
-                    padding: 0px 15px 0px 0px;
+                    margin: -6px 0px 0px 0;
+                    padding: 5px 15px 0px 10px;
+                    font-size: 0.875em;
+                    text-align: left;
+                    @include media-query($from: tablet) {
+                         height: 61px;
+                         font-size: 1.2em;
+                         margin: -6px 0px 0px -70px;
+                    }
                }
                &.basket-item {
                     display: inline-block;
                     width: 100%;
                     margin: 0 0 4em 0;
-                    h2.heading-l {
-                         margin: 0 0 0.75em 0;
+                    &:last-of-type {
+                         margin: 0 0 0em 0;
+                    }
+                    h2.heading-l, h2.heading-m {
+                         margin: 2.5em 0 0.75em 0;
                          padding: 0 0 0.75em 0;
                          border-bottom: 1px solid rgba(black,0.1);
+                         text-transform: inherit;
+                         font-size: 25px;
+                         @include media-query($from: tablet) {
+                              margin: 0 0 0.75em 0;
+                              font-size: 30px;
+                         }
                          a {
                               color: $apprentice;
                               &.apprenticeship-title {
@@ -142,10 +173,13 @@
                     }
                     .left-content, .right-content {
                          display: inline-block;
-                         width: 50%;
                          float: left;
                     }
                     .left-content {
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 50%;
+                         }
                          .new {
                               background: red;
                               color: white;
@@ -161,14 +195,44 @@
                          }
                     }
                     .right-content {
-                         .heading-s {
-                              margin-top: 0;
+                         width: 100%;
+                         @include media-query($from: tablet) {
+                              width: 45%;
+                              padding: 0 0 0 5%;
+                         }
+                         .postcode-wrapper {
+                              background: rgba(black, 0.1);
+                              // background: $employer;
+                              padding: 0 5%;
+                              display: inline-block;
+                              width: 90%;
+                              margin: 1em 0 0 0;
+                              @include media-query($from: tablet) {
+                                   margin: 0 0 0 0;
+                              }
+                              a.button {
+                                   background: black;
+                                   color: white;
+                              }
+                              input[type="text"] {
+                                   width: 90%;
+                                   @include media-query($from: tablet) {
+                                        width: 100%;
+                                        margin-bottom: 0;
+                                   }
+                              }
+                              .faa-fat-link-block.cta-fat.search .cta-fat__action {
+                                   width: 60%;
+                              }
+                         }
+                         h1, h2, h3, h4 {
+                              margin-top: 1em;
                          }
                          ul.training-providers-list {
                               padding: 0;
                               li {
                                    list-style: none;
-                                   margin: 0 0 0.5em 0;
+                                   margin: 0 0 0.75em 0;
                                    font-size: 1.2rem;
                                    a {
                                         color: $apprentice;
@@ -237,7 +301,7 @@
                               input[type="search"] {
                                    width: inherit;
                               }
-                              #link-FAT-search, #link-FAT-search-provider {
+                              #link-FAT-search, #link-FAT-search-provider, #link-location-search {
                                    padding: 14px 20px 14px 20px;
                                    margin: 1px 0 0 -3px;
                               }
@@ -246,6 +310,16 @@
                }
           }
      }
+}
+
+.favourites-icon {
+     display: inline-block;
+     width: 1.5em;
+     height: 1.5em;
+     float: left;
+     margin: -0.15em 0.75em 0 0;
+     background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+     background-size: contain;
 }
 
 .saved-icon {

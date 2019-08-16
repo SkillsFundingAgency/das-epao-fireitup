@@ -74,9 +74,14 @@ blockquote {
                }
           }
           .quote {
-               width: 5em;
-               height: 5em;
-               margin: 0 0 1em 0;
+               width: 4em;
+               height: 4em;
+               margin: 0 0 0 0;
+               @include media-query($from: tablet) {
+                    width: 5em;
+                    height: 5em;
+                    margin: 0 0 1em 0;
+               }
           }
           h2 {
                width: 100%;
@@ -96,13 +101,13 @@ blockquote {
                background: $employer;
                margin-top: -4em;
                h2 {
-                    color: black;
+                    color: white;
                }
                // .cite {
                //      color: black;
                // }
                .quote {
-                    background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
+                    background: url("../images/icon-quotes-large-white.svg") no-repeat 50% 50%;
                     background-size: contain;
                }
           }
@@ -152,7 +157,7 @@ blockquote {
           .cite {
                color: $apprentice;
                .cite-detail {
-                    color: black;
+                    color: $apprentice-mid;
                }
           }
           &.full-width {
@@ -188,23 +193,26 @@ blockquote {
                }
           }
           .cite {
-               color: #646c6f;
-               .cite-detail {
-                    color: black;
-               }
+               color: white;
+               // .cite-detail {
+               //      color: black;
+               // }
           }
           &.full-width {
                background: $employer;
+               // h2 {
+               //      color: black;
+               // }
                .cite {
-                    color: white;
+                    // color: black;
                     .cite-detail {
-                         color: black;
+                         color: rgba(white,0.5);
                     }
                }
-               .quote {
-                    background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
-                    background-size: contain;
-               }
+               // .quote {
+               //      background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
+               //      background-size: contain;
+               // }
           }
      }
 }
@@ -218,14 +226,6 @@ blockquote {
      margin-bottom: 0;
      &.second-quote {
           margin-top: -6.5em;
-     }
-     &.employer-quotes {
-          background: #FFF4DF;
-          .quote-wrapper {
-               .heading-xs {
-                    color: rgba(black,0.6);
-               }
-          }
      }
      @include media-query($from: tablet) {
           clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
@@ -339,8 +339,11 @@ blockquote {
           }
      }
      &.employer-quotes {
-          background: #FFF4DF;
+          background: $employer-pale;
           .quote-wrapper {
+               .heading-xs {
+                    color: rgba(black,0.6);
+               }
                .caption {
                     .caption-text {
                          border-bottom: 2px solid $employer;
@@ -350,7 +353,7 @@ blockquote {
           .quote-block-black {
                .logo {
                     background: $employer;
-                    color: black;
+                    color: white;
                }
           }
           blockquote {

@@ -92,12 +92,12 @@ $cbk-primary-colour: #000000;
 
 .save-label {
      .checkboxes__input + .checkboxes__label::before {
-          background: url("../images/save-unchecked.svg") no-repeat 50% 50%;
+          background: url("../images/favourite-unchecked-employer.svg") no-repeat 50% 50%;
           background-size: contain;
           border: none;
      }
      .checkboxes__input + .checkboxes__label::after {
-          background: url("../images/save-checked.svg") no-repeat 50% 50%;
+          background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
           background-size: contain;
           border: none;
           transform: rotate(0);

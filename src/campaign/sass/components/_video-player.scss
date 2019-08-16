@@ -8,7 +8,7 @@
   top: 20%;
   left: 20px;
   right: 20px;
-  z-index: 1000;
+  z-index: 30000;
   max-height: 90%;
 
   &.video-player__playing {
@@ -77,11 +77,11 @@
 }
 
 .plyr__control--overlaid {
-  background: $apprentice;
-  padding: 20px;
-  .video-player--employer & {
-    background: $employer;
-  }
+     background: $apprentice;
+     padding: 20px;
+     .video-player--employer & {
+          background: $employer;
+     }
 }
 
 .plyr__control {
@@ -109,7 +109,7 @@
   }
   .video-player--employer & {
     background-color: $employer;
-    background-image: url("../images/icon-cross-black.svg");
+    // background-image: url("../images/icon-cross-black.svg");
     &:active,
     &:focus {
       outline: 3px solid #fff;

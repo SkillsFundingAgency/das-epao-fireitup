@@ -20,8 +20,7 @@
     if(typeof txt === 'undefined' || txt === null){
       return ele;
     }
-    var tn = document.createTextNode(txt);
-    ele.appendChild(tn);
+    ele.innerHTML = txt;
     return ele;
   }
   var KEY_ESC = 27;
@@ -91,6 +90,7 @@
       input = ce('input', 'msc-input');
 
     body.appendChild(ce('p','msc-sub', options.subtitle));
+    console.log(options.subtitle)
 
     action.appendChild(okBtn);
     if(type !== "alert") {

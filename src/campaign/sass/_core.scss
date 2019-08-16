@@ -1,3 +1,53 @@
+body {
+     &.employer-page, &.apprentice-page {
+          .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+               display: none;
+               &.js-show {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: inline-block;
+                    }
+               }
+          }
+          .current-user {
+               .navigation__sub-menu--employer, .navigation__sub-menu--apprentice {
+                    display: inline-block;
+                    .navigation__sub-menu {
+                         display: none;
+                         @include media-query($from: tablet) {
+                              display: none;
+                         }
+                    }
+                    .navigation__list-item {
+                         &:hover, &:active, &:focus {
+                              .navigation__sub-menu {
+                                   display: inline-block;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     @include media-query($from: tablet) {
+          &.employer-page {
+               .navigation__sub-menu--employer {
+                    display: inline-block;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: none;
+               }
+          }
+          &.apprentice-page {
+               .navigation__sub-menu--employer {
+                    display: none;
+               }
+               .navigation__sub-menu--apprentice {
+                    display: inline-block;
+               }
+          }
+     }
+}
+
 html {
      scroll-behavior: smooth;
 }
@@ -8,6 +58,7 @@ html {
      // background: $page-bg;
      &.index {
           background: $page-bg;
+          overflow: hidden;
      }
      &.real-stories {
           background: #F8F8F8;
@@ -148,12 +199,25 @@ html {
           @include media-query($from: tablet) {
                padding-top: 40px;
           }
+          .cta-row {
+               margin-top: 4em;
+               .form-group.radios {
+                    margin-top: 0;
+               }
+          }
      }
      &.page-app-2-B {
           padding-top: 20px;
           @include media-query($from: tablet) {
                // padding: 50px;
                padding: 10px 80px 0px 80px;
+          }
+     }
+     &.page-em-7 {
+          padding: 0;
+          .page {
+               padding: 0;
+               min-height: 1px;
           }
      }
      @include media-query($from: tablet) {
@@ -174,7 +238,15 @@ html {
                padding: 0;
                margin: 0;
                .heading-l {
-                    width: 50%;
+                    width: 100%;
+                    @include media-query($from: tablet) {
+                         width: 50%;
+                    }
+               }
+               .faa-fat-link-block {
+                    .heading-l {
+                         width: 100%;
+                    }
                }
           }
      }
@@ -253,6 +325,17 @@ html {
                          padding-right: 5%;
                          margin-top: 0;
                     }
+               }
+          }
+     }
+}
+
+.email-me-page, .share-me-page {
+     .main-content {
+          padding-bottom: 40px;
+          .page {
+               @include media-query($from: tablet) {
+                    min-height: auto;
                }
           }
      }
@@ -342,14 +425,14 @@ html {
 
 .provider-details {
      a {
-          color: $apprentice;
+          color: white;
           &[rel~="external"] {
                &:after {
                     content: '';
                     display: inline-block;
                     height: 20px;
                     width: 20px;
-                    background-image: url("../images/icon-link-external-blue.svg");
+                    background-image: url("../images/icon-link-external-white.svg");
                     background-size: contain;
                     background-repeat: no-repeat;
                     vertical-align: bottom;
@@ -359,15 +442,27 @@ html {
      }
 }
 
-main.FAT-basket {
-     @include media-query($from: tablet) {
-          padding: 80px 80px 80px 80px;
+main {
+     &.employer, &.apprentice {
+          padding-top: 3em;
+          &.interests-page {
+               padding-top: 6em;
+          }
      }
-     .page {
-          min-height: 1px;
+     &.FAT-basket {
+          @include media-query($from: tablet) {
+               padding: 40px 80px 80px 80px;
+          }
+          .page {
+               min-height: 1px;
+          }
      }
 }
 
+.faa-cta-banner {
+     display: block;
+     // margin-top: 4em;
+}
 
 .section-break {
   margin: 0;
@@ -398,5 +493,17 @@ main.FAT-basket {
      display: none !important;
      @include media-query($from: tablet) {
           display: inline-block !important;
+     }
+}
+
+#main-content {
+     &.employer {
+          .main-content {
+               h1, h2, h3, h4 {
+                    span {
+                         color: $employer;
+                    }
+               }
+          }
      }
 }

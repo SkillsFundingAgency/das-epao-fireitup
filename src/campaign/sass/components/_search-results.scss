@@ -16,7 +16,7 @@
                content: counter(results-counter);
                color: #fff;
                font-size: 2.3em;
-               padding: 6px 15px 0px 0px;
+               padding: 2px 15px 0px 0px;
                font-family: nobel,sans-serif;
                -webkit-font-smoothing: antialiased;
                text-align: center;
@@ -29,7 +29,7 @@
           > li {
                &:before{
                     background-image: url("../images/number-employer.svg");
-                    color: black;
+                    // color: black;
                }
           }
      }

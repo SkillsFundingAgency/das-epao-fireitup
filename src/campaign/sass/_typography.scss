@@ -40,7 +40,7 @@ main {
      &.apprentice, &.employer {
           .page {
                .heading-s {
-                 color: $grey-3;
+                    color: $grey-3;
                }
           }
      }
@@ -72,7 +72,7 @@ main {
 }
 
 .heading--success {
-  color: $green;
+     color: $green;
 }
 
 .heading__icon {
@@ -125,7 +125,7 @@ main {
 
 // Generic
 
-p, ul li {
+p, ul li, ol li, details, label {
      @include typography-common;
      font-weight: $font-weight-light;
      font-size: 21px;
@@ -136,6 +136,14 @@ p, ul li {
      }
      &.no-margin-bottom {
           margin-bottom: 0;
+     }
+}
+
+details {
+     a {
+          @include typography-common;
+          color: $apprentice;
+          text-decoration: underline;
      }
 }
 
@@ -201,4 +209,14 @@ p, ul li {
 
 .bold{
 font-weight: 700;
+}
+
+h3.msc-title {
+  &:empty {
+    display: none;
+  }
+}
+
+p.msc-sub {
+  margin-top: 0;
 }

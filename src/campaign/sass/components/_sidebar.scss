@@ -27,49 +27,98 @@
                     }
                }
           }
+          .sidebar-nav {
+               a.show, a.hide {
+                    color: $employer;
+               }
+          }
      }
      &.FAT-basket {
-          margin-top: 30px;
+          margin-top: 0em;
           margin-right: 0;
+          margin-left: 0;
           float: none;
           @include media-query($from: tablet) {
                float: right;
+               margin-left: -3em;
           }
           .shopping-basket {
                background: $employer;
                padding: 2em 1.5em 2.5em 1.5em;
                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0%);
+               width: 87%;
                @include media-query($from: tablet) {
-                    padding: 4em 30px;
+                    padding: 4em 30px 4em 30px;
                     margin: 0;
                     clip-path: polygon(0 100%, 100% 91.4%, 100% 0, 0 8.6%);
                }
                &.secondary-basket {
-                    background: darken(white,70%);
+                    background: black;
+                    // background: darken(white,70%);
+                    input[type="search"], input[type="text"] {
+                         width: 70%;
+                         margin-bottom: 0;
+                    }
+                    #link-FAT-search, #save-this-standard, #link-FAT-search-provider, #link-location-search {
+                         background: $employer;
+                         color: white;
+                    }
+                    .link-FAT-search {
+                         float: left;
+                         width: 30%;
+                         margin-top: 0 !important;
+                         background: #4d4d4d;
+                    }
                     p {
                          color: white;
                     }
                }
                h1 {
-                    margin-bottom: 1.25em;
+                    margin-bottom: 0.5em;
+               }
+               p {
+                    color: white;
                }
                a.button {
                     width: 100%;
+                    background: black;
+                    color: white;
                }
           }
      }
 }
 
-.email-me {
+.email-me, .share-me, .create-account {
      display: inline-block;
      margin: 1em 0 0 0;
-     font-size: 1.4rem;
+     font-size: 1.2rem;
      font-family: $font-family;
      font-weight: bold;
-     color: black;
+     color: white;
+     padding: 0 0 0 1.75em;
+     background: url("../images/email-white.svg") no-repeat 0% 0%;
+     background-size: 1.2em;
+     min-height: 1.5em;
+}
+
+.email-me {
+     margin: 0.5em 0 0 0;
+}
+
+
+.share-me {
      padding: 0 0 0 2em;
-     background: url("../images/email-black.svg") no-repeat 0% 50%;
-     background-size: contain;
+     background: url("../images/email-white.svg") no-repeat 0% 50%;
+     background-size: 1.35em;
+}
+
+.create-account {
+     border: none;
+     width: 100%;
+     text-align: left;
+     text-decoration: underline;
+     background: url("../images/go-uk-crown-white.png") no-repeat 0% 50%;
+     background-size: 1.35em;
 }
 
 .sidebar__hero {
@@ -112,7 +161,7 @@
       bottom: 0;
       border-style: solid;
       border-width: 0 0 50px 475px;
-      border-color: transparent transparent $apprentice-mid;
+      border-color: transparent transparent $apprentice-light;
     }
   }
   .sidebar--employer & {
@@ -200,17 +249,17 @@
 }
 
 .sidebar__heading {
-  color: #fff;
-  margin: .2em 0 0;
-  .sidebar--employer & {
-    color: $black;
-  }
+     color: #fff;
+     margin: .2em 0 0;
+     // .sidebar--employer & {
+     //      color: white;
+     // }
 }
 
 .sidebar__content {
      padding: 20px 20px 50px 20px;
      margin-bottom: 120px;
-     background: darken(#F5FAFF,2.5%);
+     background: $apprentice-light;
      // background: $apprentice-mid;
      position: relative;
      z-index: 10;
@@ -330,7 +379,7 @@ $timeline-width: 2px;
                     // color: #fff;
                     .sidebar--employer & {
                          background-color: $employer;
-                         color: black;
+                         // color: black;
                     }
                }
                & > ul {
@@ -425,7 +474,7 @@ $timeline-width: 2px;
           position: relative;
           // overflow: hidden;
           @include media-query($from: tablet) {
-               padding: 40px 40px 100px 40px;
+               padding: 40px 40px 80px 40px;
           }
           &:before, &:after {
                display: none;
@@ -472,7 +521,7 @@ $timeline-width: 2px;
                clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0%);
                @include media-query($from: tablet) {
                     clip-path: polygon(0 100%, 100% 86.4%, 100% 0, 0 13.6%);
-                    padding: 100px 40px 100px 40px;
+                    padding: 70px 40px 70px 40px;
                     margin-top: 0;
                }
                .sidebar__heading {
@@ -521,7 +570,7 @@ $timeline-width: 2px;
           }
           &.sticky {
                display: inline-block;
-               top: 6em;
+               top: 8em;
                right: 80px;
                position: fixed;
                display: inline-block;

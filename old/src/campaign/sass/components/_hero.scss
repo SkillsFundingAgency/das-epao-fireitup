@@ -1,0 +1,446 @@
+.hero {
+     background-color: white;
+     background-image: url("../images/bokeh-tint-bg.jpg");
+     background-size: cover;
+     padding: 110px 20px 50px;
+     color: white;
+     position: relative;
+     z-index: 10;
+     clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+     // &:after {
+     //      content: '';
+     //      position: absolute;
+     //      left: 0;
+     //      right: 0;
+     //      bottom: 0;
+     //      border-style: solid;
+     //      border-width: 0 0 151px 1440px;
+     //      border-color: transparent transparent #fff;
+     //      z-index: -1;
+     // }
+     &#em-FAT-3-header {
+          background: none;
+          // clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
+          clip-path: none !important;
+          position: relative;
+          .background-image {
+               position: absolute;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               left: 0;
+               background-image: url("../images/bokeh-tint-bg.jpg");
+               background-size: cover;
+               clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
+               z-index: 1;
+          }
+          input[type="search"], input[type="text"] {
+               width: 70%;
+          }
+          #link-FAT-search {
+               width: 30%;
+               margin: 0;
+          }
+          .grid-row {
+               position: relative;
+               z-index: 10;
+          }
+          .grid-column-two-thirds {
+               @include media-query($from: tablet) {
+                    padding-right: 5%;
+               }
+               .text-wrapper {
+                    @include media-query($from: tablet) {
+                         width: 80%;
+                    }
+               }
+          }
+          .grid-column-one-third {
+               position: relative;
+               float: right;
+               .sidebar {
+                    top: 0;
+                    .shopping-basket {
+                         margin-right: -60px;
+                         p {
+                              color: black;
+                         }
+                    }
+               }
+          }
+     }
+     @include media-query($from: tablet) {
+          padding: 140px 40px 80px;
+          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+     }
+     @include media-query($from: desktop) {
+          padding: 140px 80px 80px;
+     }
+     .list--arrows {
+          margin-top: 1.5em;
+          display: inline-block;
+          width: 100%;
+          width: 94%;
+          padding-left: 6%;
+          @include media-query($from: tablet) {
+               width: 100%;
+          }
+     }
+     .hmrc-gov {
+          position: relative;
+          right: auto;
+          bottom: auto;
+          margin: 1em 0 0 0;
+     }
+     .grid-row {
+          max-width: 1440px;
+          margin-left: auto;
+          margin-right: auto;
+          .grid-column-one-half {
+               padding: 0;
+          }
+     }
+     &.no-side-nav {
+          padding-bottom: 0px !important;
+          clip-path: none !important;
+          @include media-query($from: tablet) {
+               padding-bottom: 90px;
+          }
+          .sidebar.FAT-basket {
+               margin: 20px -20px 0px -20px;
+          }
+     }
+     &.interests-page {
+          position: relative;
+          background: none;
+          clip-path: none;
+          min-height: 56em;
+          padding-bottom: 0;
+          .grid-row {
+               position: relative;
+               z-index: 10;
+               .grid-column-one-half {
+                    &.image-holder {
+                         position: relative;
+                    }
+               }
+          }
+          .hero-heading__content {
+               margin: 0px 0 40px 0;
+               @include media-query($from: tablet) {
+                    margin: 0px 0 70px 0;
+               }
+          }
+          .background-colour {
+               position: absolute;
+               z-index: 2;
+               background: $apprentice;
+               bottom: -3em;
+               left: 0;
+               right: 0;
+               min-height: 38em;
+               @include media-query($from: tablet) {
+                    min-height: 33em;
+                    clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
+               }
+          }
+          .background-image {
+               clip-path: none;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 90%);
+               }
+               position: absolute;
+               z-index: 1;
+               top: 0;
+               right: 0;
+               bottom: 0;
+               left: 0;
+               background-image: url("../images/bokeh-tint-bg.jpg");
+               background-size: cover;
+          }
+          img {
+               display: none;
+               @include media-query($from: tablet) {
+                    display: inline-block;
+                    clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+                    position: absolute;
+                    right: -5em;
+                    top: 0;
+               }
+          }
+     }
+     &.faa-hero, &.faa-search-hero, &.fat-hero, &.fat-search-hero {
+          position: relative;
+          clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 95%);
+          // min-height: 25em;
+          min-height: auto;
+          padding-top: 110px;
+          padding-bottom: 30px;
+          // background: none;
+          @include media-query($from: tablet) {
+               padding-bottom: 60px;
+               clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
+          }
+          &.no-side-nav {
+               padding-bottom: 40px !important;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
+                    padding-bottom: 50px !important;
+               }
+          }
+          &.no-results-page {
+               clip-path: none;
+               margin-bottom: -30px;
+          }
+          .grid-column-one-half {
+               // min-height: 25em;
+               min-height: auto;
+               position: relative;
+          }
+          .hero-heading, .hmrc-gov {
+               position: relative;
+               z-index: 10;
+          }
+          .hero-heading {
+               margin-bottom: 10px;
+               h1 {
+                    color: white;
+                    // text-shadow: 7px 7px rgba(white,0.7);
+               }
+          }
+          .text-wrapper {
+               margin-top: 10px;
+               // p {
+               //      color: $text-colour;
+               // }
+          }
+          // .hmrc-gov {
+          //      background: url("../images/hm-government-logo-black.png") no-repeat;
+          //      background-size: cover;
+          //      position: absolute;
+          //      left: 0;
+          //      bottom: 0;
+          // }
+          // #mapDev {
+          //      min-height: 45em;
+          //      position: absolute;
+          //      overflow: visible;
+          //      top: 0;
+          //      left: 0;
+          //      right: 0;
+          //      bottom: 0;
+          //      z-index: 1;
+          //      clip-path: none;
+          // }
+     }
+     &.fat-hero {
+          .form-group.radios {
+               margin: 0;
+               .checkboxes__item {
+                    float: left;
+                    clear: none;
+                    width: auto;
+                    margin: 0 1em 0 0;
+                    label {
+                         color: white;
+                    }
+                    &.save-label {
+
+                    }
+                    &.compare-label {
+
+                    }
+               }
+          }
+          .sector-info {
+               display: none;
+          }
+     }
+     &.faa-search-hero {
+          padding-bottom: 110px;
+          .faa-fat-link-block {
+               &.cta-faa {
+                    &.search {
+                         margin: 2.5em 0 1.5em 0;
+                         .cta-faa__action {
+                              width: 100%;
+                              .form-group {
+                                   margin-bottom: 1em;
+                                   display: inline-block;
+                                   width: 100%;
+                                   #faa-search-keyword, #faa-search-location, #Distance, #faa-search-interest {
+                                        float: left;
+                                   }
+                                   #faa-search-keyword {
+                                        width: 65%;
+                                   }
+                                   #faa-search-interest {
+                                        width: 100%;
+                                        @include media-query($from: tablet) {
+                                             width: auto;
+                                        }
+                                   }
+                                   #faa-search-location {
+                                        width: 60%;
+                                        margin-right: 5%;
+                                        @include media-query($from: tablet) {
+                                             width: 40%;
+                                             margin-right: 5%;
+                                        }
+                                   }
+                                   #Distance {
+                                        width: 35%;
+                                        @include media-query($from: tablet) {
+                                             width: 25%;
+                                        }
+                                   }
+                              }
+                              #link-FAA-search, #link-FAA-Cta {
+                                   position: relative;
+                                   right: inherit;
+                              }
+                         }
+                    }
+               }
+          }
+     }
+     &.register {
+          .hero-heading__content {
+               margin: 0;
+          }
+     }
+     &.FAT-basket {
+          @include media-query($from: desktop) {
+               padding: 140px 80px 60px;
+          }
+          .grid-column-one-third {
+               float: right;
+          }
+          .hero-heading {
+               margin-bottom: 0;
+               .hero-heading__heading {
+                    font-size: 30px;
+                    @include media-query($from: desktop) {
+                         font-size: 50px;
+                    }
+               }
+          }
+          .text-wrapper {
+               span.separator {
+                    margin: 26px 2em 0 2em;
+                    width: 2px;
+                    background: rgba(white,0.3);
+                    height: 2.5em;
+                    display: inline-block;
+                    float: left;
+               }
+               p {
+                    width: auto;
+                    float: left;
+                    margin-bottom: 0;
+                    // margin-right: 2em;
+                    span {
+                         &.number {
+                              width: 2em;
+                              height: 2em;
+                              margin: 0 0.5em 0 0;
+                              font-weight: bold;
+                              border-radius: 50%;
+                              display: flex;
+                              align-items: center;
+                              justify-content: center;
+                              background: $employer;
+                              color: black;
+                              font-size: 18px;
+                              float: left;
+                         }
+                    }
+               }
+          }
+     }
+     .provider-details {
+          color: black;
+     }
+     .text-wrapper {
+          display: inline-block;
+          width: 100%;
+          margin-top: 10px;
+          p {
+               color: white;
+               strong {
+                    font-weight: bold;
+               }
+               .new {
+                    display: inline-block;
+                    font-weight: bold;
+                    color: white;
+                    background: #B10E1E;
+                    text-transform: uppercase;
+                    padding: 0.25em 0.35em;
+                    font-size: 16px;
+                    margin: 0 0.5em;
+                    position: relative;
+                    border-radius: 5px;
+               }
+          }
+          ul {
+               margin: 0 0 2em 0;
+               display: inline-block;
+          }
+          a {
+               color: white;
+               font-weight: bold;
+          }
+     }
+}
+
+.fat-search {
+     .hero {
+          .text-wrapper {
+               margin-top: 0;
+          }
+     }
+}
+
+.hero__link {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  &:hover,
+  &:focus {
+    border-bottom-color: transparent;
+  }
+}
+
+.hero .list--arrows > li:before {
+  color: #fff;
+}
+
+.hero__hm-government-logo {
+  margin-top: 30px;
+}
+
+.hmrc-gov {
+     display: inline-block;
+     position: absolute;
+     width: 156px;
+     height: 54px;
+     bottom: 3.5em;
+     right: inherit;
+     left: 20px;
+     text-indent: -1000em;
+     z-index: 1;
+     background: url("../images/hm-government-logo.png") no-repeat;
+     background-size: cover;
+     @include media-query($from: tablet) {
+          right: 5em;
+          left: inherit;
+          bottom: 5em;
+     }
+}
+
+.index {
+     .hmrc-gov {
+          bottom: 8em;
+     }
+}

@@ -1,0 +1,745 @@
+$hero-text-colour: #fff;
+
+.hero-banner {
+     font-family: $font-family;
+     overflow: hidden;
+     position: relative;
+     color: $hero-text-colour;
+     padding: 40px $edgeGutter 60px;
+     min-height: auto;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: 10;
+     @include media-query($from: tablet) {
+          min-height: 38em;
+     }
+     // clip-path: none !important;
+     // .grid-row {
+     //      position: relative;
+     // }
+     &.interests-page, &#hub-page {
+          min-height: 11em;
+          @include media-query($from: tablet) {
+               min-height: 15em;
+          }
+          position: relative;
+          .grid-row {
+               width: 100%;
+               max-width: 1440px;
+               .grid-column-one-half {
+                    padding-left: 0;
+                    .hero-heading__heading {
+                         padding-left: 0;
+                    }
+               }
+          }
+          .hero-banner__background {
+               clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/hajra-center.jpg") no-repeat;
+               background-size: cover;
+               background-position: 60% 12%;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               }
+          }
+          .hero-heading__heading {
+               margin-top: -10px;
+               @include media-query($from: tablet) {
+                    margin-top: 40px;
+               }
+          }
+          .hmrc-gov {
+               bottom: 6em;
+               right: inherit;
+               @include media-query($from: tablet) {
+                    bottom: 10em;
+                    right: 5em;
+               }
+          }
+     }
+     &#hub-page {
+          padding-top: 120px;
+          padding-bottom: 140px;
+          min-height: auto;
+          margin: 0 !important;
+          @include media-query($from: tablet) {
+               padding-top: 90px;
+               padding-bottom: 70px;
+               min-height: auto;
+          }
+          .hero-heading {
+               margin-left: 20px;
+               margin-bottom: 40px;
+               @include media-query($from: tablet) {
+                    margin-left: 40px;
+               }
+          }
+          .spark {
+               width: 7em;
+               height: 2.25em;
+               transform: rotate(0deg);
+               &.top {
+                    top: -106px;
+               }
+               &.bottom {
+                    transform: rotate(180deg);
+                    top: 98px;
+               }
+          }
+          .hero-banner__background {
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/omar-right.jpg") no-repeat;
+               background-size: cover;
+               background-position: 60% 50%;
+               @include media-query($from: tablet) {
+                    background-position: 50% 50%;
+               }
+          }
+          .hmrc-gov {
+               bottom: 3.5em;
+               @include media-query($from: tablet) {
+                    bottom: 7em;
+               }
+          }
+          &.apprentice {
+               @include media-query($from: tablet) {
+                    padding-bottom: 90px;
+               }
+               .spark {
+                    &.bottom {
+                         left: -127px;
+                    }
+               }
+               .hero-banner__background {
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
+                    background-size: cover;
+                    background-position: 65% 50%;
+                    @include media-query($from: tablet) {
+                         background-position: 50% 25%;
+                    }
+               }
+          }
+     }
+     &.real-stories {
+          .hero-heading__heading {
+               margin-bottom: 0.25em;
+          }
+          &.hero-banner--header-slant {
+               margin-bottom: 0;
+               padding-bottom: 140px !important;
+               @include media-query($from: tablet) {
+                    padding-bottom: 70px !important;
+               }
+          }
+          padding-bottom: 60px !important;
+          .hero-banner__background {
+               clip-path: polygon(0 0%, 100% 0%, 100% 87.5%, 0% 100%);
+               background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/apprentice/michelle-right.jpg") no-repeat;
+               background-size: cover;
+               background-position: 60% 10%;
+               &.employer {
+                    clip-path: none;
+                    background: linear-gradient(245deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 90%), url("../images/images/heroes/2000x1200/employer/matt-right.jpg") no-repeat;
+                    background-size: cover;
+                    background-position: 50% 15%;
+               }
+          }
+     }
+     // margin: 0 0 -30px 0;
+     @include media-query($from: tablet) {
+          padding-left: $edgeGutterTablet;
+          padding-right: $edgeGutterTablet;
+          padding-bottom: 50px;
+     }
+     @include media-query($from: desktop) {
+          padding-left: $edgeGutterDesktop;
+          padding-right: $edgeGutterDesktop;
+          padding-bottom: 120px;
+     }
+     &.hero-banner--right-aligned {
+          text-align: left;
+          margin: 0 0 -50px 0;
+          @include media-query($from: tablet) {
+               text-align: right;
+               margin: -100px 0 -100px 0;
+          }
+          .grid-column-full {
+               padding: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
+     }
+     &.real-stories {
+          min-height: auto;
+          .hero-heading__content {
+               margin-bottom: 0;
+               .heading-m {
+                    color: white;
+                    margin-top: 0;
+               }
+               p.lead-paragraph {
+                    margin-bottom: 0;
+               }
+          }
+          .hero-banner__background {
+               clip-path: none;
+          }
+     }
+     .grid-column-full {
+          max-width: 1440px;
+          margin: 0 auto;
+     }
+     // .hmrc-gov {
+     //      bottom: 4em;
+     // }
+     .hero-line {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 1rem;
+          margin: 0;
+          @include media-query($from: tablet) {
+               font-size: 2rem;
+          }
+          &.large-text {
+               font-size: 2.5rem;
+               margin-top: -0.5em;
+               @include media-query($from: tablet) {
+                    font-size: 3rem;
+               }
+          }
+     }
+}
+
+.real-stories {
+     .hero-banner {
+          .hero-heading {
+               margin-bottom: 10px;
+          }
+          // padding-bottom: 40px;
+          &.hero-banner--apprentice, &.hero-banner--employer {
+               padding-left: 0;
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-left: 80px;
+                    padding-right: 80px;
+               }
+               .hero-banner__icon-play-container {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    @include media-query($from: tablet) {
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                    }
+               }
+               &.real-stories-hero-1, &.real-stories-hero-2 {
+                    margin: 0;
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                    .hero-banner__header {
+                         margin-top: 0;
+                    }
+                    .hero-banner__icon-play {
+                         margin: 1em 0;
+                         @include media-query($from: tablet) {
+                              margin: 0 auto;
+                         }
+                    }
+               }
+               &.real-stories-hero-1 {
+                    clip-path: none;
+                    margin: -31px 0 0 0;
+                    padding-left: 0px;
+                    padding-right: 0px;
+                    padding-top: 80px !important;
+                    @include media-query($from: tablet) {
+                         margin: -94px 0 -14px 0;
+                         padding-left: 80px;
+                         padding-right: 80px;
+                    }
+               }
+               &.real-stories-hero-2 {
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         padding-top: 80px !important;
+                         padding-bottom: 0px !important;
+                         // clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%) !important;
+                         clip-path: polygon(0 0%, 100% 10%, 100% 100%, 0 100%) !important;
+                         margin-top: -2em;
+                    }
+               }
+          }
+          &.hero-banner--employer {
+               &.real-stories-hero-1 {
+                    clip-path: none;
+                    padding-top: 80px;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+                    }
+               }
+               &.real-stories-hero-2 {
+                    @include media-query($from: tablet) {
+                         margin-top: -4em;
+                    }
+               }
+
+          }
+          &.hero-banner--apprentice {
+               clip-path: none !important;
+               margin-bottom: 0px !important;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%);
+               }
+               &.real-stories-hero-1 {
+                    clip-path: none !important;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%) !important;
+                         margin: -47px 0 -14px 0;
+                    }
+               }
+          }
+     }
+}
+
+.hero-banner__caption-text {
+     font-weight: $font-weight-bold;
+     font-size: 14px;
+     border-bottom: $apprentice 2px solid;
+     padding: 0 0 5px 0;
+     text-transform: uppercase;
+     padding-left: 2000px;
+     margin-left: -2045px;
+     // margin-left: $edgeGutterDesktop * -1;
+     // background: url("../images/icon-quote-white.svg") no-repeat 0 50%;
+     // background-size: contain;
+     .hero-banner--right-aligned & {
+          padding-left: 0;
+          margin-left: 0;
+          // padding-right: $edgeGutterDesktop;
+          // margin-right: $edgeGutterDesktop * -1;
+          padding-right: 2000px;
+          margin-right: -2000px;
+     }
+     .hero-banner--employer & {
+          border-color: $employer;
+     }
+}
+
+.hero-banner__caption-icon {
+     width: 26px;
+     height: 26px;
+     display: inline-block;
+     background: url("../images/icon-quote-white.svg") no-repeat 0 0%;
+     background-size: contain;
+     margin: 0 8px;
+     position: relative;
+     top: 12px;
+     right: -170px;
+}
+
+.hero-banner__caption {
+     margin-bottom: 40px;
+     @include media-query($from: tablet) {
+          margin-bottom: 80px;
+     }
+}
+
+.hero-banner__caption-text {
+  font-weight: $font-weight-bold;
+  font-size: 14px;
+  border-bottom: $apprentice 2px solid;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+  padding-left: $edgeGutterDesktop;
+  margin-left: $edgeGutterDesktop * -1 - 26;
+  .hero-banner--right-aligned & {
+    padding-left: 0;
+    margin-left: 0;
+    padding-right: $edgeGutterDesktop;
+    margin-right: $edgeGutterDesktop * -1;
+  }
+  .hero-banner--employer & {
+    border-color: $employer;
+  }
+}
+
+.hero-banner__caption-icon {
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  background: url("../images/icon-quote-circle-white.svg") no-repeat 0 0;
+  margin: 0;
+  position: relative;
+  top: 12px;
+  right: -180px;
+  .hero-banner--right-aligned & {
+    right: 0;
+    left: -5px;
+  }
+}
+
+.hero-banner__content{
+     margin-right: - ($gutter-half);
+     margin-left: - ($gutter-half);
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column-reverse;
+     @include media-query($from: tablet) {
+          flex-direction: inherit;
+     }
+}
+
+.hero-banner--employer {
+     // padding-top: 60px;
+     // padding-bottom: 60px;
+     .hero-banner__content{
+          .hero-banner__content-main {
+               // flex-shrink: 0;
+               order: 2;
+          }
+          .hero-banner__icon-play-container {
+               order: 1;
+          }
+          @include mq ($from: tablet) {
+               align-items: center;
+               justify-content: center;
+               flex-wrap: none;
+               .hero-banner__content-main {
+                    // flex-shrink: 0;
+                    order: 1;
+               }
+               .hero-banner__icon-play-container {
+                    order: 2;
+               }
+          }
+     }
+}
+
+.hero-banner__content-main {
+     @include mq ($from: tablet) {
+          padding-right: 50px;
+          padding-left: 0;
+     }
+     @include mq ($from: desktop) {
+          padding-right: 100px;
+     }
+     .hero-banner--right-aligned & {
+          @include mq ($from: tablet) {
+               padding-left: 50px;
+               padding-right: 20px;
+          }
+          @include mq ($from: desktop) {
+               padding-left: 100px;
+               padding-right: 20px;
+          }
+     }
+}
+
+.hero-banner__copy {
+  color: $hero-text-colour;
+}
+
+.hero-banner__header {
+     font-weight: $font-weight-bold;
+     font-size: 30px;
+     margin-top: 10px;
+     @include mq ($from: tablet) {
+          margin-top: 0;
+          font-size: 36px;
+     }
+     color: $hero-text-colour;
+     text-transform: uppercase;
+}
+
+.hero-banner__sub-heading {
+  color: $hero-text-colour;
+}
+
+.hero-banner__hero-header {
+  margin-top: 100px;
+  color: #fff;
+  font-size: 60px;
+}
+
+.hero-banner__cite {
+  text-transform: uppercase;
+  font-weight: $font-weight-bold;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-banner__cite-detail {
+     display: block;
+     color: lighten($apprentice,8%);
+     // color: $apprentice;
+     .hero-banner--employer & {
+          color: $employer;
+     }
+}
+
+.hero-banner__link {
+  color: $hero-text-colour;
+  font-size: 18px;
+  &:hover{
+    color: darken($color: $hero-text-colour, $amount: 15%);
+  }
+}
+
+.hero-banner__icon-play-container {
+     @include clearfix;
+     @include mq ($from: tablet) {
+          float: right;
+          position: relative;
+          .hero-banner--right-aligned & {
+               float: left;
+          }
+     }
+}
+
+.hero-banner__icon-play {
+     // visibility: hidden;
+     position: relative;
+     height: 80px;
+     width: 80px;
+     display: block;
+     margin-top: 40px;
+     margin-bottom: 20px;
+     background: $apprentice;
+     -webkit-border-radius: 50%;
+     -moz-border-radius: 50%;
+     border-radius: 50%;
+     transition: box-shadow 0.2s ease;
+     &:hover, &:active, &:focus {
+          cursor: pointer;
+     }
+     @include mq ($from: tablet) {
+          margin: 135px auto 120px;
+          height: 130px;
+          width: 130px;
+     }
+     @include mq ($from: desktop) {
+          margin: 0 auto 0;
+     }
+     #homepage & {
+          @include mq ($from: tablet) {
+               margin: 0 auto 0;
+               height: 110px;
+               width: 110px;
+          }
+          @include mq ($from: desktop) {
+               margin: 60px auto 120px;
+          }
+     }
+     .hero-banner--employer & {
+          background: $employer;
+     }
+     .hero-banner--right-aligned & {
+          float: left;
+          @include mq ($from: tablet) {
+               float: none;
+          }
+     }
+     &:before {
+          content: "";
+          position: absolute;
+          background: url("../images/hero-play-apprentice.svg") no-repeat;
+          background-size: cover;
+          display: inline-block;
+          z-index: 1;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          top: 0;
+          .hero-banner--employer & {
+               background-image: url("../images/hero-play-employer.svg");
+          }
+     }
+     &:hover {
+          -webkit-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+          -moz-box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+          box-shadow: 0px 0px 31px 9px rgba(255,255,255,.3);
+     }
+}
+
+.hero-banner__background {
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     z-index: -1;
+     background-size: cover;
+     background-position: 60% 0%;
+     background-repeat: no-repeat;
+}
+
+.hero-banner--apprentice {
+     clip-path: none !important;
+     // min-height: auto;
+     padding-bottom: 40px !important;
+     padding-top: 40px  !important;
+     margin-bottom: 0px !important;
+     @include mq($from: tablet) {
+          margin-bottom: -80px !important;
+          // min-height: 40em;
+          clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%) !important;
+          // padding: 40px 20px 60px !important;
+     }
+     .hero-banner__background {
+          background-size: cover;
+          background-position: 50% 100%;
+          @include mq($from: desktop) {
+               background-position: 0 20%;
+               background-size: cover;
+          }
+          @include mq($from: wide) {
+
+          }
+     }
+}
+
+.hero-banner--employer .hero-banner__background {
+     background-position: 80% 0%;
+     @include mq($from: tablet) {
+     }
+     @include mq($from: desktop) {
+          background-position: 0 20%;
+          background-size: cover;
+     }
+     @include mq($from: wide) {
+
+     }
+}
+
+.hero-banner__background--apprentice-alim {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/alim-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--apprentice-hosanna {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/hozanna-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--apprentice-sarah {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/sarah-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+     @include mq ($from: tablet) {
+
+     }
+}
+
+.hero-banner__background--apprentice-ella {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/ella-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+.hero-banner__background--apprentice-michelle {
+     background-image: linear-gradient(255deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/apprentice/michelle-hero-1.jpg");
+     @include mq($until: desktop) {
+          background-position: 35% 0%;
+     }
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--employer-gail {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/gail-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--employer-bendy {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/bendy-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--employer-annie {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/annie-hero-1.jpg");
+     background-position: 60% 0% !important;
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+.hero-banner__background--employer-matt {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/employer/matt-hero-1.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}
+
+.hero-banner__background--industry {
+     background-image: linear-gradient(225deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%), url("../images/hero-banner-bg.jpg");
+     .hero-banner--right-aligned & {
+          -moz-transform: scaleX(-1);
+          -o-transform: scaleX(-1);
+          -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+          filter: FlipH;
+          -ms-filter: "FlipH";
+     }
+}

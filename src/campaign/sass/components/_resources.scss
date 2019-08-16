@@ -3,7 +3,7 @@
 }
 
 .resources--employer {
-     background: $employer-light;
+     background: $employer-pale;
 }
 
 .resources__heading {
@@ -37,20 +37,32 @@
 
 .resources__link {
      text-decoration: none;
+     line-height: 1.2;
+     span {
+          display: block;
+          margin-bottom: 0.5em;
+     }
+     p {
+          line-height: 1.4;
+     }
 }
 
 .resources__link-title {
      text-transform: uppercase;
-     color: $black;
+     color: $employer;
      font-weight: $font-weight-bold;
      font-size: 14px;
      margin-bottom: 5px;
      padding: 0 0 0 1.5em;
-     background: url("../images/new-window-black.svg") no-repeat 0% 0%;
+     background: url("../images/new-window-blue.svg") no-repeat 0% 0%;
      background-size: 1em;
      .resources__link:hover &,
      .resources__link:focus & {
           text-decoration: underline;
+     }
+     .resources--employer & {
+          background: url("../images/new-window-green.svg") no-repeat 0% 0%;
+          background-size: 1.25em;
      }
 }
 

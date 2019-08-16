@@ -444,7 +444,6 @@ $(function(){
        { value: "Nuclear scientist and nuclear engineer (degree)" },
        { value: "Nuclear Technician" },
        { value: "Nuclear welding inspection technician" },
-       { value: "Nuclear welding inspection technician" },
        { value: "Nursing associate - NMC 2018" },
        { value: "Occupational therapist (integrated degree)" },
        { value: "Operating department practitioner (integrated degree)" },
@@ -674,7 +673,7 @@ $(function(){
   ];
 
      // setup autocomplete function pulling from currencies[] array
-     $('#fat-search-keyword-test').autocomplete({
+     $('#fat-search-keyword').autocomplete({
           lookup: currencies,
           onSelect: function (suggestion) {
                var thehtml = '<strong>Currency Name:</strong> ' + suggestion.value + ' <br> <strong>Symbol:</strong> ' + suggestion.data;

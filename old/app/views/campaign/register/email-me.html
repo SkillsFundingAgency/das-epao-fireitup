@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>Fire it up! - Register interest</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template" id="form-share-items">
+
+          <script>
+               document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          </script>
+
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+
+          {% include '../components/header/_header-employer.html'%}
+
+          <main id="main-content" class="email-me-page employer">
+
+               <div class="hero register" data-module="smoothScroll">
+                    <div class="grid-row">
+                         <div class="grid-column-one-half">
+                              <div class="hero-heading">
+                                   <span class="caption-m hero-heading__caption hero-heading__caption--employer">
+                                        <a href="javascript:history.back()">&#60; &nbsp; Back</a>
+                                   </span>
+                                   <h1 class="heading-xl hero-heading__heading">SEND YOUR FAVOURITES LIST IN AN EMAIL</h1>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+
+               <div class="main-content">
+
+                    <div class="grid-row">
+                         <div class="grid-column-two-thirds">
+
+                              <p class="intro-text no-top-margin">
+                                   We’ll email you a list of your saved apprenticeships and training providers so you can return to them later.
+                              </p>
+
+                              <form action="/campaign/register/email-me-complete" method="get">
+
+                                   <div class="form-validation-summary" style="display: none">
+                                        <h3 class="heading-s">Sorry but there seems to be a problem with your registration</h3>
+                                   </div>
+                                   <div class="form-group">
+                                        <label class="label visually-hidden" for="FirstName-Email">
+                                             First name
+                                        </label>
+                                        <input id="FirstName-Email" class="input" type="text" placeholder="First name" autocomplete="given-name" name="FirstName" value="">
+                                   </div>
+
+                                   <div class="form-group">
+                                        <label class="label visually-hidden" for="LastName-Email">
+                                             Last name
+                                        </label>
+                                        <input id="LastName-Email" class="input" type="text" placeholder="Last name" autocomplete="family-name" name="LastName" value="">
+                                   </div>
+
+                                   <div class="form-group">
+                                        <label class="label visually-hidden" for="Email-Email">
+                                             Email Address
+                                        </label>
+                                        <input id="Email-Email" class="input" type="text" placeholder="Email address" autocomplete="email" name="Email" value="">
+                                   </div>
+
+                                   <div class="form-group radios">
+                                        <div class="checkboxes__item">
+                                             <input class="checkboxes__input" type="checkbox" value="true" id="AcceptTandCs" name="AcceptTandCs">
+                                             <label class="label checkboxes__label" for="AcceptTandCs">
+                                                  I’d like to receive more information about apprenticeships from the Education and Skills Funding Agency via email.
+                                             </label>
+                                        </div>
+                                   </div>
+
+                                   <button class="button button-inverted" name="emailSubmit" id="btn-email">EMAIL ME MY FAVOURITES</button>
+                                   <p><a href="javascript:history.back()">Back</a></p>
+                              </form>
+
+                         </div>
+
+                         <div class="grid-column-one-third">
+
+                              <h3 class="heading-s no-top-margin">I confirm I wish to email myself the following details:</h3>
+
+                              <ol id="training-providers-list">
+
+                              </ol>
+
+                         </div>
+
+                    </div>
+
+               </div>
+
+          </main>
+
+          {% include '../components/footer/_footer.html'%}
+
+          <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
+
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+          <!-- <script src="/dist/campaign/js/app.min.js"></script>
+          <script src="/dist/js/das-all.js"></script> -->
+          <!-- <script>
+               window.DASFrontend.initAll()
+          </script> -->
+
+          {% include '../components/footer/_scripts.html'%}
+
+     </body>
+
+</html>

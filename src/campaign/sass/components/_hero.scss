@@ -7,6 +7,13 @@
      position: relative;
      z-index: 10;
      clip-path: polygon(0 0%, 100% 0%, 100% 95%, 0% 100%);
+     @include media-query($from: tablet) {
+          padding: 160px 40px 80px;
+          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+     }
+     @include media-query($from: desktop) {
+          padding: 160px 80px 80px;
+     }
      // &:after {
      //      content: '';
      //      position: absolute;
@@ -23,6 +30,10 @@
           // clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%) !important;
           clip-path: none !important;
           position: relative;
+          padding-bottom: 0px !important;
+          @include media-query($from: tablet) {
+               padding-bottom: 40px !important;
+          }
           .background-image {
                position: absolute;
                top: 0;
@@ -37,7 +48,7 @@
           input[type="search"], input[type="text"] {
                width: 70%;
           }
-          #link-FAT-search {
+          #link-FAT-search, #link-location-search {
                width: 30%;
                margin: 0;
           }
@@ -61,20 +72,18 @@
                .sidebar {
                     top: 0;
                     .shopping-basket {
-                         margin-right: -60px;
-                         p {
-                              color: black;
+                         margin-right: -20px;
+                         margin-left: -20px;
+                         @include media-query($from: tablet) {
+                              margin-right: -60px;
+                              margin-left: 0;
                          }
+                         // p {
+                         //      color: black;
+                         // }
                     }
                }
           }
-     }
-     @include media-query($from: tablet) {
-          padding: 140px 40px 80px;
-          clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
-     }
-     @include media-query($from: desktop) {
-          padding: 140px 80px 80px;
      }
      .list--arrows {
           margin-top: 1.5em;
@@ -96,7 +105,7 @@
           max-width: 1440px;
           margin-left: auto;
           margin-right: auto;
-          .grid-column-one-half {
+          .grid-column-one-half, .grid-column-two-thirds {
                padding: 0;
           }
      }
@@ -107,21 +116,28 @@
                padding-bottom: 90px;
           }
           .sidebar.FAT-basket {
-               margin: 20px -20px 0px -20px;
+               margin: 20px -80px 0px -20px;
           }
      }
      &.interests-page {
           position: relative;
           background: none;
           clip-path: none;
-          min-height: 56em;
+          min-height: auto;
           padding-bottom: 0;
+          @include media-query($from: tablet) {
+               min-height: 53em;
+          }
           .grid-row {
                position: relative;
                z-index: 10;
                .grid-column-one-half {
                     &.image-holder {
                          position: relative;
+                         min-height: 0;
+                         @include media-query($from: tablet) {
+                              min-height: 53em;
+                         }
                     }
                }
           }
@@ -140,7 +156,7 @@
                right: 0;
                min-height: 38em;
                @include media-query($from: tablet) {
-                    min-height: 33em;
+                    min-height: 24em;
                     clip-path: polygon(0 12.5%, 100% 0%, 100% 100%, 0% 88%);
                }
           }
@@ -165,7 +181,7 @@
                     clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
                     position: absolute;
                     right: -5em;
-                    top: 0;
+                    top: 2em;
                }
           }
      }
@@ -174,11 +190,12 @@
           clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 95%);
           // min-height: 25em;
           min-height: auto;
-          padding-top: 110px;
+          padding-top: 6em;
           padding-bottom: 30px;
           // background: none;
           @include media-query($from: tablet) {
                padding-bottom: 60px;
+               padding-top: 10em;
                clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 90%);
           }
           &.no-side-nav {
@@ -191,6 +208,15 @@
           &.no-results-page {
                clip-path: none;
                margin-bottom: -30px;
+               // .faa-fat-link-block {
+               //      width: 100%;
+               //      @include media-query($from: tablet) {
+               //           width: 70%;
+               //      }
+               // }
+               .grid-column-one-third {
+                    float: right;
+               }
           }
           .grid-column-one-half {
                // min-height: 25em;
@@ -202,9 +228,12 @@
                z-index: 10;
           }
           .hero-heading {
-               margin-bottom: 10px;
+               margin-bottom: 30px;
                h1 {
                     color: white;
+                    span {
+                         color: $employer;
+                    }
                     // text-shadow: 7px 7px rgba(white,0.7);
                }
           }
@@ -254,6 +283,9 @@
           }
           .sector-info {
                display: none;
+          }
+          .search-results-title {
+               font-size: 40px;
           }
      }
      &.faa-search-hero {
@@ -311,13 +343,13 @@
      }
      &.FAT-basket {
           @include media-query($from: desktop) {
-               padding: 140px 80px 60px;
+               padding: 160px 80px 60px;
           }
           .grid-column-one-third {
                float: right;
           }
           .hero-heading {
-               margin-bottom: 0;
+               margin-bottom: 20px;
                .hero-heading__heading {
                     font-size: 30px;
                     @include media-query($from: desktop) {
@@ -350,16 +382,42 @@
                               align-items: center;
                               justify-content: center;
                               background: $employer;
-                              color: black;
+                              color: white;
                               font-size: 18px;
                               float: left;
                          }
                     }
                }
           }
+          &.FAT-save-standard {
+               clip-path: none;
+               padding-bottom: 100px;
+               .cta-row {
+                    display: inline-block;
+                    margin-top: 2em;
+                    .checkboxes__label {
+                         color: white;
+                    }
+               }
+               #save-this-standard {
+                    float: left;
+                    background: $employer;
+                    color: black;
+               }
+               .gov-uk-image-wrapper {
+                    display: inline-block;
+                    max-width: 30em;
+                    overflow: hidden;
+                    float: right;
+                    clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
+                    img {
+                         width: 100%;
+                    }
+               }
+          }
      }
      .provider-details {
-          color: black;
+          color: white;
      }
      .text-wrapper {
           display: inline-block;
@@ -392,6 +450,58 @@
                font-weight: bold;
           }
      }
+}
+
+.employer-section-industries {
+     .hero {
+          &.interests-page {
+               clip-path: none;
+               .background-image {
+                    clip-path: none;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0%, 100% 0%, 100% 90%, 0% 100%);
+                    }
+               }
+          }
+     }
+}
+
+.fat-intro-page {
+     .hero {
+          clip-path: none;
+          margin-bottom: -1px;
+     }
+}
+
+.email-me-page, .share-me-page {
+     .hero {
+          @include media-query($from: tablet) {
+               padding: 120px 80px 30px;
+          }
+          .hero-heading__content {
+               margin: 0;
+          }
+          .hero-heading__heading {
+               @include media-query($from: tablet) {
+                    font-size: 38px;
+               }
+          }
+     }
+}
+
+.employer {
+     .hero {
+          &.interests-page {
+               .background-colour {
+                    background: $employer;
+               }
+          }
+     }
+}
+
+.fat-search-location {
+     text-transform: uppercase;
+     font-weight: bold;
 }
 
 .fat-search {
@@ -429,7 +539,7 @@
      right: inherit;
      left: 20px;
      text-indent: -1000em;
-     z-index: 1;
+     z-index: 10;
      background: url("../images/hm-government-logo.png") no-repeat;
      background-size: cover;
      @include media-query($from: tablet) {

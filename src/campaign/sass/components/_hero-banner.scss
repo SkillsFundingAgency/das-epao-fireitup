@@ -20,6 +20,9 @@ $hero-text-colour: #fff;
      // }
      &.interests-page, &#hub-page {
           min-height: 11em;
+          &.email-me-page {
+               display: inline-block;
+          }
           @include media-query($from: tablet) {
                min-height: 15em;
           }
@@ -92,7 +95,7 @@ $hero-text-colour: #fff;
                background-size: cover;
                background-position: 60% 50%;
                @include media-query($from: tablet) {
-                    background-position: 50% 50%;
+                    background-position: 50% 0%;
                }
           }
           .hmrc-gov {
@@ -158,7 +161,7 @@ $hero-text-colour: #fff;
      }
      &.hero-banner--right-aligned {
           text-align: left;
-          margin: 0 0 -50px 0;
+          margin: 0 0 -30px 0;
           @include media-query($from: tablet) {
                text-align: right;
                margin: -100px 0 -100px 0;
@@ -294,11 +297,11 @@ $hero-text-colour: #fff;
                }
                &.real-stories-hero-1 {
                     clip-path: none !important;
-                    padding-left: 20px;
-                    padding-right: 20px;
+                    // padding-left: 20px;
+                    // padding-right: 20px;
                     @include media-query($from: tablet) {
                          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 88%) !important;
-                         margin: -47px 0 -14px 0;
+                         margin: -50px 0 -14px 0;
                     }
                }
           }
@@ -338,13 +341,13 @@ $hero-text-colour: #fff;
      margin: 0 8px;
      position: relative;
      top: 12px;
-     right: -170px;
+     right: -200px;
 }
 
 .hero-banner__caption {
      margin-bottom: 40px;
      @include media-query($from: tablet) {
-          margin-bottom: 80px;
+          margin-bottom: 40px;
      }
 }
 
@@ -417,6 +420,14 @@ $hero-text-colour: #fff;
                .hero-banner__icon-play-container {
                     order: 2;
                }
+          }
+     }
+}
+
+.index {
+     .hero-banner--employer {
+          @include mq ($from: tablet) {
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
           }
      }
 }
@@ -741,5 +752,56 @@ $hero-text-colour: #fff;
           transform: scaleX(-1);
           filter: FlipH;
           -ms-filter: "FlipH";
+     }
+}
+
+.real-stories {
+     .hero-banner.hero-banner--header-slant {
+          padding-bottom: 80px;
+     }
+}
+
+#hero-banner-1 {
+     clip-path: none;
+     padding-top: 80px;
+     padding-bottom: 80px;
+     .hero-banner__content-main {
+          order: 2;
+     }
+     .hero-banner__icon-play-container {
+          order: 1;
+     }
+     &.hero-banner--employer {
+          margin-bottom: -20px;
+          @include media-query($from: tablet) {
+               margin-bottom: -80px;
+               clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+          }
+     }
+     &.hero-banner--apprentice {
+          padding-bottom: 80px !important;
+          clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 100%);
+     }
+}
+
+#hero-banner-2 {
+     clip-path: none;
+     padding-top: 40px;
+     padding-bottom: 40px;
+     &.apprentice-footer-hero {
+          margin-bottom: 0;
+     }
+     &.hero-banner--employer {
+          @include media-query($from: tablet) {
+               padding-top: 80px;
+               padding-bottom: 80px;
+               clip-path: polygon(0 0%, 100% 12%, 100% 100%, 0 100%);
+          }
+     }
+     &.hero-banner--apprentice {
+          padding-top: 80px !important;
+          padding-bottom: 80px !important;
+          margin-bottom: 0 !important;
+          clip-path: polygon(0 0%, 100% 12%, 100% 100%, 0 100%) !important;
      }
 }

@@ -53,9 +53,10 @@
      position: relative;
      margin-top: 0;
      margin-bottom: 0;
-     padding-top: 14px;
+     padding-top: 8px;
      padding-bottom: 12px;
      width: 82%;
+     // float: left;
      @include mq ($until: tablet) {
           cursor: pointer;
      }

@@ -36,7 +36,7 @@
           // }
      }
      @include media-query($from: desktop) {
-          padding: 60px 80px 25px 80px;
+          padding: 40px 80px 25px 80px;
           width: auto;
      }
      &.footer--privacy {
@@ -49,7 +49,10 @@
 
 footer {
      display: block;
-     width: 100%;
+     width: 90%;
+     @include mq ($from: tablet) {
+          width: 100%;
+     }
 }
 
 .footer--privacy {
@@ -57,8 +60,9 @@ footer {
 }
 
 .footer__apprenticeship-logo{
-    width:100%;
-    max-width: 200px;
+     width:100%;
+     max-width: 200px;
+     margin-bottom: 2em;
 }
 .footer__hm-government-logo{
   @include mq ($until: tablet) {
@@ -232,7 +236,7 @@ footer {
     // Will typically result in wrapping, and end up in a single column on smaller screens.
     flex-basis: 200px; // Support: Flexbox
     margin-bottom:0px;
-    background-color: #000000;
+    // background-color: #000000;
     padding:0;
   }
 }
@@ -281,13 +285,66 @@ footer {
 }
 
 .footer__list-item {
-  @include responsive-margin(4, "bottom");
-  padding: 0 20px;
-  @include mq ($from: tablet) {
-    padding-left: 0;
-  }
+     @include responsive-margin(4, "bottom");
+     padding: 0 20px;
+     @include mq ($from: tablet) {
+          padding-left: 0;
+     }
+}
+
+.footer__sep-item {
+
 }
 
 .footer__list-item:last-child {
   margin-bottom: 0;
+}
+
+.govuk-accordion__section {
+     float: left;
+     text-align: left;
+     @include mq ($from: tablet) {
+          float: right;
+          text-align: right;
+     }
+     .footer__list-header, ul.footer__list {
+          width: auto !important;
+          display: inline-block;
+     }
+     .footer__list-header {
+          padding-right: 2em;
+          margin-top: 2em;
+          margin-left: 2em;
+          @include mq ($from: tablet) {
+               margin-top: 0.5em;
+               margin-left: 0;
+          }
+     }
+     ul.footer__list {
+          float: right;
+          margin-right: 1.25em;
+          @include mq ($from: tablet) {
+               margin-right: 0;
+          }
+          li {
+               padding-right: 0;
+               &.footer__list-item {
+                    margin: 0 1em 0 0;
+                    padding: 0 1em 0 0;
+                    border-right: 1px solid #70777b;
+                    float: right;
+                    &:first-of-type {
+                         border-right: none;
+                         margin: 0;
+                         padding: 0;
+                    }
+               }
+               // &.footer__sep-item {
+               //      display: inline-block;
+               //      margin: 0 2em;
+               //      width: 2px;
+               //      background: rgba(white,0.2);
+               // }
+          }
+     }
 }

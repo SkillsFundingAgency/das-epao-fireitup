@@ -6,7 +6,7 @@
           &.FAT-basket {
                margin: -40px -20px 40px -20px;
                @include media-query($from: tablet) {
-                    margin: 20px 0px 0px 0px;
+                    margin: 40px 0px 0px 0px;
                     padding-right: 0px;
                }
           }
@@ -24,14 +24,61 @@
      // .sidebar__hero {
      //      min-height: 30em;
      // }
-     #search-results-filter, #search-training-provider-filter {
+     .search-statistic {
+          background-color: $employer;
+          padding: 3.5em 7.5% 2.75em 7.5%;
+          color: black;
+          position: relative;
+          z-index: 100;
+          margin: -11em -5em 0 0;
+          clip-path: polygon(0 18%, 100% 0%, 100% 93%, 0% 100%);
+          .heading-s {
+               padding-left: 2.75em;
+               background: url("../images/information-black.svg") no-repeat 0 50%;
+               background-size: 2.25em;
+          }
+          p {
+               margin: 0.25em 0 0 0;
+          }
+          .search-numbers {
+               display: flex;
+               flex-wrap: wrap;
+               margin: 0.5em 0 0 0;
+               .number {
+                    width: 50%;
+                    text-align: center;
+                    .lead-paragraph {
+                         font-size: 20px;
+                         strong {
+                              font-weight: bold;
+                              width: 100%;
+                              display: inline-block;
+                              font-size: 50px;
+                              line-height: 1;
+                         }
+                    }
+               }
+          }
+     }
+     .no-results-page {
+          .search-statistic {
+               margin: 1em -3em 0 -3em;
+               clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+               padding: 2.25em 7.5% 2.25em 7.5%;
+               @include media-query($from: tablet) {
+                    margin: 1em -2em 0 -3em;
+               }
+          }
+     }
+     #search-results-filter, #search-training-provider-filter, #register-no-results {
           // padding: 0 5em 3em 5em;
           // margin: 0 -4.35em -173px -5em;
-          display: block;
+          display: inline-block;
           position: relative;
           clip-path: none;
           margin: 1em 0 2em 0;
           padding: 0;
+          width: 100%;
           // @include media-query($from: tablet) {
           //      clip-path: polygon(0 14%, 100% 0%, 100% 87%, 0% 100%);
           // }
@@ -51,6 +98,9 @@
           //      bottom: 0;
           //      border-color: transparent transparent white;
           // }
+          @include media-query($from: tablet) {
+               margin: 1em -5em 2em 0;
+          }
           .cta-faa, .cta-fat {
                display: inline-block;
                width: 93%;
@@ -172,13 +222,24 @@
                background: $apprentice;
           }
           .cta-fat {
-               background: $employer;
-               padding: 4em 7.5% 3em 7.5%;
+               background: #4d4d4d;
+               // background: $employer;
+               padding: 2em 7.5% 2em 7.5%;
                width: 85%;
                position: relative;
                top: -8.5em;
                z-index: 100;
-               clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+               clip-path: none;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+                    padding: 4em 7.5% 3em 7.5%;
+               }
+               h1, h2, h3, h4, label {
+                    color: white;
+               }
+               h2.heading-m {
+                    color: white !important;
+               }
                .form-content {
                     width: 100%;
                     display: inline-block;
@@ -188,8 +249,12 @@
                          .form-group {
                               display: inline-block;
                               margin: 0 0 0 0;
+                              label {
+                                   color: white;
+                              }
                               &.radios {
                                    margin: 0 0 1em 0;
+                                   width: 100%;
                               }
                               .checkboxes__item {
                                    width: 35%;
@@ -215,6 +280,36 @@
                }
           }
      }
+     #register-no-results {
+          margin: 1em -3em 2em -3em;
+          @include media-query($from: tablet) {
+               margin: 1em -2em 2em -3em;
+          }
+          .cta-fat {
+               clip-path: polygon(0 7%, 100% 0%, 100% 93%, 0% 100%);
+          }
+     }
+     #search-results-filter {
+          .cta-fat .cta-fat__content {
+               .form-group {
+                    input[type="search"] {
+                         width: 70%;
+                         float: left;
+                    }
+                    #submit-new-search {
+                         width: 30%;
+                         float: left;
+                         height: 3.5em;
+                    }
+               }
+               hr {
+                    margin: 1.5em 0;
+                    border: none;
+                    height: 2px;
+                    background: rgba(white,0.2);
+               }
+          }
+     }
      #search-training-provider-filter {
           .cta-fat {
                .form-content {
@@ -232,6 +327,7 @@
                               font-family: $font-family;
                               margin: 0 0 2em 0;
                               font-size: 1rem;
+                              color: white;
                               p {
                                    font-size: 1rem;
                               }
@@ -243,11 +339,11 @@
      ol.search-results-list {
           padding: 0;
           li {
-               margin: 0 0 2em 0;
+               margin: 0 0 1.5em 0;
                display: inline-block;
                position: relative;
                @include media-query($from: tablet) {
-                    margin: 0 0 2em 0;
+                    margin: 0 0 1.5em 0;
                }
                &:before {
                     font-weight: bold;
@@ -256,22 +352,22 @@
                     text-align: left;
                     height: 46px;
                     width: 42px;
-                    padding-left: 8px;
+                    padding-left: 4px;
                     margin: -15px 0px 0px 0px;
-                    font-size: 1.2em;
+                    font-size: 1em;
                     top: 0.5em;
                     @include media-query($from: tablet) {
-                         font-size: 2em;
-                         height: 79px;
-                         width: 65px;
-                         padding-left: 12px;
+                         font-size: 1em;
+                         height: 49px;
+                         width: 24px;
+                         padding-left: 6px;
                          margin: -15px 0px 0px -26px;
                     }
                }
                h2, ul.search-results__list-secondary {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 10%;
+                         margin-left: 5%;
                     }
                     li {
                          margin: 0 0 5px 0;
@@ -287,7 +383,7 @@
                h2 {
                     margin-top: 3em;
                     @include media-query($from: tablet) {
-                         margin-top: 15px;
+                         margin-top: 0;
                     }
                }
           }
@@ -348,10 +444,25 @@
 }
 
 .fat-search {
-     #search-results-filter, #search-training-provider-filter {
-          margin-top: -6.5em;
+     #search-results-filter, #search-training-provider-filter, #register-no-results {
+          margin-top: 0;
+          @include media-query($from: tablet) {
+               margin-top: -8.5em;
+          }
           .cta-fat {
                top: 0;
+          }
+          .heading-s {
+               text-transform: inherit;
+          }
+     }
+     #search-training-provider-filter {
+          margin-top: -6em;
+     }
+     #register-no-results {
+          margin-top: -1em;
+          @include media-query($from: tablet) {
+               margin-top: -1.5em;
           }
      }
 }
@@ -361,10 +472,15 @@ select {
      display: inline-block;
      background: white;
      padding: 1em 2.25em 1em 0.75em;
+     margin: 0 0 1em 0;
      -webkit-appearance: none !important;
      background: url("../images/arrow-down-black.svg") no-repeat white;
      background-position: right 15px top 25px;
      background-size: 1em;
+     @include typography-common;
+     @include media-query($from: tablet) {
+          margin: 0 0 0 0;
+     }
      // @include media-query($from: tablet) {
      //      padding: 0.75em 5%;
      // }
@@ -613,27 +729,61 @@ select {
           clip-path: none;
           .cta-row {
                display: inline-block;
-               margin: 2em 0 4em 0;
+               margin: 1em 0 0 0;
                width: 100%;
                #save-this-standard {
                     float: left;
                     width: 100%;
+                    background: black;
+                    color: white;
                     @include media-query($from: tablet) {
                          width: auto;
                     }
                }
-               .secondary-cta {
-                    width: auto;
-                    font-size: 1.4rem;
+               .primary-cta, .secondary-cta {
+                    clip-path: none;
+                    display: inline-block;
+                    background: $employer;
+                    width: 85%;
                     float: left;
-                    margin: 0.5em 0 0 0;
+                    padding: 1em 7.5% 2em 7.5%;
+                    margin: 0 0 1em 0;
                     @include media-query($from: tablet) {
-                         margin: 0.3em 0 0 1.5em;
+                         width: 38%;
+                         clip-path: polygon(0 8%, 100% 0%, 100% 100%, 0% 92%);
+                         padding: 2.5em 4% 3em 4%;
+                         margin: 0 5% 0 0;
+                    }
+                    h1, h2, h3, h4, p {
+                         color: white;
+                    }
+                    p {
+                         margin: 0.25em 0 1em 0;
                     }
                }
-               a.lead-paragraph {
-
+               .secondary-cta {
+                    clip-path: none;
+                    background: #4d4d4d;
+                    margin-right: 0;
+                    @include media-query($from: tablet) {
+                         clip-path: polygon(0 0%, 100% 8%, 100% 92%, 0% 100%);
+                    }
+                    h1, h2, h3, h4, p {
+                         color: white;
+                    }
                }
+               // .secondary-cta {
+               //      width: auto;
+               //      font-size: 1.4rem;
+               //      float: left;
+               //      margin: 0.5em 0 0 0;
+               //      @include media-query($from: tablet) {
+               //           margin: 0.3em 0 0 1.5em;
+               //      }
+               // }
+               // a.lead-paragraph {
+               //
+               // }
           }
           .gov-uk-image-wrapper {
                display: inline-block;
@@ -643,6 +793,7 @@ select {
                clip-path: polygon(0 0%, 100% 10%, 100% 98%, 0% 90%);
                @include media-query($from: tablet) {
                     max-width: 30em;
+                    margin-top: -3em;
                }
                .gov-uk-image {
                     margin: 0 0 0 0;
@@ -676,34 +827,17 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
           &.search-result {
                width: 100%;
                border-bottom: 1px solid rgba(black,0.1);
-               padding: 0 0 2em 0;
+               padding: 0 0 1.5em 0;
                &:last-of-type {
                     border-bottom: none;
                     padding: 0;
                     margin: 0;
                }
                h2.heading-m {
-                    margin-bottom: 0;
+                    margin-bottom: 0.25em;
                     position: relative;
                     padding-right: 0;
-                    display: inline-block;
-                    width: 100%;
-                    @include media-query($from: tablet) {
-                         // padding-right: 3em;
-                         width: 90%;
-                    }
-                    a {
-                         display: inline-block;
-                         float: left;
-                         // max-width: 100%;
-                         // white-space: normal;
-                         // overflow: hidden;
-                         // text-overflow: ellipsis;
-                         // @include media-query($from: tablet) {
-                         //      max-width: 85%;
-                         //      white-space: nowrap;
-                         // }
-                    }
+                    text-transform: inherit;
                     .new {
                          position: absolute;
                          right: 0;
@@ -731,7 +865,7 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                .content-row {
                     margin-left: 0px;
                     @include media-query($from: tablet) {
-                         margin-left: 10%;
+                         margin-left: 5%;
                     }
                     p {
                          margin: 0;
@@ -750,6 +884,11 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                                    background: url("../images/location-employer.svg") no-repeat white 50% 50%;
                                    background-size: contain;
                               }
+                         }
+                         &.phone-number {
+                              padding-top: 0.5em;
+                              margin-top: 0.5em;
+                              border-top: 2px dashed rgba(black,0.05);
                          }
                          .distance, .locations {
                               display: inline-block;
@@ -801,7 +940,10 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     .form-group {
                          &.radios {
                               display: inline-block;
-                              margin: 1em 0 0 50px;
+                              margin: 1em 0 0 0;
+                              @include media-query($from: tablet) {
+                                   margin: 1em 0 0 5%;
+                              }
                               .checkboxes__item {
                                    float: left;
                                    width: auto;
@@ -815,6 +957,26 @@ ol#fat-search-results, ol#fat-training-provider-results, ol#fat-search-results-n
                     }
                }
           }
+     }
+}
+
+.warning {
+     display: inline-block;
+     text-transform: none;
+     font-size: 1.2rem;
+     color: grey;
+     margin-top: 0.5em;
+     margin-bottom: 0.5em;
+     padding: 0.5em 0 0.5em 1em;
+     border-left: 10px solid rgba(black,0.1);
+     span {
+          display: inline-block;
+          width: 1.25em;
+          height: 1.25em;
+          margin: 0 0.5em 0 0;
+          background: url("../images/warning-black.svg") no-repeat 50% 50%;
+          background-size: contain;
+          text-indent: -1000em;
      }
 }
 
@@ -875,20 +1037,26 @@ ol#fat-training-provider-results {
                     padding-right: 0;
                     a {
                          max-width: 100%;
+                         width: 100%;
                          white-space: normal;
                          overflow: hidden;
                          text-overflow: ellipsis;
+                         display: inline-block;
                          @include media-query($from: tablet) {
-                              max-width: 85%;
+                              width: 87.5%;
                               white-space: nowrap;
+                              overflow: hidden;
+                              display: inline-block;
+                              text-overflow: ellipsis;
                          }
                     }
                }
                .content-row {
+
                }
-               .cta-row {
-                    margin-top: 1em;
-               }
+               // .cta-row {
+               //      margin-top: 1em;
+               // }
           }
      }
 }
@@ -1241,6 +1409,52 @@ dl.data-list {
                          background-color: #df3034;
                     }
                }
+          }
+     }
+}
+
+
+.peoples-results, .similar-results {
+     background: rgba(black,0.075);
+     border-radius: 8px;
+     padding: 0 0 1em 0;
+     display: inline-block;
+     width: 100%;
+     margin: -2em 0 2em 0;
+     .heading-m {
+          margin: 0.75em 0 0.25em 0;
+          padding: 0 1.25em;
+     }
+     .flex-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          p {
+               width: 86%;
+               margin: 0.25em 0;
+               padding: 0 7%;
+               @include media-query($from: tablet) {
+                    width: 43%;
+                    padding: 0 3.5%;
+               }
+          }
+     }
+}
+
+.hero {
+     .peoples-results, .similar-results {
+          margin: 0;
+     }
+}
+
+.similar-results {
+     background: none;
+     margin-top: 2em;
+     .heading-m {
+          padding: 0;
+     }
+     .flex-wrapper {
+          p {
+               padding: 0 6.5% 0 0;
           }
      }
 }

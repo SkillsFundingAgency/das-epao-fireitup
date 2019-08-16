@@ -115,7 +115,7 @@
                line-height: 20px;
                margin: 40px 0 0 0;
                .card-stories__cite-detail {
-                    color: $apprentice;
+                    // color: $apprentice;
                     width: 100%;
                     display: inline-block;
                }
@@ -138,11 +138,11 @@
                          background-size: contain;
                     }
                }
-               .card-stories__cite {
-                    .card-stories__cite-detail {
-                         color: black;
-                    }
-               }
+               // .card-stories__cite {
+               //      .card-stories__cite-detail {
+               //           color: black;
+               //      }
+               // }
           }
      }
 }
@@ -208,12 +208,12 @@
 
 .card-stories__cite-detail {
   display: block;
-  .card-stories--apprentice & {
-    color: $apprentice;
-  }
-  .card-stories--employer & {
-    color: $employer;
-  }
+     .card-stories--apprentice & {
+          color: $apprentice;
+     }
+     .card-stories--employer & {
+          color: $employer;
+     }
 }
 
 .card-stories__icon-play {

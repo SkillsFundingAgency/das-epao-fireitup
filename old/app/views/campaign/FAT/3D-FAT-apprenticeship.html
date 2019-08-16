@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>FIRE IT UP! - Find apprenticeship training</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template employer-page" id="page-fat-details" data-id="{{ id }}" data-page-id="5">
+
+
+
+          <script>
+               document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+          </script>
+
+          <a href="#main-content" class="skip-link">Skip to main content</a>
+
+          <div class="wrap fat-search">
+
+               {% include '../components/header/_header-employer.html'%}
+               {% include '../components/hero-heading/_em-FAT-3D-hero-heading.html' %}
+
+               <main id="main-content" class="main-content page-app-3-FAT employer">
+
+                    <div class="grid-row" id="flex-direction-change">
+                         <div class="grid-column-full">
+
+                              <div class="page">
+
+                                   <h2 class="heading-l no-top-margin">Summary of this apprenticeship standard</h2>
+
+                                   <!-- <p class="lead-paragraph">Helping organisations become more efficient.</p> -->
+
+                                   <dl class="data-list">
+                                        <dt>Level</dt>
+                                        <dd id="level">
+                                             <div class="markdown"><p>3 (equivalent to A levels at grades A to E)</p></div>
+                                        </dd>
+                                        <dt>Typical length</dt>
+                                        <dd id="length">18 months</dd>
+
+                                        <dt>Current funding band</dt>
+                                        <dd id="funding-cap">
+                                             Up to £9,000 per apprentice.<br>
+                                             <a href="https://www.gov.uk/guidance/employing-an-apprentice-technical-guide-for-employers#funding-for-your-apprenticeship" target="_blank" rel="external" class="external">More information about funding</a>
+                                        </dd>
+
+                                        <dt>Entry requirements</dt>
+                                        <dd id="entry-requirements">
+                                             <div class="markdown"><p>Set by employer</p></div>
+                                        </dd>
+
+                                        <dt>What apprentices will learn</dt>
+                                        <dd id="will-learn">
+                                             <div class="markdown">
+                                                  <ul class="list list--bullet list--bullet-employer">
+                                                       <li>checking how many hours employees have worked</li>
+                                                       <li>how to calculate pay</li>
+                                                       <li>working out tax and national insurance payments</li>
+                                                       <li>paying wages</li>
+                                                       <li>processing holiday, sick and maternity pay, and expenses</li>
+                                                       <li>understanding and issuing tax forms</li>
+                                                  </ul>
+                                             </div>
+                                        </dd>
+
+                                        <dt>Qualifications</dt>
+                                        <dd id="qualifications">
+                                             <div class="markdown">
+                                                  <p>Before taking their end-point assessment:</p>
+                                                  <ul class="list list--bullet list--bullet-employer">
+                                                       <li>apprentices must achieve level 2 English and maths (equivalent to GCSE grades 9 to 4 or A* to C)</li>
+                                                  </ul>
+                                             </div>
+                                        </dd>
+
+                                        <dt>Professional registration</dt>
+                                        <dd id="professional-registration">
+                                             <div class="markdown"><p>Apprentices will be eligible to apply for student membership of the Global Payroll Association and Chartered Institute of Payroll Professionals.</p></div>
+                                        </dd>
+
+                                        <dt>How apprentices are assessed</dt>
+                                        <dd id="professional-registration">
+                                             <div class="markdown">
+                                                  <p>
+                                                       A government-approved organisation must assess apprentices towards the end of their apprenticeship.
+                                                  </p>
+                                                  <p>
+                                                       This end-point assessment ensures apprentices achieve the skills, training and any qualifications
+                                                       necessary to complete their apprenticeship.
+                                                  </p>
+                                                  <p>
+                                                       You can download the assessment plan from the Institute for Apprenticeships. There are no end-point
+                                                       assessment organisations for this apprenticeship yet. Please email
+                                                       <a href="mailto:apprentice.assessment@education.gov.uk" target="_blank">apprentice.assessment@education.gov.uk</a>
+                                                       if you urgently need an end-point assessment organisation.
+                                                  </p>
+                                             </div>
+                                        </dd>
+
+                                        <dt>More Information</dt>
+                                        <dd id="more-information">
+                                             <div class="markdown">
+                                                  <p>The Institute for Apprenticeships has more detailed information about this apprenticeship.</p>
+                                             </div>
+                                        </dd>
+
+                                   </dl>
+
+                                   <div class="cta-row save-and-compare">
+                                        <div class="form-group radios">
+                                             <div class="checkboxes__item save-label">
+                                                  <input class="checkboxes__input checkbox-save" type="checkbox" value="true" id="save-{{ id }}" name="save-{{ id }}">
+                                                  <label class="label checkboxes__label" for="save-{{ id }}">Add to favourites</label>
+                                             </div>
+                                             <!-- <div class="checkboxes__item compare-label">
+                                                  <input class="checkboxes__input compare-item" type="checkbox" value="true" id="compare-1" name="compare-feature">
+                                                  <label class="label checkboxes__label" for="compare-1">Compare</label>
+                                             </div> -->
+                                        </div>
+                                   </div>
+
+                              </div>
+
+
+                         </div>
+
+                    </div>
+
+                    {% include '../components/faa-fat/_fat-training-provider-search.html' %}
+
+
+               </main>
+
+               {% include '../components/footer/_footer-employer.html'%}
+
+          </div>
+
+     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+     <script src="/dist/campaign/js/app.min.js"></script>
+     <script src="/dist/js/das-all.js"></script>
+     <script>
+          window.DASFrontend.initAll()
+     </script> -->
+
+     {% include '../components/footer/_scripts.html'%}
+
+     </body>
+
+</html>

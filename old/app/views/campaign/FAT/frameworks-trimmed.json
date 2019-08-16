@@ -1,0 +1,236 @@
+[
+  {
+    "Id": "196",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/standards/196",
+    "Title": "Business Administrator",
+    "Duration": 18,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2017-09-18T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 5000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 5000
+      }
+    ],
+    "CurrentFundingCap": 5000,
+    "MaxFunding": 5000,
+    "Level": 3,
+    "Ssa1": 15,
+    "Ssa2": 15.2,
+    "EffectiveFrom": "2017-09-18T00:00:00"
+  },
+  {
+    "Id": "490-3-1",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/frameworks/490-3-1",
+    "Title": "Business and Administration: Business and Administration",
+    "Duration": 12,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2017-05-01T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 2000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 2000
+      }
+    ],
+    "CurrentFundingCap": 2000,
+    "MaxFunding": 2000,
+    "Level": 2,
+    "Ssa1": 15,
+    "Ssa2": 15.2,
+    "EffectiveFrom": "2012-12-05T00:00:00",
+    "EffectiveTo": "2020-07-31T00:00:00"
+  },
+  {
+    "Id": "620-20-1",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/frameworks/620-20-1",
+    "Title": "Business and Professional Administration: Business and Professional Administration",
+    "Duration": 24,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2017-05-01T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 4000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 4000
+      }
+    ],
+    "CurrentFundingCap": 4000,
+    "MaxFunding": 4000,
+    "Level": 4,
+    "Ssa1": 15,
+    "Ssa2": 15.2,
+    "EffectiveFrom": "2014-02-19T00:00:00",
+    "EffectiveTo": "2020-07-31T00:00:00"
+  },
+  {
+    "Id": "286",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/standards/286",
+    "Title": "Payroll Administrator",
+    "Duration": 18,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2018-06-13T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 9000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 9000
+      }
+    ],
+    "CurrentFundingCap": 9000,
+    "MaxFunding": 9000,
+    "Level": 3,
+    "Ssa1": 15,
+    "Ssa2": 15.2,
+    "EffectiveFrom": "2018-06-13T00:00:00"
+  },
+  {
+    "Id": "232",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/standards/232",
+    "Title": "School Business Professional",
+    "Duration": 18,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2018-02-05T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 6000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 6000
+      }
+    ],
+    "CurrentFundingCap": 6000,
+    "MaxFunding": 6000,
+    "Level": 4,
+    "Ssa1": 15,
+    "Ssa2": 15.2,
+    "EffectiveFrom": "2018-02-05T00:00:00"
+  },
+  {
+    "Id": "8",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/standards/8",
+    "Title": "Financial services administrator",
+    "Duration": 12,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2017-05-01T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 12000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 12000
+      }
+    ],
+    "CurrentFundingCap": 12000,
+    "MaxFunding": 12000,
+    "Level": 3,
+    "Ssa1": 15,
+    "Ssa2": 15.1,
+    "EffectiveFrom": "2014-08-01T00:00:00"
+  },
+  {
+    "Id": "311",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/standards/311",
+    "Title": "Business to Business Sales Professional (degree)",
+    "Duration": 36,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2018-06-26T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 21000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 21000
+      }
+    ],
+    "CurrentFundingCap": 21000,
+    "MaxFunding": 21000,
+    "Level": 6,
+    "Ssa1": 15,
+    "Ssa2": 15.4,
+    "EffectiveFrom": "2018-06-26T00:00:00"
+  },
+  {
+    "Id": "490-2-1",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/frameworks/490-2-1",
+    "Title": "Business and Administration: Business and Administration",
+    "Duration": 18,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2017-05-01T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 2500
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 2500
+      }
+    ],
+    "CurrentFundingCap": 2500,
+    "MaxFunding": 2500,
+    "Level": 3,
+    "Ssa1": 15,
+    "Ssa2": 15.2,
+    "EffectiveFrom": "2012-12-05T00:00:00",
+    "EffectiveTo": "2020-07-31T00:00:00"
+  },
+  {
+    "Id": "29",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/standards/29",
+    "Title": "Investment operations administrator",
+    "Duration": 12,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2017-05-01T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 5000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 5000
+      }
+    ],
+    "CurrentFundingCap": 5000,
+    "MaxFunding": 5000,
+    "Level": 2,
+    "Ssa1": 15,
+    "Ssa2": 15.1,
+    "EffectiveFrom": "2015-08-01T00:00:00"
+  },
+  {
+    "Id": "455-3-5",
+    "Uri": "https://findapprenticeshiptraining-api.sfa.bis.gov.uk/frameworks/455-3-5",
+    "Title": "Providing Financial Services: Administration for Mortgage and/or Financial Planning Intermediaries",
+    "Duration": 12,
+    "FundingPeriods": [
+      {
+        "EffectiveFrom": "2017-05-01T00:00:00",
+        "EffectiveTo": "2018-07-31T00:00:00",
+        "FundingCap": 2000
+      },
+      {
+        "EffectiveFrom": "2018-08-01T00:00:00",
+        "FundingCap": 2000
+      }
+    ],
+    "CurrentFundingCap": 2000,
+    "MaxFunding": 2000,
+    "Level": 2,
+    "Ssa1": 15,
+    "Ssa2": 15.1,
+    "EffectiveFrom": "2012-12-21T00:00:00",
+    "EffectiveTo": "2020-07-31T00:00:00"
+  }
+]

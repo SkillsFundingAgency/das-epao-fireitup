@@ -1,4 +1,4 @@
-#hub-page-B, #hub-page-C {
+#hub-page-B, #hub-page-C, #hub-page-D {
      .main-content {
           &.hub-page {
                display: inline-block;
@@ -8,7 +8,7 @@
                // clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
                position: relative;
                z-index: 100;
-               background: white;
+               background: none;
                .main-title-container {
                     text-align: center;
                     .heading-l {
@@ -26,7 +26,7 @@
                          display: flex;
                     }
                     &.section-1, &.section-2, &.section-3, &.section-4, &.section-5, &.section-6, &.section-7 {
-                         margin-bottom: 8em;
+                         margin-bottom: 10em;
                          @include media-query($from: tablet) {
                               margin-bottom: 0em;
                          }
@@ -101,8 +101,12 @@
                          }
                     }
                     &.section-1 {
-                         margin-top: 2em;
+                         margin-top: 0;
                          z-index: 1;
+                         .border {
+                              top: inherit;
+                              bottom: -0.35em;
+                         }
                          .image {
                               order: 1;
                          }
@@ -129,26 +133,28 @@
                          }
                          .border {
                               transform: scaleX(-1);
-                              // .spot {
-                              //      &.top {
-                              //           left: inherit;
-                              //           right: -1em;
-                              //      }
-                              //      &.bottom {
-                              //           left: -1em;
-                              //           right: inherit;
-                              //      }
-                              // }
                          }
                     }
                     &.section-4 {
                          z-index: 4;
-                         margin-bottom: 2em;
                          .image {
                               order: 2;
                          }
                          .text {
                               order: 1;
+                         }
+                    }
+                    &.section-5 {
+                         z-index: 5;
+                         margin-bottom: 0;
+                         .image {
+                              order: 1;
+                         }
+                         .text {
+                              order: 2;
+                         }
+                         .border {
+                              transform: scaleX(-1);
                          }
                     }
                     .image, .text {
@@ -197,6 +203,7 @@ section {
      &.title-container {
           padding: 2em 0;
           background: $employer;
+          color: white;
           clip-path: none;
           position: relative;
           z-index: 1;
@@ -211,12 +218,13 @@ section {
                padding: 0 5%;
                h1, h2, h3, h4, p {
                     margin: 0;
+                    color: white;
                }
           }
      }
 }
 
-#hub-page-C {
+#hub-page-D {
      .main-content {
           &.hub-page {
                .journey-section {
@@ -347,6 +355,72 @@ section {
                          }
                     }
                }
+          }
+     }
+}
+
+#hub-page-B {
+     section.title-container {
+          margin: -2.5em 0 1em 0;
+     }
+     .main-content {
+          &.hub-page {
+               padding: 0 5% 0 5%;
+               &.top-section {
+                    padding: 40px 5% 0 5%;
+               }
+               .journey-section {
+                    &.section-1 {
+                         .border {
+                              bottom: -8.35em;
+                              @include media-query($from: tablet) {
+                                   bottom: -0.35em;
+                              }
+                         }
+                    }
+                    &.section-5 {
+                         margin-bottom: 0em !important;
+                    }
+               }
+          }
+     }
+     .card__collection--hub-employer {
+          padding-bottom: 10px;
+          margin-bottom: 8em;
+          background: $employer-pale;
+          clip-path: none;
+          @include media-query($from: tablet) {
+               margin-bottom: 0;
+               padding-bottom: 130px;
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+          }
+     }
+}
+
+#hub-page-C {
+     section.title-container {
+          margin: -2.5em 0 1em 0;
+     }
+     .main-content {
+          &.hub-page {
+               padding: 0 5% 0 5%;
+               &.top-section {
+                    padding: 40px 5% 0 5%;
+               }
+               .journey-section {
+                    &.section-5 {
+                         margin-bottom: 3em;
+                    }
+               }
+          }
+     }
+     .card__collection--hub-employer {
+          padding-bottom: 90px;
+          margin-bottom: -100px;
+          background: #FFF4DF;
+          clip-path: none;
+          @include media-query($from: tablet) {
+               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
           }
      }
 }

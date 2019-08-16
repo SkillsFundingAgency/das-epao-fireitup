@@ -1,0 +1,9 @@
+html {
+     line-height: 1.4;
+}
+
+.hidden--desktop {
+  @include media-query($from: tablet) {
+    display: none;
+  }
+}

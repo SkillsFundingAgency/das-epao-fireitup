@@ -3,7 +3,7 @@
      z-index: 1;
      &.mobile-only {
           .hmrc-gov {
-               bottom: 13em;
+               bottom: 3em;
           }
      }
 }
@@ -54,13 +54,19 @@
      .fire-it-up {
           text-indent: -1000em;
           position: absolute;
-          top: 130px;
+          top: 100px;
           left: 20px;
           display: inline-block;
           width: 11em;
           height: 6em;
           background: url("../images/fire-it-up.png") no-repeat;
           background-size: contain;
+          @include media-query($from: tablet) {
+               top: 140px;
+               left: 75px;
+               width: 17em;
+               height: 10em;
+          }
      }
      @include media-query($from: tablet) {
           padding: 320px $edgeGutter 110px;
@@ -125,12 +131,12 @@
 #apprentice-and-employer-journey {
      height: 100vh;
      .launcher__content {
-          padding-top: 220px;
+          padding-top: 190px;
           height: 100vh;
           position: relative;
           .cta-wrappers {
                position: absolute;
-               bottom: 18em;
+               bottom: 20.5em;
                left: 20px;
                right: 20px;
           }
@@ -154,13 +160,13 @@
 
 .launcher--apprentices {
      .launcher__bg {
-          background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-apprentice.jpg");
+          background-image: linear-gradient(215deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-apprentice.jpg");
           background-position: -250px -60px;
           @include mq($from: 320px) {
                background-position: 37%;
           }
           @include mq($from: tablet) {
-               background-position: 30%;
+               background-position: 30% 0;
           }
      }
 }
@@ -173,7 +179,7 @@
                background-position: 37%;
           }
           @include mq($from: tablet) {
-               background-position: 30%;
+               background-position: 30% 0;
           }
      }
 }
@@ -192,8 +198,8 @@
 }
 
 .launcher--employer .launcher__bg {
-     background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-employer.jpg");
-     background-position: center;
+     background-image: linear-gradient(215deg, rgba(0,0,0,0) 20%, rgba(0,0,0,0.4) 40%, rgba(0,0,0,1) 100%), url("../images/homepage/home-launch-employer.jpg");
+     background-position: 50% 0;
      @include mq($from: tablet) {
 
      }
@@ -207,7 +213,7 @@
 
 .launcher--employer-2 .launcher__bg {
      background-image: linear-gradient(255deg, rgba(0,0,0,0) 20%, rgba(0,0,0,1) 100%), url("../images/images/heroes/2000x1200/employer/hajra-right.jpg");
-     background-position: 70% 0%;
+     background-position: 70% 0;
      @include mq($from: tablet) {
 
      }
@@ -237,7 +243,7 @@
      margin-left: 0;
      .launcher--employer & {
           background: $employer;
-          color: $black;
+          // color: $black;
      }
      @include media-query($from: tablet) {
           padding-left: $edgeGutterTablet;
@@ -252,14 +258,14 @@
 }
 
 .launcher__heading {
-     text-transform: uppercase;
+     text-transform: inherit;
      font-family: $font-family;
      font-weight: $font-weight-bold;
-     font-size: 30px;
+     font-size: 24px;
      margin: 30px 0 15px;
      line-height: 1.2;
      @include mq($from: tablet) {
-          font-size: 36px;
+          font-size: 24px;
      }
 }
 
@@ -288,5 +294,14 @@
           .launcher--employer & {
                background: $employer;
           }
+     }
+}
+
+#employer-journey-2 {
+     margin-bottom: -10px;
+     clip-path: none;
+     @include mq($from: tablet) {
+          margin-bottom: -80px;
+          clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
      }
 }

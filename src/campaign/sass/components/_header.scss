@@ -1,22 +1,141 @@
 header {
-     &.header-concept {
+     position: relative;
+     // &.header-concept {
+     //      .header {
+     //           padding-left: 2em !important;
+     //           background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+     //           &:hover {
+     //                box-shadow: none;
+     //                background: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+     //                .header__logo {
+     //                     background-image: url('../images/apprenticeships-logo.png');
+     //                }
+     //           }
+     //      }
+     // }
+     &.header-index {
           .header {
-               padding-left: 2em !important;
-               &:hover {
-                    box-shadow: none;
-                    background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+               &.active, &:hover {
                     .header__logo {
-                         background-image: url('../images/apprenticeships-logo.png');
+                         background-color: transparent;
+                         background-image: none;
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                         @include media-query($from: tablet) {
+                              background-image: url('../images/apprenticeships-logo-black.png');
+                         }
+                    }
+               }
+               .header__logo {
+                    background-color: transparent;
+                    background-image: none;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeship-logo.png');
                     }
                }
           }
      }
+     &.employer-header {
+          .header {
+               background: white;
+               .header__logo {
+                    background-image: none;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeships-logo-black-employer.jpg');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
+               }
+               &.active {
+                    .header__logo .header__logo-image {
+                         opacity: 1;
+                    }
+               }
+               .navigation__toggle-label {
+                    color: black;
+               }
+               .navigation__toggle .navigation__toggle-icon {
+                    background: black;
+                    &:before, &:after {
+                         background: black;
+                    }
+               }
+          }
+          .apprentice-nav, .parents-nav {
+               display: none;
+          }
+     }
+     &.apprentice-header {
+          .header {
+               background: white;
+               .header__logo {
+                    background-image: none;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeships-logo-black-apprentice.jpg');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
+               }
+               &.active {
+                    .header__logo .header__logo-image {
+                         opacity: 1;
+                    }
+               }
+               .navigation__toggle-label {
+                    color: black;
+               }
+               .navigation__toggle .navigation__toggle-icon {
+                    background: black;
+                    &:before, &:after {
+                         background: black;
+                    }
+               }
+          }
+          .employer-nav, .parents-nav {
+               display: none;
+          }
+     }
+     &.parents-header {
+          .header {
+               background: white;
+               .header__logo {
+                    background-image: none;
+                    @include media-query($from: tablet) {
+                         background-image: url('../images/apprenticeships-logo-black-parents.jpg');
+                         background-repeat: no-repeat;
+                         background-size: contain;
+                    }
+               }
+               &.active {
+                    .header__logo .header__logo-image {
+                         opacity: 1;
+                    }
+               }
+               .navigation__toggle-label {
+                    color: black;
+               }
+               .navigation__toggle .navigation__toggle-icon {
+                    background: black;
+                    &:before, &:after {
+                         background: black;
+                    }
+               }
+          }
+          .employer-nav, .apprentice-nav {
+               display: none;
+          }
+     }
+
 }
 
 .header {
      // background: #000;
-     background: linear-gradient(0deg, rgba(0,0,0,0.025) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
-     padding: 15px 20px 20px 20px;
+     // background: white;
+     // padding: 10px 20px;
+     background: linear-gradient(0deg, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+     padding: 0;
      position: fixed;
      left: 0;
      right: 0;
@@ -27,18 +146,49 @@ header {
      box-sizing: border-box;
      overflow: visible;
      transition: all .3s ease-in;
+     box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
+     height: 70px;
      @include media-query($from: tablet) {
-          padding: 20px;
+          height: 80px;
+          padding: 15px 20px 20px 20px;
+     }
+     .header__logo {
+          height: 70px;
+          margin-top: 0px;
+          // background-color: white;
+          position: relative;
+          z-index: 11;
+          box-shadow: 0px 0px 10px 10px rgba(black,0.2);
+          background-image: none;
+          background-repeat: no-repeat;
+          background-size: contain;
+          @include media-query($from: tablet) {
+               background-image: url('../images/apprenticeships-logo.png');
+               height: 60px;
+               margin-top: 10px;
+               box-shadow: none;
+          }
+     }
+     .navigation__link--top-level {
+          // color: white;
+          // color: #0B0C0C;
+          @include media-query($from: tablet) {
+               padding: 30px 20px 32px 20px;
+          }
+          &:hover, &:active, &:focus {
+               cursor: pointer;
+          }
      }
      .js-menu-open & {
           background: #fff;
      }
      @include media-query($from: tablet) {
-          background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+          // background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.8) 50%, rgba(0,0,0,1) 100%);
+          padding: 20px;
      }
      @include media-query($from: $nav-breakpoint) {
           padding: 25px 40px;
-          height: 120px;
+          height: 80px;
           &:hover {
                background: #fff;
           }
@@ -49,46 +199,79 @@ header {
      &:hover {
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
           .navigation {
-               &.employer-nav {
-                    .navigation__list-item--with-button {
-                         .separator {
-                              background: rgba(black,0.1);
-                         }
-                         a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
-                              background-size: contain;
+               .navigation__list-item--with-button {
+                    .separator {
+                         background: rgba(black,0.1);
+                    }
+                    a.button {
+                         &.basket {
+                              background: url("../images/favourite-unchecked-white.svg") no-repeat 92% 50%;
+                              background-size: 2.5em;
                               &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
-                                   background-size: contain;
+                                   background: url("../images/favourite-checked-white.svg") no-repeat 92% 50%;
+                                   background-size: 2.5em;
+                              }
+                              @include media-query($from: desktop) {
+                                   background: url("../images/favourite-unchecked-white.svg") no-repeat 50% 50%;
+                                   background-size: 2em;
+                                   &.full {
+                                        background: url("../images/favourite-checked-white.svg") no-repeat 50% 50%;
+                                        background-size: 2em;
+                                   }
+                              }
+                         }
+                         &.user-icon {
+                              background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                         }
+                    }
+               }
+          }
+          .apprentice-nav {
+               .nav-item-with-sub-nav {
+                    .navigation__link--top-level {
+                         &:hover, &:active, &:focus {
+                              // color: white;
+                              .border {
+                                   background: white;
+                              }
+                              .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                                   background: white;
                               }
                          }
                     }
                }
           }
-          .navigation__link--top-level {
-               color: #0B0C0C;
-               &:hover {
-                    color: rgba($black, 0.4);
-                    .navigation__sub-menu-icon {
-                         transform: rotate(224deg) scaleX(-1);
-                         background: rgba($black, 0.4);
-                         &:before {
-                              background: rgba($black, 0.4);
-                         }
-                    }
-               }
-          }
+          // .navigation__link--top-level {
+          //      // color: #0B0C0C;
+          //      &:hover {
+          //           // color: rgba($black, 0.4);
+          //           // color: rgba($black, 0.4);
+          //           .navigation__sub-menu-icon {
+          //                transform: rotate(224deg) scaleX(-1);
+          //                background: rgba($black, 0.4);
+          //                &:before {
+          //                     background: rgba($black, 0.4);
+          //                }
+          //           }
+          //      }
+          // }
      }
      &.active {
           background: #fff;
           box-shadow: 0px 0px 40px 10px rgba(black, 0.3);
-          height: auto;
+          // height: 70px;
           @include media-query($from: tablet) {
                height: 80px;
           }
           .navigation__menu {
                li {
                     a {
+                         .border {
+                              // display: inline-block;
+                              // background: $employer;
+                              bottom: 2.55em;
+                         }
                          &.active-section {
                               .border {
                                    background: black;
@@ -103,59 +286,102 @@ header {
                }
           }
           .navigation {
-               top: 84px;
-               @include media-query($from: tablet) {
-                    top: 89px;
+               .navigation__list-item--with-button {
+                    .separator {
+                         background: rgba(black,0.1);
+                    }
+                    a.button {
+                         &.basket {
+                              // background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
+                              top: 84px;
+                              @include media-query($from: tablet) {
+                                   top: 0px;
+                                   padding-top: 0 !important;
+                              }
+                         }
+                    }
                }
                &.employer-nav {
                     .navigation__list-item--with-button {
                          .separator {
-                              background: rgba(black,0.4);
+                              background: rgba(black,0.1);
                          }
                          a.button.basket {
-                              background: url("../images/basket-empty-black.svg") no-repeat 50% 50%;
+                              background: url("../images/favourite-unchecked-black.svg") no-repeat 50% 50%;
                               background-size: contain;
-                              margin-top: -0.35em;
+                              // margin-top: 0.25em;
                               &.full {
-                                   background: url("../images/basket-full-black.svg") no-repeat 50% 50%;
+                                   background: url("../images/favourite-checked-employer.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                              }
+                         }
+                         &.user-icon {
+                              background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                              background-size: contain;
+                              &:hover, &:active, &:focus {
+                                   background: url("../images/avatar-white.svg") no-repeat 50% 50%;
                                    background-size: contain;
                               }
                          }
                     }
                }
           }
+          .employer-nav {
+               .navigation {
+                    .navigation__list-item--with-button {
+                         a.button {
+                              &.user-icon {
+                                   background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                                   background-size: contain;
+                                   &:hover, &:active, &:focus {
+                                        background: url("../images/avatar-black.svg") no-repeat 50% 50%;
+                                        background-size: contain;
+                                   }
+                              }
+                         }
+                    }
+               }
+          }
           .header__logo {
-               height: 50px;
-               margin-top: 0;
+               height: 70px;
+               margin-top: 0px;
                @include media-query($from: tablet) {
-                    margin-top: 15px;
+                    margin-top: 10px;
+                    height: 60px;
                }
           }
-          .navigation__toggle-label {
-               color: $black;
-          }
-          .navigation__toggle-icon {
-               background: black;
-               &:before, &:after {
-                    background: black;
-               }
-          }
+          // .navigation__toggle-label {
+          //      color: $black;
+          // }
+          // .navigation__toggle-icon {
+          //      background: black;
+          //      &:before, &:after {
+          //           background: black;
+          //      }
+          // }
           .header__logo {
                background-image: url('../images/apprenticeships-logo-black.png');
-               background-size: contain;
+               background-size: 9.5em;
                background-repeat: no-repeat;
+               background-position: 10px;
+               @include media-query($from: tablet) {
+                    background-image: url('../images/apprenticeships-logo-black.png');
+                    background-size: contain;
+                    background-position: inherit;
+               }
                .header__logo-image {
                     opacity: 0;
                }
           }
           .navigation__link--top-level {
-               color: #0B0C0C;
-               padding: 20px 20px 20px;
+               // color: $black;
+               padding: 30px 20px 32px;
                @include media-query($from: tablet) {
-                    padding: 30px 25px 40px;
+                    padding: 30px 20px 40px;
                }
                &:hover, &.active {
-                    color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
+                    // color: rgba($black, 0.4);
                     .navigation__sub-menu-icon {
                          transform: rotate(224deg) scaleX(-1);
                          background: rgba($black, 0.4);
@@ -174,11 +400,12 @@ header {
                top: 80px;
           }
           .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
-               background: #0B0C0C;
+               // background: #0B0C0C;
+               background: white;
           }
-          .navigation__list-item--with-button {
-               padding-top: 15px;
-          }
+          // .navigation__list-item--with-button {
+          //      padding-top: 0;
+          // }
           .navigation__list-item--with-button > .button, .js-menu-open .navigation__list-item--with-button > .button {
                background: #000;
                color: #fff;
@@ -190,12 +417,51 @@ header {
      }
 }
 
-.header.header--active {
-  background: #fff;
-  -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
-  box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+.index {
+     .header {
+          &:hover {
+               background: linear-gradient(0deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
+               .header__logo {
+                    background-image: none;
+               }
+               .navigation {
+                    .navigation__link--top-level {
+                         color: black;
+                    }
+               }
+          }
+          &.active {
+               .navigation__link--top-level {
+                    color: black;
+               }
+          }
+          @include media-query($from: desktop) {
+               padding: 0px 20px 25px 20px;
+               &:hover {
+                    .header__logo {
+                         background-image: url('../images/apprenticeships-logo.png');
+                    }
+               }
+          }
+     }
 }
+
+.apprentice-header {
+     .header {
+          &.active, &:hover {
+               .navigation__sub-menu-icon, .navigation__sub-menu-icon:before {
+                    background: white;
+               }
+          }
+     }
+}
+
+// .header.header--active {
+//      background: #fff;
+//      -webkit-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+//      -moz-box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+//      box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.2);
+// }
 
 .header__logo {
      height: 55px;
@@ -220,14 +486,18 @@ header {
 }
 
 .header__logo-image {
-  max-height: 100%;
-  .header--active &,
-  .js-menu-open & {
-    opacity: 0;
-  }
-  @include media-query($from: $nav-breakpoint) {
-    .header:hover & {
-      opacity: 0;
-    }
-  }
+     max-height: 78%;
+     margin: 5px 0 0 10px;
+     // .header--active &,
+     // .js-menu-open & {
+     //   opacity: 0;
+     // }
+     @include media-query($from: $nav-breakpoint) {
+          max-height: 100%;
+          opacity: 0;
+          margin: 0 0 0 0;
+          .header:hover & {
+               opacity: 0;
+          }
+     }
 }

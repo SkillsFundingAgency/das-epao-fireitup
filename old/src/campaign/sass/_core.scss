@@ -1,0 +1,402 @@
+html {
+     scroll-behavior: smooth;
+}
+
+
+.page-template {
+     background: white;
+     // background: $page-bg;
+     &.index {
+          background: $page-bg;
+     }
+     &.real-stories {
+          background: #F8F8F8;
+     }
+}
+
+.no-top-margin {
+     margin-top: 0 !important;
+}
+.no-bottom-margin {
+     margin-bottom: 0 !important;
+}
+.no-top-padding {
+     padding-top: 0 !important;
+}
+.no-bottom-padding {
+     padding-bottom: 0 !important;
+}
+
+.mobile-only {
+     display: inline-block;
+     @include media-query($from: tablet) {
+          display: none;
+     }
+}
+
+.desktop-only {
+     display: none;
+     @include media-query($from: tablet) {
+          display: inline-block;
+     }
+}
+
+.js-menu-open {
+  overflow: hidden;
+}
+
+.wrap {
+  margin: 0 auto;
+  min-width: 320px;
+  // max-width: $page-width;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-content-section {
+     padding: 20px;
+     background: #F8F8F8;
+     padding-top: 50px;
+     @include media-query($from: tablet) {
+          padding: 20px 50px  0px  50px;
+     }
+     &:after{
+          content: '';
+          position: relative;
+          left: -20px;
+          right: 0;
+          bottom: -22px;
+          border-style: solid;
+          border-width: 0px 0px 32px 740px;
+          border-color: transparent #f8f8f8 transparent;
+          z-index: 10;
+          @include media-query($from: tablet) {
+               left: -50px;
+               border-width: 0px 0px 50px 1440px;
+               bottom: -15px;
+          }
+     }
+     &.real-stories-section {
+          @include media-query($from: tablet) {
+               padding: 20px 50px 50px 50px;
+          }
+          &:after {
+               display: none;
+          }
+     }
+}
+
+.main-content,
+.section,
+.resources,
+.footer {
+     padding: 20px;
+     // padding: $gutter-half;
+     @include media-query($from: tablet) {
+          padding: $gutter;
+     }
+     @include media-query($from: desktop) {
+          padding: 40px 80px;
+     }
+}
+
+.footer {
+     @include media-query($from: desktop) {
+          padding: 40px 0px;
+     }
+}
+
+.main-content {
+     padding: 40px 20px 40px 20px;
+     background: #fff;
+     max-width: 1440px;
+     margin: 0 auto;
+     // min-height: 75em;
+     &.page-app-2, &.page-app-8-B {
+          @include media-query($from: tablet) {
+               // padding: 50px;
+               padding: 30px 80px 80px 80px;
+          }
+     }
+     &.page-fat-2 {
+          padding: 0px 20px 40px 20px;
+          @include media-query($from: tablet) {
+               padding: 0px 80px 80px 80px;
+          }
+          .page {
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
+     }
+     &.page-fat-4 {
+          padding: 20px 20px 40px 20px;
+          @include media-query($from: tablet) {
+               padding: 20px 80px 80px 80px;
+          }
+          .page {
+               padding-right: 0;
+               @include media-query($from: tablet) {
+                    padding-right: 0;
+               }
+          }
+     }
+     &.page-app-5-FAT {
+          padding-top: 40px;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
+          }
+     }
+     &.page-app-2-B {
+          padding-top: 20px;
+          @include media-query($from: tablet) {
+               // padding: 50px;
+               padding: 10px 80px 0px 80px;
+          }
+     }
+     @include media-query($from: tablet) {
+          // padding: 50px;
+          padding: 60px 80px 80px 80px;
+     }
+     &.page-app-3-FAT {
+          // @include media-query($from: tablet) {
+          //      // padding: 50px;
+          //      padding: 30px 80px 80px 80px;
+          // }
+          padding-top: 30px;
+          @include media-query($from: tablet) {
+               padding-top: 40px;
+          }
+          .page {
+               max-width: 100%;
+               padding: 0;
+               margin: 0;
+               .heading-l {
+                    width: 50%;
+               }
+          }
+     }
+     &.page-app-3-FAT, &.page-fat-4, &.page-app-5-FAT {
+          .trimmer {
+               @include media-query($from: tablet) {
+                    margin-top: 0px;
+               }
+               .sidebar__header:before, .sidebar__sub-content:before {
+                    @include media-query($from: tablet) {
+                         top: -37px;
+                         border-width: 0 0 38px 475px;
+                    }
+               }
+               .sidebar__header:after, .sidebar__sub-content:after {
+                    @include media-query($from: tablet) {
+                         border-width: 0 0 38px 475px;
+                    }
+               }
+          }
+     }
+     &.real-stories-section {
+          background-color: #F8F8F8;
+          @include media-query($from: tablet) {
+               padding: 40px 80px 20px 80px;
+          }
+     }
+}
+
+.real-stories-section {
+     .faa-fat-link-block {
+          &.cta-faa, &.cta-fat {
+               padding-left: 5%;
+               padding-right: 5%;
+               margin-top: 0;
+          }
+     }
+}
+
+.hub-page {
+     background: white;
+     .hero-banner {
+          margin-top: 0;
+          margin-bottom: 0 !important;
+          clip-path: none !important;
+          @include media-query($from: tablet) {
+               margin-top: -4em;
+               margin-bottom: -5em !important;
+               clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%) !important;
+          }
+     }
+     .resources {
+          padding-top: 3em;
+          @include media-query($from: tablet) {
+               padding-top: 6em;
+          }
+     }
+     .grid-column-full-width-one-quarter {
+          margin: 0 0 3em 0;
+          @include media-query($from: tablet) {
+               margin: 0;
+          }
+     }
+     &.apprentice {
+          .hero-banner {
+               clip-path: none !important;
+               margin-bottom: 0 !important;
+               margin-top: -4em !important;
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 0%, 100% 8%, 100% 100%, 0 100%) !important;
+                    padding: 60px 80px 0px 80px;
+               }
+               .faa-fat-link-block {
+                    &.cta-faa, &.cta-fat {
+                         padding-left: 5%;
+                         padding-right: 5%;
+                         margin-top: 0;
+                    }
+               }
+          }
+     }
+}
+
+.main-content-section {
+     max-width: 1440px;
+     margin: 0 auto;
+     .faa-fat-link-block {
+          margin-top: 10em;
+     }
+}
+
+// .card-stories__icon-play {
+//      position: relative;
+//      top: 35%;
+//      height: 110px;
+//      width: 110px;
+//      display: block;
+//      margin: 0 auto;
+//      background: $apprentice;
+//      border-radius: 50%;
+//      transition: box-shadow 0.2s ease;
+//      &:before {
+//           content: "";
+//           position: absolute;
+//           background: url("../images/hero-play-apprentice.svg") no-repeat 50% 50%;
+//           background-size: cover;
+//           display: inline-block;
+//           z-index: 1;
+//           bottom: 0;
+//           right: 0;
+//           left: 0;
+//           top: 0;
+//      }
+// }
+
+#text-container {
+     min-height: 75em;
+}
+
+#text-container-employer {
+     min-height: 90em;
+}
+
+
+.page {
+     max-width: 800px;
+     color: $text-colour;
+     &.low-height {
+          min-height: 1px;
+     }
+     @include media-query($from: tablet) {
+          padding-right: 40px;
+          min-height: 800px;
+     }
+     @include media-query($from: desktop) {
+          padding-right: 70px;
+     }
+     a {
+          color: $link-colour;
+          &:hover,
+          &:focus {
+               text-decoration: none;
+          }
+          &:focus {
+               outline: 3px solid $focus-colour;
+          }
+          &:visited {
+               color: $link-visited-colour;
+          }
+          &[rel~="external"] {
+               &:after {
+                    content: '';
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url("../images/icon-link-external-blue.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: bottom;
+                    margin-left: 3px;
+               }
+          }
+     }
+}
+
+.provider-details {
+     a {
+          color: $apprentice;
+          &[rel~="external"] {
+               &:after {
+                    content: '';
+                    display: inline-block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url("../images/icon-link-external-blue.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    vertical-align: bottom;
+                    margin-left: 3px;
+               }
+          }
+     }
+}
+
+main.FAT-basket {
+     @include media-query($from: tablet) {
+          padding: 80px 80px 80px 80px;
+     }
+     .page {
+          min-height: 1px;
+     }
+}
+
+
+.section-break {
+  margin: 0;
+  border: none;
+  height: 0;
+  border-bottom: 1px solid $border-colour;
+  @include responsive-margin(6, "top");
+  @include responsive-margin(6, "bottom");
+}
+
+#flex-direction-change {
+     display: flex;
+     flex-direction: column-reverse;
+     @include media-query($from: tablet) {
+          display: inherit;
+          flex-direction: inherit;
+     }
+}
+
+.show-for-mobile-only {
+     display: inline-block !important;
+     @include media-query($from: tablet) {
+          display: none !important;
+     }
+}
+
+.show-for-desktop-only {
+     display: none !important;
+     @include media-query($from: tablet) {
+          display: inline-block !important;
+     }
+}

@@ -1,0 +1,362 @@
+blockquote {
+     font-family: $font-family;
+     margin: 0;
+     width: 100%;
+     display: inline-block;
+     float: left;
+     padding: 0em 0 1.5em 0;
+     // border-left: 10px solid lightgrey;
+     position: relative;
+     @include media-query($from: tablet) {
+          width: 45%;
+          padding: 0em 3em 1.5em 0;
+     }
+     .quote {
+          display: inline-block;
+          width: 2em;
+          height: 2em;
+          margin: 0 0 0 0;
+          &.start, &.finish {
+               position: relative;
+          }
+          &.start {
+               top: -0.25em;
+               margin: 0 0.25em -0.5em 0;
+          }
+          &.finish {
+               top: 0.5em;
+               margin: 0 0 -0.75em 0.25em;
+          }
+     }
+     h2 {
+          margin: 0.5em auto 1.5em auto;
+          position: relative;
+          font-weight: 300;
+     }
+     .cite {
+          display: inline-block;
+          width: 100%;
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: bold;
+          line-height: 1;
+          .cite-detail, .cite-detail-job-title {
+               display: inline-block;
+               font-size: 0.85rem;
+               width: 100%;
+               font-weight: 700;
+          }
+          .cite-detail-job-title {
+               // color: #D7E9FC;
+               color: rgba(white,0.9);
+          }
+     }
+     &.full-width {
+          margin: 0;
+          color: white;
+          clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+          min-height: auto;
+          float: none;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-left: none;
+          @include media-query($from: tablet) {
+               min-height: 35em;
+          }
+          .content-wrapper {
+               text-align: center;
+               max-width: 1440px;
+               padding: 3em 2em;
+               @include media-query($from: tablet) {
+                    padding: 0 2em;
+               }
+          }
+          .quote {
+               width: 5em;
+               height: 5em;
+               margin: 0 0 1em 0;
+          }
+          h2 {
+               width: 100%;
+               margin: 0.5em auto 1.5em auto;
+               // text-transform: uppercase;
+               font-size: 1.25rem;
+          }
+          .cite {
+               font-size: 1.25rem;
+               color: white;
+               .cite-detail {
+                    color: black;
+                    font-size: 1rem;
+               }
+          }
+          &#employer-quote {
+               background: $employer;
+               margin-top: -4em;
+               h2 {
+                    color: black;
+               }
+               // .cite {
+               //      color: black;
+               // }
+               .quote {
+                    background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+          }
+          @include media-query($from: tablet) {
+               clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 90%);
+               min-height: 35em;
+               .content-wrapper {
+                    padding: 0;
+               }
+               .quote {
+                    width: 6em;
+                    height: 6em;
+               }
+               h2 {
+                    width: 60%;
+                    margin: 0.5em auto 1.5em auto;
+                    font-size: 1.75rem;
+               }
+               .cite {
+                    font-size: 1.5rem;
+                    .cite-detail {
+                         font-size: 1rem;
+                    }
+               }
+          }
+          &.end-of-page {
+               clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+               @include media-query($from: tablet) {
+                    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+               }
+          }
+     }
+}
+
+.apprentice {
+     blockquote {
+          .quote {
+               &.start {
+                    background: url("../images/icon-start-quote-large-blue.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+               &.finish {
+                    background: url("../images/icon-end-quote-large-blue.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+          }
+          .cite {
+               color: $apprentice;
+               .cite-detail {
+                    color: black;
+               }
+          }
+          &.full-width {
+               background: $apprentice;
+               .quote {
+                    background: url("../images/icon-quotes-large-white.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+               .cite {
+                    color: white;
+               }
+          }
+     }
+}
+
+
+.employer {
+     blockquote {
+          &.full-width#employer-quote {
+               margin-top: 0em;
+               @include media-query($from: tablet) {
+                    margin-top: -2em;
+               }
+          }
+          .quote {
+               &.start {
+                    background: url("../images/icon-start-quote-large-yellow.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+               &.finish {
+                    background: url("../images/icon-end-quote-large-yellow.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+          }
+          .cite {
+               color: #646c6f;
+               .cite-detail {
+                    color: black;
+               }
+          }
+          &.full-width {
+               background: $employer;
+               .cite {
+                    color: white;
+                    .cite-detail {
+                         color: black;
+                    }
+               }
+               .quote {
+                    background: url("../images/icon-quotes-large-black.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+          }
+     }
+}
+
+.real-stories-quotes {
+     clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+     padding-top: 4em;
+     background: #F5FAFF;
+     padding-bottom: 10em;
+     margin-top: -4em;
+     margin-bottom: 0;
+     &.second-quote {
+          margin-top: -6.5em;
+     }
+     &.employer-quotes {
+          background: #FFF4DF;
+          .quote-wrapper {
+               .heading-xs {
+                    color: rgba(black,0.6);
+               }
+          }
+     }
+     @include media-query($from: tablet) {
+          clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+          padding-top: 10em;
+     }
+     &.right-aligned-quotes {
+          .quote-block-black {
+               margin-bottom: 5em;
+          }
+          .quote-wrapper {
+               float: right;
+          }
+     }
+     &.margin-bottom-negative {
+          margin-bottom: -4em;
+     }
+     .quote-wrapper {
+          width: 100%;
+          @include media-query($from: tablet) {
+               width: 80%;
+          }
+          .heading-xs {
+               margin: 2em 0 0 0;
+          }
+          p {
+               margin-top: 0;
+          }
+          .caption {
+               display: inline-block;
+               width: auto;
+               .caption-icon {
+                    float: right;
+                    display: inline-block;
+                    width: 1.75em;
+                    height: 1.75em;
+                    margin: 0 0 0 0.5em;
+                    background: url("../images/icon-quote-circle-black.svg") no-repeat 50% 50%;
+                    background-size: contain;
+               }
+               .caption-text {
+                    margin-top: 0;
+                    padding-bottom: 0.25em;
+                    border-bottom: 2px solid $apprentice;
+                    width: auto;
+                    display: inline-block;
+               }
+          }
+     }
+     .quote-block-black {
+          position: relative;
+          display: inline-block;
+          .logo {
+               position: absolute;
+               bottom: -2.5em;
+               left: 7.5%;
+               background: $apprentice;
+               color: white;
+               padding: 1.5em 1em;
+               clip-path: polygon(0 0%, 100% 6%, 100% 94%, 0% 100%);
+               min-width: 5em;
+               @include media-query($from: tablet) {
+                    left: 7.5%;
+               }
+               p {
+                    margin: 0;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    text-align: center;
+               }
+          }
+     }
+     blockquote {
+          background: black;
+          color: white;
+          text-transform: uppercase;
+          padding: 2em 7.5% 4em 7.5%;
+          width: 85%;
+          display: inline-block;
+          font-weight: bold;
+          margin: 2em 0 0 0;
+          clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+          overflow: visible;
+          h2 {
+               font-size: 1.2rem;
+          }
+          @include media-query($from: tablet) {
+               clip-path: polygon(0 6%, 100% 0%, 100% 94%, 0% 100%);
+               padding: 4em 7.5% 4em 7.5%;
+               margin: 0;
+          }
+          .quote {
+               display: inline-block;
+               width: 4em;
+               height: 4em;
+               margin: 0 0 0 0;
+               background: url("../images/icon-quote-white.svg") no-repeat 50% 50%;
+               background-size: contain;
+               @include media-query($from: tablet) {
+                    width: 5em;
+                    height: 5em;
+               }
+          }
+          .cite {
+               .cite-detail-job-title {
+                    line-height: 1.2;
+               }
+          }
+          h2 {
+               font-weight: bold;
+          }
+     }
+     &.employer-quotes {
+          background: #FFF4DF;
+          .quote-wrapper {
+               .caption {
+                    .caption-text {
+                         border-bottom: 2px solid $employer;
+                    }
+               }
+          }
+          .quote-block-black {
+               .logo {
+                    background: $employer;
+                    color: black;
+               }
+          }
+          blockquote {
+               .cite {
+                    color: $employer;
+               }
+          }
+     }
+}

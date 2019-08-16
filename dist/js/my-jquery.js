@@ -36,19 +36,32 @@ if ($('body').hasClass('cookieBannerV1')) {
 ////////////////////////////// COOKIE BANNER - END //////////////////////////////
 
 ////////////////////////////// NAVIGATION - START //////////////////////////////
-if ($('main').hasClass('apprentice')) {
-     $('nav a.navigation__link--top-level--apprentice').append('<div class="border"></div>').addClass('active-section');
-} else if ($('main').hasClass('employer')) {
-     $('nav a.navigation__link--top-level--employer').append('<div class="border"></div>').addClass('active-section');
-} else if ($('main').hasClass('real-stories')) {
-     $('nav a.navigation__link--top-level--real-stories').append('<div class="border"></div>').addClass('active-section');
-} else if ($('main').hasClass('interests-page')) {
-     $('nav a.navigation__link--top-level--interests').append('<div class="border"></div>').addClass('active-section');
+if ($('body').hasClass('employer-page')) {
+     // $('.navigation__sub-menu').hide();
+     // $('.navigation__sub-menu--employer').show();
+     $('ul.navigation__menu li.navigation__list-item').removeClass('current-user');
+     $('ul.navigation__menu li.employer-nav').addClass('current-user');
+} else if ($('body').hasClass('apprentice-page')) {
+     // $('.navigation__sub-menu').hide();
+     // $('.navigation__sub-menu--apprentice').show();
+     $('ul.navigation__menu li.navigation__list-item').removeClass('current-user');
+     $('ul.navigation__menu li.apprentice-nav').addClass('current-user');
+} else {
+     // $('nav li').removeClass('section-active');
+     // $('nav li.nav-list-item-three').addClass('section-active');
 }
 
-else {
-     $('nav a.navigation__link--top-level--apprentice, nav a.navigation__link--top-level--employer').remove('border').removeClass('active-section');
-}
+// if ($('main').hasClass('apprentice')) {
+//      $('nav a.navigation__link--top-level--apprentice').append('<div class="border"></div>').addClass('active-section');
+// } else if ($('main').hasClass('employer')) {
+//      $('nav a.navigation__link--top-level--employer').append('<div class="border"></div>').addClass('active-section');
+// } else if ($('main').hasClass('real-stories')) {
+//      $('nav a.navigation__link--top-level--real-stories').append('<div class="border"></div>').addClass('active-section');
+// } else if ($('main').hasClass('interests-page')) {
+//      $('nav a.navigation__link--top-level--interests').append('<div class="border"></div>').addClass('active-section');
+// } else {
+//      $('nav a.navigation__link--top-level--apprentice, nav a.navigation__link--top-level--employer').remove('border').removeClass('active-section');
+// }
 ////////////////////////////// NAVIGATION - END //////////////////////////////
 
 ////////////////////////////// FAA SEARCH BOX - START //////////////////////////////
@@ -381,6 +394,14 @@ $(document).ready(function () {
 });
 ////////////////////////////// POPULATED BASKET - START //////////////////////////////
 
+$(document).ready(function () {
+     $("#fat-search-keyword").on('keyup',function(e) {
+          if ($(this).val() == "tattoo artist" || $(this).val() == "tattooist" || $(this).val() == "tattoo") {
+               $('#link-FAT-search').attr('href', '/campaign/FAT/2D-no-results');
+          }
+     });
+});
+
 // $(document).ready(function () {
 //      var myInput = document.getElementById("fat-search-keyword");
 //      $("#link-FAT-search").click(function(){
@@ -444,6 +465,49 @@ $(document).ready(function () {
           $('.default-hidden').toggle();
      });
 });
-
-
 ////////////////////////////// SHOW HIDE LIST COMPONENT - END //////////////////////////////
+
+////////////////////////////// SHOW HIDE CONTENT HUB - START //////////////////////////////
+// $(document).ready(function () {
+//      $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').hide();
+//      $('a.open-content').on('click',function(e) {
+//           e.preventDefault();
+//           $('#hub-page-B .hub-page .card__collection, #hub-page-B .hub-page .hub-title-container').toggle();
+//           $(this).toggleClass('close');
+//           $(this).closest('section').find('.border').toggleClass('visually-hidden');
+//           $(this).text(function(i, v){
+//                return v === 'Where should I start?' ? 'Keep following the journey...' : 'Where should I start?'
+//           });
+//      });
+// });
+////////////////////////////// SHOW HIDE CONTENT HUB - END //////////////////////////////
+
+////////////////////////////// NAVIGATION STATUS - START //////////////////////////////
+$(document).ready(function () {
+     if ($('body').data("page-id") == '1') { $('ul.navigation__menu').find(`[data-nav-id='1']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '2') { $('ul.navigation__menu').find(`[data-nav-id='2']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '3') { $('ul.navigation__menu').find(`[data-nav-id='3']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '4') { $('ul.navigation__menu').find(`[data-nav-id='4']`).addClass('active-page'); }
+     if ($('body').data("page-id") == '5') { $('ul.navigation__menu').find(`[data-nav-id='5']`).addClass('active-page'); }
+});
+////////////////////////////// NAVIGATION STATUS - END //////////////////////////////
+
+////////////////////////////// USER STATUS - START //////////////////////////////
+$(document).ready(function () {
+     if ($('body').hasClass("employer-page")) {
+          $('#userModal').find('a.journey-employer').hide();
+          $('#userModal').find('a.journey-apprentice, a.journey-parents').show();
+     }
+     if ($('body').hasClass("apprentice-page")) {
+          $('#userModal').find('a.journey-apprentice').hide();
+          $('#userModal').find('a.journey-employer, a.journey-parents').show();
+     }
+     if ($('body').hasClass("parent-page")) {
+          $('#userModal').find('a.journey-parents').hide();
+          $('#userModal').find('a.journey-employer, a.journey-apprentice').show();
+     }
+});
+////////////////////////////// USER STATUS - END //////////////////////////////
+
+////////////////////////////// HUB PAGE - START //////////////////////////////
+////////////////////////////// HUB PAGE - END //////////////////////////////

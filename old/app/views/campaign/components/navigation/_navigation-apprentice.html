@@ -1,0 +1,235 @@
+{% from "../button/macro.njk" import dasButton %}
+
+<a href="#navigation" class="navigation__toggle">
+    <span class="navigation__toggle-label" id="nav-label">Menu</span>
+    <span class="navigation__toggle-icon"></span>
+</a>
+
+<nav class="navigation apprentice-nav" aria-labelledby="nav-label">
+     <ul class="navigation__menu">
+
+          <!-- NAV ITEM 1 - START -->
+          <li class="navigation__list-item nav-list-item-one">
+               <a href="/campaign/apprentice/2-find-an-apprenticeship" class="navigation__link--top-level">
+                    Find an apprenticeship
+                    <div class="border"></div>
+               </a>
+          </li>
+          <!-- NAV ITEM 1 - END -->
+
+          <!-- NAV ITEM 2 - START -->
+          <li class="navigation__list-item nav-list-item-two">
+               <a href="/campaign/apprentice/what-are-the-benefits-for-me" class="navigation__link--top-level">
+                    Benefits
+                    <div class="border"></div>
+               </a>
+          </li>
+          <!-- NAV ITEM 2 - END -->
+
+          <!-- NAV ITEM 3 - START -->
+          <li class="navigation__list-item nav-item-with-sub-nav nav-list-item-three">
+               <a href="/campaign/apprentice/1-what-is-an-apprenticeship" class="navigation__link--top-level navigation__link--top-level--apprentice">
+                    How to become...
+                    <span class="navigation__sub-menu-toggle"></span>
+                    <span class="navigation__sub-menu-icon"></span>
+                    <div class="border"></div>
+               </a>
+               <div class="navigation__sub-menu navigation__sub-menu--apprentice">
+                    <h3 class="heading-s navigation_sub-heading">
+                         <span class="highlight">How</span>
+                         <span class="secondary">to become an apprentice - step by step...</span>
+                    </h3>
+                    <ol class="navigation__ordered-list">
+                         <li>
+                              <a href="/campaign/apprentice/1-what-is-an-apprenticeship" class="navigation__link">
+                                   What is an apprenticeship?
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/apprentice/2-find-an-apprenticeship" class="navigation__link">
+                                   Find an apprenticeship
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/apprentice/3-application" class="navigation__link">
+                                   Application
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/apprentice/4-interview" class="navigation__link">
+                                   Interview
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/apprentice/5-your-apprenticeship" class="navigation__link">
+                                   Your apprenticeship
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/apprentice/6-assessment-and-qualification" class="navigation__link">
+                                   Assessment and qualification
+                              </a>
+                         </li>
+                    </ol>
+               </div>
+          </li>
+          <!-- NAV ITEM 3 - END -->
+
+
+          <!-- NAV ITEM 4 - START -->
+          <li class="navigation__list-item nav-list-item-four">
+               <a href="/campaign/real-stories/apprentices" class="navigation__link--top-level navigation__link--top-level--real-stories">
+                    Real stories
+                    <div class="border"></div>
+               </a>
+          </li>
+          <!-- NAV ITEM 4 - END -->
+
+          <!-- NAV ITEM 5 - START -->
+          <li class="navigation__list-item nav-item-with-sub-nav nav-list-item-five">
+               <a href="/campaign/apprentice-interests/interests-home" class="navigation__link--top-level  navigation__link--top-level--interests">
+                    Interests
+                    <span class="navigation__sub-menu-toggle"></span>
+                    <span class="navigation__sub-menu-icon"></span>
+                    <div class="border"></div>
+               </a>
+               <div class="navigation__sub-menu navigation__double-sub-menu navigation__sub-menu--apprentice">
+                    <h3 class="heading-s navigation_sub-heading">
+                        <span class="highlight">My interests</span>
+                        <span class="secondary">- find your perfect apprenticeship</span>
+                    </h3>
+                    <div class="grid-row">
+                         <div class="grid-column-one-half navigation__column">
+                              <ul class="navigation__list">
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/1-agriculture-environment-animal-care" class="navigation__link">
+                                             Agriculture, environment and animal care
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/2-business-administration" class="navigation__link">
+                                             Business and administration
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/3-care-services" class="navigation__link">
+                                             Care services
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/4-catering-hospitality" class="navigation__link">
+                                             Catering and hospitality
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/5-construction" class="navigation__link">
+                                             Construction
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/6-creative-design" class="navigation__link">
+                                             Creative and design
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/7-digital" class="navigation__link">
+                                             Digital
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/8-education-childcare" class="navigation__link">
+                                             Education and childcare
+                                        </a>
+                                   </li>
+                              </ul>
+                         </div>
+                         <div class="grid-column-one-half navigation__column">
+                              <ul class="navigation__list">
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/9-engineering-manufacturing" class="navigation__link">
+                                             Engineering and manufacturing
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/10-hair-beauty" class="navigation__link">
+                                             Hair and beauty
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/11-health-science" class="navigation__link">
+                                             Health and science
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/12-legal-finance-accounting" class="navigation__link">
+                                             Legal, finance and accounting
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/13-protective-services" class="navigation__link">
+                                             Protective services
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/14-sales-marketing-procurement" class="navigation__link">
+                                             Sales, marketing and procurement
+                                        </a>
+                                   </li>
+                                   <li>
+                                        <a href="/campaign/apprentice-interests/15-transport-logistics" class="navigation__link">
+                                             Transport and logistics
+                                        </a>
+                                   </li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+          </li>
+          <!-- NAV ITEM 5 - START -->
+
+          <!-- NAV ITEM 6 - START -->
+          <li class="navigation__list-item navigation__list-item--with-button nav-item-with-sub-nav user-list-item">
+               <span class="separator"></span>
+               <a href="/campaign/index" class="button user-icon">
+                    Who are you?
+               </a>
+               <div class="navigation__sub-menu navigation__sub-menu--apprentice">
+                    <h3 class="heading-s navigation_sub-heading">
+                         <span class="highlight">What journey is right for you?</span>
+                    </h3>
+                    <ul class="navigation__list">
+                         <li>
+                              <a href="/campaign/index-app" class="navigation__link current-selection">
+                                   Apprentices
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/#" class="navigation__link">
+                                   Upskillers/reskillers
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/#" class="navigation__link">
+                                   Teachers, parents and careers advisors
+                              </a>
+                         </li>
+                         <li>
+                              <a href="/campaign/index-em" class="navigation__link">
+                                   Employers
+                              </a>
+                         </li>
+                    </ul>
+               </div>
+          </li>
+          <!-- NAV ITEM 6 - END -->
+
+          <!-- <li class="navigation__list-item navigation__list-item--with-button">
+               <span class="separator"></span>
+               <a class="button basket" href="/campaign/FAT/FAT-basket">
+                    Your choices
+                    <span class="number">0</span>
+                    <span class="tooltiptext">Your favourites</span>
+               </a>
+          </li> -->
+     </ul>
+</nav>

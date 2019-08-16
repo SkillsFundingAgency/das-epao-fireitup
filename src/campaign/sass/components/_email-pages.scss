@@ -1,0 +1,91 @@
+#email-template {
+     background: #25282F;
+     text-align: center;
+     .email-wrapper {
+          width: 600px;
+          // background: white;
+          display: inline-block;
+          margin: 0 auto;
+     }
+     .email-header {
+          text-align: center;
+          padding: 1em 0 0 0;
+          p, a {
+               color: white;
+               font-size: 16px;
+               margin: 0 0 0 0;
+          }
+          p {
+               margin: 3em 0 0 0;
+               float: left;
+               width: auto;
+               &:last-of-type {
+                    float: right;
+               }
+          }
+     }
+     main {
+          margin: 0 0 3em 0;
+          .email-wrapper {
+               background: white;
+               .text {
+                    padding: 0 2em 2em 2em;
+                    text-align: left;
+                    h1, h2, h3, h4 {
+                         margin-top: 0;
+                    }
+                    hr {
+                         width: 100%;
+                         background: $employer;
+                         height: 3px;
+                         border: none;
+                         margin: 1em 0;
+                         display: inline-block;
+                    }
+               }
+          }
+     }
+     .email-footer {
+          background: #16181D;
+          p, a {
+               color: white;
+               font-size: 16px;
+          }
+          .footer-top, .footer-bottom {
+               padding: 2em 0;
+          }
+          .footer-top {
+               .logo-container {
+                    display: inline-block;
+                    width: 100%;
+                    img {
+                         float: left;
+                         &:last-of-type {
+                              float: right;
+                         }
+                    }
+               }
+          }
+          .footer-bottom {
+               background: #0E1014;
+          }
+     }
+}
+
+#form-share-items {
+     p {
+          width: 100%;
+          @include media-query($from: tablet) {
+               width: 80%;
+          }
+     }
+     form {
+          width: 100%;
+          @include media-query($from: tablet) {
+               width: 80%;
+          }
+     }
+     ol#training-providers-list {
+          padding-left: 3em;
+     }
+}

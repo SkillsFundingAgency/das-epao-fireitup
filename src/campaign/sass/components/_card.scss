@@ -16,10 +16,13 @@ a.card {
      display: block;
      // height: 100%;
      flex: 1;
-     &:hover, &:active, &:focus { 
+     &:hover, &:active, &:focus {
           .card__link {
                border-bottom: 2px solid black;
-               bottom: 1em;
+               bottom: 2em;
+               @include media-query($from: tablet) {
+                    bottom: 1em;
+               }
           }
      }
 }
@@ -186,6 +189,14 @@ a.card {
           position: absolute;
           top: 0;
           .card--employer & {
+               background: $employer;
+          }
+     }
+}
+
+.employer {
+     .card__link {
+          &:before {
                background: $employer;
           }
      }

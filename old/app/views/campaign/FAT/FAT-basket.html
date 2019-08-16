@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+     <head>
+          <meta charset="utf-8" />
+          <title>FIRE IT UP! - Your saved apprenticeships</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta name="theme-color" content="#0b0c0c" />
+
+          <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/dist/campaign/images/favicon.ico" type="image/x-icon" />
+          <link rel="apple-touch-icon" sizes="180x180" href="/dist/campaign/images/apple-touch-icon-180x180.png">
+          <link rel="apple-touch-icon" sizes="167x167" href="/dist/campaign/images/apple-touch-icon-167x167.png">
+          <link rel="apple-touch-icon" sizes="152x152" href="/dist/campaign/images/apple-touch-icon-152x152.png">
+          <link rel="apple-touch-icon" href="/dist/campaign/images/apple-touch-icon.png">
+
+          <!--[if !IE 8]><!-->
+
+          <link href="/dist/campaign/css/screen.css" rel="stylesheet" />
+          <link rel="stylesheet" href="https://use.typekit.net/tyj1hwm.css">
+
+          <!--<![endif]-->
+
+          <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+     </head>
+
+     <body class="page-template employer-page" id="page-fat-basket" data-page-id="5">
+
+     <script>
+     document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+     </script>
+
+     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+     <div class="wrap fat FAT-basket-empty">
+
+          {% include '../components/header/_header-employer.html'%}
+          {% include '../components/hero-heading/_em-FAT-basket.html' %}
+
+          <main id="main-content" class="main-content page-app-7 employer FAT-basket">
+
+               <div class="grid-row">
+                    <div class="grid-column-two-thirds">
+                         <div class="page"></div>
+                    </div>
+
+                    <div class="grid-column-one-third">
+
+                         <div class="sidebar sidebar--employer FAT-basket">
+                              <div class="shopping-basket">
+                                   <h1 class="heading-m sidebar__heading no-bottom-margin">
+                                        Want to start a conversation with your favourite training providers?
+                                   </h1>
+                                   <p class="no-top-margin">Share your details so we can ask them to contact you.</p>
+                                   <a class="button button--sparks button--shadow __web-inspector-hide-shortcut__" href="/campaign/FAT/save-this-standard">SHARE MY DETAILS</a>
+                                   <!-- <a class="button button--sparks button--shadow __web-inspector-hide-shortcut__ external" href="https://das-nonlevy-prototype.herokuapp.com/version-7/newregister/employerStarted" target="_blank" rel="external"><span class="external"></span> Hire an apprentice</a> -->
+                                   <form method="post" action="https://esfa-shopping-basket.herokuapp.com/sprint-17/V7/index">
+                                        <div class="pass-form-data"></div>
+                                        <input type="submit" class="create-account" value="Create an Apprenticeship Service account" />
+                                   </form>
+                                   <a href="/campaign/register/email-me" class="email-me">Email me my favourites for later</a>
+                                   <!-- <a href="/campaign/register/register-interest-employer" class="share-me">Share my favourites with my training provider</a> -->
+                              </div>
+                         </div>
+
+                    </div>
+               </div>
+
+               <div class="grid-row">
+                    <div class="grid-column-full-width">
+
+                         <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
+                         {% include '../components/confirmation/_email-saved.html'%}
+                         <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
+
+                         <!-- ///////////////////// EMPTY BASKET - START ///////////////////// -->
+                         <div id="empty-basket">
+                              <h1 class="heading-m">You have yet to save an apprenticeship or trainging provider</h1>
+                              <a class="button button--sparks" href="/campaign/FAT/1-FAT-search">Find apprenticeships</a>
+                         </div>
+                         <!-- ///////////////////// EMPTY BASKET - END ///////////////////// -->
+
+
+                         <div id="populated-basket">
+
+                         </div>
+
+
+                           <div class="visually-hidden">
+
+                             <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
+                             {% include '../components/faa-fat/_fat-populated-basket.html'%}
+                             <!-- ///////////////////// POPULATED BASKET - START ///////////////////// -->
+
+                             <!-- ///////////////////// COMPARE COMPONENT - START ///////////////////// -->
+                             {% include '../components/faa-fat/_fat-compare-component.html'%}
+                             <!-- ///////////////////// COMPARE COMPONENT - END ///////////////////// -->
+
+                            </div>
+                    </div>
+               </div>
+
+          </main>
+
+          {% include '../components/confirmation/_compare-confirmation.html' %}
+
+          {% include '../components/faa-fat/_fat-link-block-search.html'%}
+
+          {% include '../components/footer/_footer-employer.html'%}
+
+          <a href="#" id="back-to-top" class="hide"><span></span>Back to the top</a>
+
+     </div>
+
+     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+     <script src="/dist/campaign/js/app.min.js"></script>
+     <script src="/dist/js/das-all.js"></script>
+     <script>
+          window.DASFrontend.initAll()
+     </script> -->
+
+     {% include '../components/footer/_scripts.html'%}
+
+
+     </body>
+
+</html>
