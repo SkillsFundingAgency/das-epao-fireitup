@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- SCRIPT AT THE BOTTOM TO DEAL WITH TABS -->
 <html lang="en">
 
      <head>
@@ -21,6 +22,408 @@
           <!--<![endif]-->
 
           <meta property="og:image" content="/dist/campaign/images/opengraph.png">
+          <style>
+
+
+.tabs-menu {
+  height: 33px;
+  margin-top: 0px;
+  margin-bottom: 18px;
+  margin-left: 20px;
+  float: left;
+}
+
+.tabs-menu li {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+  color: #000;
+  background-color: #dee0e2;
+  border-top: 1px solid #d4d4d1;
+  border-right: 1px solid #d4d4d1;
+  border-left: 1px solid #d4d4d1;
+}
+
+.tabs-menu li.current {
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  z-index: 5;
+}
+
+.tabs-menu li a {
+  padding: 15px;
+  margin-top: 0px;
+  color: #005ea5;
+  text-decoration: none;
+}
+
+.tabs-menu .current a {
+  color: #000;
+}
+
+.tabs-menu li a:focus {
+  background: none;
+  border: 0;
+  outline: 0;
+}
+
+.nav-tabs a:focus {
+  outline: none;
+}
+
+.nav-tabs {
+  zoom: 1;
+  background: #fff;
+  padding: 0;
+  position: relative;
+}
+
+.nav-tabs:after {
+  content: '.';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.nav-tabs ol,
+.nav-tabs ul,
+.nav-tabs .tabs-nav {
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  z-index: 5;
+}
+
+@media (max-width: 640px) {
+  .nav-tabs ol,
+  .nav-tabs ul,
+  .nav-tabs .tabs-nav {
+    float: none;
+    margin: 0 -16px;
+  }
+}
+
+.nav-tabs li,
+.nav-tabs .tabs-nav li {
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.14286;
+  font-weight: 400;
+  text-transform: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+@media (min-width: 641px) {
+  .nav-tabs li,
+  .nav-tabs .tabs-nav li {
+    font-size: 19px;
+    line-height: 1.25;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav-tabs li,
+  .nav-tabs .tabs-nav li {
+    float: none;
+  }
+}
+
+.nav-tabs li a,
+.nav-tabs .tabs-nav li a {
+  border-bottom: solid 5px #fff;
+  border-left: solid 5px #fff;
+  border-right: solid 5px #fff;
+  float: left;
+  height: 2.5em;
+  line-height: 2.25em;
+  padding: 0.5em 1em 0 1em;
+  position: relative;
+  text-align: center;
+  top: 0;
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 640px) {
+  .nav-tabs li a,
+  .nav-tabs .tabs-nav li a {
+    display: block;
+    position: static;
+    float: none;
+    height: auto;
+    line-height: 3.5em;
+    padding: 0 16px;
+    text-align: left;
+    margin-bottom: 0;
+    border-bottom: 1px solid #bfc1c3;
+  }
+}
+
+.nav-tabs li a:hover,
+.nav-tabs .tabs-nav li a:hover {
+  background-color: #bfc1c3;
+}
+
+.nav-tabs li.active a,
+.nav-tabs .tabs-nav li.active a {
+  background-color: #fff;
+  border: solid 1px #bfc1c3;
+  border-bottom: solid 6px #fff;
+  color: #0b0c0c;
+  position: relative;
+  text-decoration: none;
+  z-index: 5;
+  margin-bottom: -2px;
+  height: 2.5em;
+  line-height: 2.25em;
+  padding: 0.5em 2em 0 2em;
+}
+
+@media (max-width: 640px) {
+  .nav-tabs li.active a,
+  .nav-tabs .tabs-nav li.active a {
+    border: none;
+    border-bottom: 1px solid #bfc1c3;
+  }
+}
+
+.nav-tabs li.active a:hover,
+.nav-tabs .tabs-nav li.active a:hover {
+  color: inherit;
+}
+
+.nav-tabs li:first-child a,
+.nav-tabs .tabs-nav li:first-child a {
+  margin-left: 0;
+}
+
+@media (max-width: 640px) {
+  .nav-tabs li:first-child a,
+  .nav-tabs .tabs-nav li:first-child a {
+    border-left: none;
+    border-top: 1px solid #bfc1c3;
+  }
+}
+
+@media (max-width: 640px) {
+  .tab-content {
+    margin: 0 -1em;
+  }
+}
+
+.tab-content .tab-pane {
+  padding: 1em 1em 0 0;
+//  border-top: solid 1px #bfc1c3;
+  clear: both;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .tab-content .tab-pane {
+    border-top: none;
+    padding: 0;
+  }
+}
+
+.tab-content .inner {
+  padding: 0em 2.5em 1em;
+}
+
+@media (max-width: 640px) {
+  .tab-content .inner {
+    padding: 0 1em 1em;
+    border-bottom: solid 1px #c9d0d0;
+  }
+}
+
+.tab-content h1.visuallyhidden + h2 {
+  margin-top: 2em;
+}
+
+.tab-content p {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.tab-content em {
+  font-style: normal;
+  font-weight: bold;
+}
+
+.tab-content nav {
+  margin: 1em -1.375em 0;
+}
+
+.js-tab-content .programme-progression li,
+.js-tab-content .js-heading-tab {
+  border-bottom: solid 1px #bfc1c3;
+  list-style: none;
+}
+
+.js-tab-content .programme-progression li a,
+.js-tab-content .programme-progression li h1,
+.js-tab-content .js-heading-tab a,
+.js-tab-content .js-heading-tab h1 {
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 2.64706;
+  font-weight: 400;
+  text-transform: none;
+  background: #fff url(https://assets.digital.cabinet-office.gov.uk/static/accordian-arrow-0753eda0cd8d71b5d9b5053abf172100c03b94b49e7f24d82e0f6551302a0aca.png) no-repeat 100% -2px;
+  display: block;
+  padding: 0 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: underline;
+  top: 0;
+}
+
+@media (min-width: 641px) {
+  .js-tab-content .programme-progression li a,
+  .js-tab-content .programme-progression li h1,
+  .js-tab-content .js-heading-tab a,
+  .js-tab-content .js-heading-tab h1 {
+    font-size: 24px;
+    line-height: 1.875;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .js-tab-content .programme-progression li a,
+  .js-tab-content .programme-progression li h1,
+  .js-tab-content .js-heading-tab a,
+  .js-tab-content .js-heading-tab h1 {
+    background-image: url(https://assets.digital.cabinet-office.gov.uk/static/accordian-arrow-2x-2b998c05ceb1dadeb373b9aff059470cd6ae4557f5d768020531e1616c0e170d.png);
+    background-size: 45px 90px;
+  }
+}
+
+.js-tab-content .programme-progression li a:hover,
+.js-tab-content .programme-progression li h1:hover,
+.js-tab-content .js-heading-tab a:hover,
+.js-tab-content .js-heading-tab h1:hover {
+  background-color: #dee0e2;
+}
+
+.js-tab-content .programme-progression li.active,
+.js-tab-content .js-heading-tab.active {
+  text-decoration: none;
+}
+
+.js-tab-content .programme-progression li.active a,
+.js-tab-content .programme-progression li.active h1,
+.js-tab-content .js-heading-tab.active a,
+.js-tab-content .js-heading-tab.active h1 {
+  background-position: 100% -48px;
+  background-color: #dee0e2;
+  color: #0b0c0c;
+  text-decoration: none;
+}
+
+.js-tab-content .js-heading-tab {
+  margin: 0;
+  clear: both;
+}
+
+.js-tab-content .js-heading-tab h1 {
+  padding: 0;
+}
+
+.js-tab-content .tab-shiftlink {
+  font-family: 'nta', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  position: absolute;
+  left: -9999em;
+}
+
+@media (min-width: 641px) {
+  .js-tab-content .tab-shiftlink {
+    font-size: 19px;
+    line-height: 1.31579;
+  }
+}
+
+@media (max-width: 640px) {
+  .js-tab-content .tab-shiftlink {
+    position: static;
+    left: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .js-tab-content .js-tab-container {
+    min-height: 0;
+  }
+  .js-tab-content .js-tab-pane {
+    border-bottom: solid 1px #bfc1c3;
+  }
+  .js-tab-content .js-tab-container:first-child {
+    border-top: solid 1px #bfc1c3;
+  }
+}
+
+.transaction .js-tab-content {
+  overflow: hidden;
+}
+
+.tabs-menu {
+  height: 33px;
+  margin-top: 0px;
+  margin-bottom: 18px;
+  margin-left: 20px;
+  float: left;
+}
+
+.tabs-menu li {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+  float: left;
+  text-align: center;
+  margin-right: 5px;
+  color: #000;
+  background-color: #dee0e2;
+  border-top: 1px solid #d4d4d1;
+  border-right: 1px solid #d4d4d1;
+  border-left: 1px solid #d4d4d1;
+}
+
+.tabs-menu li.current {
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+  z-index: 5;
+}
+
+.tabs-menu li a {
+  padding: 15px;
+  margin-top: 0px;
+  color: #005ea5;
+  text-decoration: none;
+}
+
+.tabs-menu .current a {
+  color: #000;
+}
+
+.tabs-menu li a:focus {
+  background: none;
+  border: 0;
+  outline: 0;
+}
+     </style>
      </head>
 
      <body class="page-template employer-section-fat employer-page" id="page-fat-training-provider" data-id="{{ id }}" data-page-id="5">
@@ -46,10 +449,25 @@
 
                                    <form id="fat-sort-by" class="sort-by employer">
                                         <p>
-                                             We’ve found <strong class="fat-number">36</strong> training providers for this apprenticeship.
+                                             We’ve found <strong class="fat-number">36</strong> training providers and <strong class="fat-number">4</strong> end-point assessors for this apprenticeship.
                                              Results are sorted by distance from '<strong class="fat-search-location">CV32 7EE</strong>'.
                                         </p>
                                    </form>
+
+<!-------->
+<div class="js-tabs nav-tabs" style="margin-bottom:35px; margin-left:-30px">
+    <ul class="tabs-nav" id="tabs-nav" role="tablist">
+        <li class="active">
+            <a href="#PAYE" role="tab" id="tab-PAYE">Training providers</a>
+        </li>
+        <li class="">
+            <a href="#transactions" role="tab" id="tab-transactions">End-point assessment organisations</a>
+        </li>
+    </ul>
+</div>
+<!--------->
+<div class="js-tab-content tab-content">
+    <div class="js-tab-pane tab-pane" id="PAYE">
 
                                    <ol id="fat-training-provider-results" class="search-results-list page-1-content">
 
@@ -322,143 +740,8 @@
                                         </li>
                                         <!-- /////////// FAT PROVIDER - 10 - END /////////// -->
 
-                                        <!-- /////////// FAT PROVIDER - 11 - START /////////// -->
-                                        <li class="search-result" data-provider-id="11">
-                                             <h2 class="heading-m">
-                                                  <a href="/campaign/FAT/5A-FAT-training-provider?id={{ id }}&providerId=10001309" class="training-provider-title">Coventry & Warwickshire Chamber of Commerce Training</a>
-                                             </h2>
-                                             <div class="content-row">
-                                                  <p>
-                                                       <span class="distance"><strong>Distance:</strong> 7.7 miles away</span>
-                                                  </p>
-                                                  <p class="address"><span></span>COVENTRY & WARWICKSHIRE CHAMBER TRAINING - COVENTRY, Commerce House, 123 St.Nicholas Street, Coventry, CV1 4FD</p>
-                                                  <p class="training-options"><strong>Training options:</strong> day release <span class="feedback yes"></span> block release <span class="feedback no"></span> at your location <span class="feedback no"></span></p>
-                                                  <p><strong>Employer satisfaction:</strong> 92%</p>
-                                                  <p><strong>Learner satisfaction:</strong> 91%</p>
-                                                  <p><strong>Achievement rate:</strong> 84%</p>
-                                                  <p class="phone-number"><strong>Phone number:</strong> 0285 3358 668</p>
-                                             </div>
-                                             <div class="cta-row">
-                                                  <div class="form-group radios">
-                                                       <div class="checkboxes__item save-label">
-                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-11" name="save-11">
-                                                            <label class="label checkboxes__label" for="save-11">Add to favourites</label>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </li>
-                                        <!-- /////////// FAT PROVIDER - 11 - END /////////// -->
-
-                                        <!-- /////////// FAT PROVIDER - 12 - START /////////// -->
-                                        <li class="search-result" data-provider-id="12">
-                                             <h2 class="heading-m">
-                                                  <a href="/campaign/FAT/5A-FAT-training-provider?id={{ id }}&providerId=10034309" class="training-provider-title">Interserve Learning & Employment</a>
-                                                  <span class="national">National</span>
-                                             </h2>
-                                             <div class="content-row">
-                                                  <p>
-                                                       <span class="distance"><strong>Distance:</strong> 9 miles away</span>
-                                                  </p>
-                                                  <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
-                                                  <p><strong>Employer satisfaction:</strong> 87%</p>
-                                                  <p><strong>Learner satisfaction:</strong> 85%</p>
-                                                  <p><strong>Achievement rate:</strong> 68%</p>
-                                                  <p class="phone-number"><strong>Phone number:</strong> 0965 6689 566</p>
-                                             </div>
-                                             <div class="cta-row">
-                                                  <div class="form-group radios">
-                                                       <div class="checkboxes__item save-label">
-                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-12" name="save-12">
-                                                            <label class="label checkboxes__label" for="save-12">Add to favourites</label>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </li>
-                                        <!-- /////////// FAT PROVIDER - 12 - END /////////// -->
-
-                                        <!-- /////////// FAT PROVIDER - 13 - START /////////// -->
-                                        <li class="search-result" data-provider-id="13">
-                                             <h2 class="heading-m">
-                                                  <a href="/campaign/FAT/5A-FAT-training-provider?id={{ id }}&providerId=10054819" class="training-provider-title">Creative Sport & Leisure</a>
-                                                  <span class="national">National</span>
-                                             </h2>
-                                             <div class="content-row">
-                                                  <p>
-                                                       <span class="distance"><strong>Distance:</strong> 9.9 miles away</span>
-                                                  </p>
-                                                  <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
-                                                  <p><strong>Employer satisfaction:</strong> no data available</p>
-                                                  <p><strong>Learner satisfaction:</strong> 70%</p>
-                                                  <p><strong>Achievement rate:</strong> no data available</p>
-                                                  <p class="phone-number"><strong>Phone number:</strong> 02568 868 965</p>
-                                             </div>
-                                             <div class="cta-row">
-                                                  <div class="form-group radios">
-                                                       <div class="checkboxes__item save-label">
-                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-13" name="save-13">
-                                                            <label class="label checkboxes__label" for="save-13">Add to favourites</label>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </li>
-                                        <!-- /////////// FAT PROVIDER - 13 - END /////////// -->
-
-                                        <!-- /////////// FAT PROVIDER - 14 - START /////////// -->
-                                        <li class="search-result" data-provider-id="14">
-                                             <h2 class="heading-m">
-                                                  <a href="/campaign/FAT/5A-FAT-training-provider?id={{ id }}&providerId=10003347" class="training-provider-title">INTEC BUSINESS COLLEGES LTD</a>
-                                                  <span class="national">National</span>
-                                             </h2>
-                                             <div class="content-row">
-                                                  <p>
-                                                       <span class="distance"><strong>Distance:</strong> 11.7 miles away</span>
-                                                  </p>
-                                                  <p class="address"><span></span>INTEC BUSINESS COLLEGES, Old School, Pennington Court, RUGBY, Warwickshire, CV21 2BB</p>
-                                                  <p class="training-options"><strong>Training options:</strong> day release <span class="feedback yes"></span> block release <span class="feedback yes"></span> at your location <span class="feedback yes"></span></p>
-                                                  <p><strong>Employer satisfaction:</strong> 85%</p>
-                                                  <p><strong>Learner satisfaction:</strong> 87%</p>
-                                                  <p><strong>Achievement rate:</strong> 72%</p>
-                                                  <p class="phone-number"><strong>Phone number:</strong> 0387 6849 6524</p>
-                                             </div>
-                                             <div class="cta-row">
-                                                  <div class="form-group radios">
-                                                       <div class="checkboxes__item save-label">
-                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-14" name="save-14">
-                                                            <label class="label checkboxes__label" for="save-14">Add to favourites</label>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </li>
-                                        <!-- /////////// FAT PROVIDER - 14 - END /////////// -->
-
-                                        <!-- /////////// FAT PROVIDER - 15 - START /////////// -->
-                                        <li class="search-result" data-provider-id="15">
-                                             <h2 class="heading-m">
-                                                  <a href="/campaign/FAT/5A-FAT-training-provider?id={{ id }}&providerId=10002976" class="training-provider-title">HEART OF ENGLAND TRAINING LIMITED</a>
-                                             </h2>
-                                             <div class="content-row">
-                                                  <p>
-                                                       <span class="distance"><strong>Distance:</strong> 12.1 miles away</span>
-                                                  </p>
-                                                  <p class="address"><span></span>Rugby, CV21 3EW</p>
-                                                  <p class="training-options"><strong>Training options:</strong> day release <span class="feedback yes"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
-                                                  <p><strong>Employer satisfaction:</strong> 91%</p>
-                                                  <p><strong>Learner satisfaction:</strong> 95%</p>
-                                                  <p class="phone-number"><strong>Phone number:</strong> 01278 678 689</p>
-                                             </div>
-                                             <div class="cta-row">
-                                                  <div class="form-group radios">
-                                                       <div class="checkboxes__item save-label">
-                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-15" name="save-15">
-                                                            <label class="label checkboxes__label" for="save-15">Add to favourites</label>
-                                                       </div>
-                                                  </div>
-                                             </div>
-                                        </li>
-                                        <!-- /////////// FAT PROVIDER - 15 - END /////////// -->
-
+                                        
                                    </ol>
-
                                    <ul class="pagination pagination--employer search-results pagination-with-numbers">
                                        <li class="pagination__list-item pagination__list-item--previous show-page-1-content show-page-2-content">
                                              <!-- <a href="#" class="pagination__link pagination__link--previous hide-content" data-page-id="1" style="display:none;">
@@ -480,7 +763,125 @@
                                              </a>
                                        </li>
                                    </ul>
+                              </div>
+                                <div class="js-tab-pane tab-pane" id="transactions">
+                                    <ol id="fat-training-provider-results" class="search-results-list page-1-content">
 
+                                   <!-- /////////// FAT EPA - 1 - START /////////// -->
+                                        <li class="search-result" data-provider-id="10004977">
+                                             <h2 class="heading-m">
+                                                  <a href="/campaign/FAT/5A-FAT-training-provider?id={{ id }}&providerId=10004977" class="training-provider-title">ABC EPA Ltd</a>
+                                        
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p>
+                                                       <span class="distance"><strong>Distance:</strong> 2 miles away</span>
+                                                       <!-- <span class="locations"><strong>3</strong> locations</span> -->
+                                                  </p>
+                                        <!--           <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
+                                                  <p><strong>Employer satisfaction:</strong> 86%</p>
+                                                  <p><strong>Learner satisfaction:</strong> 91%</p>
+                                                  <p><strong>Achievement rate:</strong> 65%</p> -->
+                                                  <p>ABC EPA Ltd, Poplar Centre, Poplar High Street, Tower Hamlets, Coventry, C1 0AF</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 0800 7832 545</p>
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-1" name="save-1">
+                                                            <label class="label checkboxes__label" for="save-1">Add to favourites</label>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </li>
+                                        <!-- /////////// FAT EPA - 1 - END /////////// -->
+
+                                        <!-- /////////// FAT EPA - 2 - START /////////// -->
+                                        <li class="search-result" data-provider-id="10044607">
+                                             <h2 class="heading-m">
+                                                  <a href="/campaign/FAT/5B-FAT-training-provider?id={{ id }}&providerId=10044607" class="training-provider-title">CYBERDYNE Assessments</a>
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p>
+                                                       <span class="distance"><strong>Distance:</strong> 3 miles away</span>
+                                                  </p>
+                                                  <p>Cyberdyne assessments, 44 Alexandra Street, Coventry , CV1 1BJ</p>
+                                               <!--    <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
+                                                  <p><strong>Employer satisfaction:</strong> no data available</p>
+                                                  <p><strong>Learner satisfaction:</strong> 84%</p>
+                                                  <p><strong>Achievement rate:</strong> no data available</p> -->
+                                                  <p class="phone-number"><strong>Phone number:</strong> 023 8000 4210</p>
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-2" name="save-2">
+                                                            <label class="label checkboxes__label" for="save-2">Add to favourites</label>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </li>
+                                        <!-- /////////// FAT EPA - 2 - END /////////// -->
+
+                                        <!-- /////////// FAT EPA - 3 - START /////////// -->
+                                        <li class="search-result" data-provider-id="10003347">
+                                             <h2 class="heading-m">
+                                                  <a href="/campaign/FAT/5C-FAT-training-provider?id={{ id }}&providerId=10003347" class="training-provider-title">XYZ Assessments</a>
+                                                 
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p>
+                                                       <span class="distance"><strong>Distance:</strong> 3.3 miles away</span>
+                                                  </p>
+                                                    <p>XYZ Assessments, 55 Victoria Street, Coventry, CV1 1BJ</p>
+                                       <!--            <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
+                                                  <p><strong>Employer satisfaction:</strong> 85%</p>
+                                                  <p><strong>Learner satisfaction:</strong> 87%</p>
+                                                  <p><strong>Achievement rate:</strong> 72%</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 0808 100 1155</p> -->
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-3" name="save-3">
+                                                            <label class="label checkboxes__label" for="save-3">Add to favourites</label>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </li>
+                                        <!-- /////////// FAT EPA - 3 - END /////////// -->
+
+                                        <!-- /////////// FAT EPA - 4 - START /////////// -->
+                                        <li class="search-result" data-provider-id="10003161">
+                                             <h2 class="heading-m">
+                                                  <a href="/campaign/FAT/5D-FAT-training-provider?id={{ id }}&providerId=10003161" class="training-provider-title">Best Assessments</a>
+                                                
+                                             </h2>
+                                             <div class="content-row">
+                                                  <p>
+                                                       <span class="distance"><strong>Distance:</strong> 4 miles away</span>
+                                                  </p>
+                                                   <p>XYZ Assessments, 66 Elizabeth Street, Coventry, CV1 1BJ</p>
+                                 <!--                  <p class="training-options"><strong>Training options:</strong> day release <span class="feedback no"></span> block release <span class="feedback no"></span> at your location <span class="feedback yes"></span></p>
+                                                  <p><strong>Employer satisfaction:</strong> 81%</p>
+                                                  <p><strong>Learner satisfaction:</strong> 89%</p>
+                                                  <p><strong>Achievement rate:</strong> 82%</p>
+                                                  <p class="phone-number"><strong>Phone number:</strong> 0800 731 8199</p> -->
+                                             </div>
+                                             <div class="cta-row">
+                                                  <div class="form-group radios">
+                                                       <div class="checkboxes__item save-label">
+                                                            <input class="checkboxes__input checkbox-save-provider" type="checkbox" value="true" id="save-4" name="save-4">
+                                                            <label class="label checkboxes__label" for="save-4">Add to favourites</label>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </li>
+                                        <!-- /////////// FAT EPA - 4 - END /////////// -->
+                                   </ol>
+                              </div>
+                              </div>
+                                   
                               </div>
 
                          </div>
@@ -532,3 +933,56 @@
      </body>
 
 </html>
+
+<script>
+//jquery that runs the tabs. Uses the jquery.tabs.js from gov.uk
+$(document).ready(function() {
+    // change the tabs themselves to active - should be in the above but isn't working because it's looking for a not li so I added this as a quick fix.
+    $("ul#tabs-nav li").click(function(e) {
+        if (!$(this).hasClass("active")) {
+            var tabNum = $(this).index();
+            var nthChild = tabNum + 1;
+            $("ul#tabs-nav li.active").removeClass("active");
+            $(this).addClass("active");
+            $("ul#tabs-nav li.active").removeClass("active");
+            $("ul#tabs-nav li:nth-child(" + nthChild + ")").addClass("active");
+        }
+    });
+});
+
+$('ul.tabs-nav').each(function() {
+    // For each set of tabs, we want to keep track of
+    // which tab is active and its associated content
+    var $active, $content, $links = $(this).find('a');
+    // If the location.hash matches one of the links, use that as the active tab.
+    // If no match is found, use the first link as the initial active tab.
+    $active = $($links.filter('[href="' + location.hash + '"]')[0] || $links[0]);
+    // $active.addClass('active');
+    console.log($active)
+
+    $content = $($active[0].hash);
+
+    // Hide the remaining content
+    $links.not($active).each(function() {
+        $(this.hash).hide();
+    });
+
+    // Bind the click event handler
+    $(this).on('click', 'a', function(e) {
+        // Make the old tab inactive.
+        //  $active.removeClass('active');
+        $content.hide();
+
+        // Update the variables with the new link and content
+        //  $active = $(this);
+        $content = $(this.hash);
+
+        // Make the tab active.
+        // $active.addClass('active');
+        $content.show();
+
+        // Prevent the anchor's default click action
+        e.preventDefault();
+    });
+});
+</script> 
