@@ -2,6 +2,8 @@
   "name": "das-frontend",
   "version": "0.2.2",
   "description": "DAS Frontend contains the code used across the apprenticeship services ",
+  "engines": {
+    "node": "8.11.1"
   "scripts": {
     "dev": "settings='dev' node server.js"
   },
